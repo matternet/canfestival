@@ -1,5 +1,5 @@
 /*
-This file is part of CanFestival, a library implementing CanOpen Stack. 
+This file is part of CanFestival, a library implementing CanOpen Stack.
 
 Copyright (C): Edouard TISSERANT and Francis DUPIN
 
@@ -29,40 +29,40 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  are in the object dictionary for definition purpose only. a device does not
  *  to support all of this datatypes.
  */
-#define boolean         0x01
-#define int8            0x02
-#define int16           0x03
-#define int32           0x04
-#define uint8           0x05
-#define uint16          0x06
-#define uint32          0x07
-#define real32          0x08
+#define cf_boolean         0x01
+#define cf_int8            0x02
+#define cf_int16           0x03
+#define cf_int32           0x04
+#define cf_uint8           0x05
+#define cf_uint16          0x06
+#define cf_uint32          0x07
+#define cf_real32          0x08
 #define visible_string  0x09
 #define octet_string    0x0A
 #define unicode_string  0x0B
 #define time_of_day     0x0C
 #define time_difference 0x0D
 
-#define domain          0x0F
-#define int24           0x10
-#define real64          0x11
-#define int40           0x12
-#define int48           0x13
-#define int56           0x14
-#define int64           0x15
-#define uint24          0x16
+#define cf_domain          0x0F
+#define cf_int24           0x10
+#define cf_real64          0x11
+#define cf_int40           0x12
+#define cf_int48           0x13
+#define cf_int56           0x14
+#define cf_int64           0x15
+#define cf_uint24          0x16
 
-#define uint40          0x18
-#define uint48          0x19
-#define uint56          0x1A
-#define uint64          0x1B
+#define cf_uint40          0x18
+#define cf_uint48          0x19
+#define cf_uint56          0x1A
+#define cf_uint64          0x1B
 
 #define pdo_communication_parameter 0x20
 #define pdo_mapping                 0x21
 #define sdo_parameter               0x22
 #define identity                    0x23
 
-/* CanFestival is using 0x24 to 0xFF to define some types containing a 
+/* CanFestival is using 0x24 to 0xFF to define some types containing a
  value range (See how it works in objdict.c)
  */
 
@@ -70,7 +70,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 /** Each entry of the object dictionary can be READONLY (RO), READ/WRITE (RW),
  *  WRITE-ONLY (WO)
  */
-#define RW     0x00  
+#define RW     0x00
 #define WO     0x01
 #define RO     0x02
 

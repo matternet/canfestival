@@ -45,28 +45,28 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 /* index 0x1000 :   Device Type. */
                     UNS32 CANOpenShellSlaveOD_obj1000 = 0x0;	/* 0 */
-                    subindex CANOpenShellSlaveOD_Index1000[] = 
+                    subindex CANOpenShellSlaveOD_Index1000[] =
                      {
-                       { RO, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1000, NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1000, NULL }
                      };
 
 /* index 0x1001 :   Error Register. */
                     UNS8 CANOpenShellSlaveOD_obj1001 = 0x0;	/* 0 */
-                    subindex CANOpenShellSlaveOD_Index1001[] = 
+                    subindex CANOpenShellSlaveOD_Index1001[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1001, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1001, NULL }
                      };
 
 /* index 0x1003 :   Pre-defined Error Field */
                     UNS8 CANOpenShellSlaveOD_highestSubIndex_obj1003 = 0; /* number of subindex - 1*/
-                    UNS32 CANOpenShellSlaveOD_obj1003[] = 
+                    UNS32 CANOpenShellSlaveOD_obj1003[] =
                     {
                       0x0	/* 0 */
                     };
-                    subindex CANOpenShellSlaveOD_Index1003[] = 
+                    subindex CANOpenShellSlaveOD_Index1003[] =
                      {
                        { RW, valueRange_EMC, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1003, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1003[0], NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1003[0], NULL }
                      };
 
 /* index 0x1005 :   SYNC COB ID */
@@ -75,10 +75,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 /* index 0x1006 :   Communication / Cycle Period */
                     UNS32 CANOpenShellSlaveOD_obj1006 = 0x0;   /* 0 */
 
-/* index 0x100C :   Guard Time */ 
+/* index 0x100C :   Guard Time */
                     UNS16 CANOpenShellSlaveOD_obj100C = 0x0;   /* 0 */
 
-/* index 0x100D :   Life Time Factor */ 
+/* index 0x100D :   Life Time Factor */
                     UNS8 CANOpenShellSlaveOD_obj100D = 0x0;   /* 0 */
 
 /* index 0x1014 :   Emergency COB ID */
@@ -90,9 +90,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 /* index 0x1017 :   Producer Heartbeat Time. */
                     UNS16 CANOpenShellSlaveOD_obj1017 = 0x0;	/* 0 */
-                    subindex CANOpenShellSlaveOD_Index1017[] = 
+                    subindex CANOpenShellSlaveOD_Index1017[] =
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&CANOpenShellSlaveOD_obj1017, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&CANOpenShellSlaveOD_obj1017, NULL }
                      };
 
 /* index 0x1018 :   Identity. */
@@ -101,13 +101,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1018_Product_Code = 0x0;	/* 0 */
                     UNS32 CANOpenShellSlaveOD_obj1018_Revision_Number = 0x0;	/* 0 */
                     UNS32 CANOpenShellSlaveOD_obj1018_Serial_Number = 0x0;	/* 0 */
-                    subindex CANOpenShellSlaveOD_Index1018[] = 
+                    subindex CANOpenShellSlaveOD_Index1018[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1018, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1018_Vendor_ID, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1018_Product_Code, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1018_Revision_Number, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1018_Serial_Number, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1018, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1018_Vendor_ID, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1018_Product_Code, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1018_Revision_Number, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1018_Serial_Number, NULL }
                      };
 
 /* index 0x1280 :   Client SDO 1 Parameter. */
@@ -115,12 +115,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1280_COB_ID_Client_to_Server_Transmit_SDO = 0x600;	/* 1536 */
                     UNS32 CANOpenShellSlaveOD_obj1280_COB_ID_Server_to_Client_Receive_SDO = 0x580;	/* 1408 */
                     UNS8 CANOpenShellSlaveOD_obj1280_Node_ID_of_the_SDO_Server = 0x0;	/* 0 */
-                    subindex CANOpenShellSlaveOD_Index1280[] = 
+                    subindex CANOpenShellSlaveOD_Index1280[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1280, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1280_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1280_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1280_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1280, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1280_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1280_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1280_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1281 :   Client SDO 2 Parameter. */
@@ -128,12 +128,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1281_COB_ID_Client_to_Server_Transmit_SDO = 0x601;	/* 1537 */
                     UNS32 CANOpenShellSlaveOD_obj1281_COB_ID_Server_to_Client_Receive_SDO = 0x581;	/* 1409 */
                     UNS8 CANOpenShellSlaveOD_obj1281_Node_ID_of_the_SDO_Server = 0x1;	/* 1 */
-                    subindex CANOpenShellSlaveOD_Index1281[] = 
+                    subindex CANOpenShellSlaveOD_Index1281[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1281, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1281_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1281_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1281_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1281, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1281_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1281_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1281_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1282 :   Client SDO 3 Parameter. */
@@ -141,12 +141,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1282_COB_ID_Client_to_Server_Transmit_SDO = 0x602;	/* 1538 */
                     UNS32 CANOpenShellSlaveOD_obj1282_COB_ID_Server_to_Client_Receive_SDO = 0x582;	/* 1410 */
                     UNS8 CANOpenShellSlaveOD_obj1282_Node_ID_of_the_SDO_Server = 0x2;	/* 2 */
-                    subindex CANOpenShellSlaveOD_Index1282[] = 
+                    subindex CANOpenShellSlaveOD_Index1282[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1282, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1282_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1282_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1282_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1282, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1282_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1282_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1282_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1283 :   Client SDO 4 Parameter. */
@@ -154,12 +154,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1283_COB_ID_Client_to_Server_Transmit_SDO = 0x603;	/* 1539 */
                     UNS32 CANOpenShellSlaveOD_obj1283_COB_ID_Server_to_Client_Receive_SDO = 0x583;	/* 1411 */
                     UNS8 CANOpenShellSlaveOD_obj1283_Node_ID_of_the_SDO_Server = 0x3;	/* 3 */
-                    subindex CANOpenShellSlaveOD_Index1283[] = 
+                    subindex CANOpenShellSlaveOD_Index1283[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1283, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1283_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1283_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1283_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1283, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1283_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1283_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1283_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1284 :   Client SDO 5 Parameter. */
@@ -167,12 +167,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1284_COB_ID_Client_to_Server_Transmit_SDO = 0x604;	/* 1540 */
                     UNS32 CANOpenShellSlaveOD_obj1284_COB_ID_Server_to_Client_Receive_SDO = 0x584;	/* 1412 */
                     UNS8 CANOpenShellSlaveOD_obj1284_Node_ID_of_the_SDO_Server = 0x4;	/* 4 */
-                    subindex CANOpenShellSlaveOD_Index1284[] = 
+                    subindex CANOpenShellSlaveOD_Index1284[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1284, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1284_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1284_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1284_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1284, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1284_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1284_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1284_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1285 :   Client SDO 6 Parameter. */
@@ -180,12 +180,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1285_COB_ID_Client_to_Server_Transmit_SDO = 0x605;	/* 1541 */
                     UNS32 CANOpenShellSlaveOD_obj1285_COB_ID_Server_to_Client_Receive_SDO = 0x585;	/* 1413 */
                     UNS8 CANOpenShellSlaveOD_obj1285_Node_ID_of_the_SDO_Server = 0x5;	/* 5 */
-                    subindex CANOpenShellSlaveOD_Index1285[] = 
+                    subindex CANOpenShellSlaveOD_Index1285[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1285, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1285_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1285_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1285_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1285, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1285_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1285_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1285_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1286 :   Client SDO 7 Parameter. */
@@ -193,12 +193,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1286_COB_ID_Client_to_Server_Transmit_SDO = 0x606;	/* 1542 */
                     UNS32 CANOpenShellSlaveOD_obj1286_COB_ID_Server_to_Client_Receive_SDO = 0x586;	/* 1414 */
                     UNS8 CANOpenShellSlaveOD_obj1286_Node_ID_of_the_SDO_Server = 0x6;	/* 6 */
-                    subindex CANOpenShellSlaveOD_Index1286[] = 
+                    subindex CANOpenShellSlaveOD_Index1286[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1286, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1286_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1286_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1286_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1286, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1286_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1286_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1286_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1287 :   Client SDO 8 Parameter. */
@@ -206,12 +206,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1287_COB_ID_Client_to_Server_Transmit_SDO = 0x607;	/* 1543 */
                     UNS32 CANOpenShellSlaveOD_obj1287_COB_ID_Server_to_Client_Receive_SDO = 0x587;	/* 1415 */
                     UNS8 CANOpenShellSlaveOD_obj1287_Node_ID_of_the_SDO_Server = 0x7;	/* 7 */
-                    subindex CANOpenShellSlaveOD_Index1287[] = 
+                    subindex CANOpenShellSlaveOD_Index1287[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1287, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1287_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1287_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1287_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1287, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1287_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1287_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1287_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1288 :   Client SDO 9 Parameter. */
@@ -219,12 +219,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1288_COB_ID_Client_to_Server_Transmit_SDO = 0x608;	/* 1544 */
                     UNS32 CANOpenShellSlaveOD_obj1288_COB_ID_Server_to_Client_Receive_SDO = 0x588;	/* 1416 */
                     UNS8 CANOpenShellSlaveOD_obj1288_Node_ID_of_the_SDO_Server = 0x8;	/* 8 */
-                    subindex CANOpenShellSlaveOD_Index1288[] = 
+                    subindex CANOpenShellSlaveOD_Index1288[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1288, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1288_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1288_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1288_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1288, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1288_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1288_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1288_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1289 :   Client SDO 10 Parameter. */
@@ -232,12 +232,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1289_COB_ID_Client_to_Server_Transmit_SDO = 0x609;	/* 1545 */
                     UNS32 CANOpenShellSlaveOD_obj1289_COB_ID_Server_to_Client_Receive_SDO = 0x589;	/* 1417 */
                     UNS8 CANOpenShellSlaveOD_obj1289_Node_ID_of_the_SDO_Server = 0x9;	/* 9 */
-                    subindex CANOpenShellSlaveOD_Index1289[] = 
+                    subindex CANOpenShellSlaveOD_Index1289[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1289, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1289_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1289_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1289_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1289, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1289_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1289_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1289_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x128A :   Client SDO 11 Parameter. */
@@ -245,12 +245,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj128A_COB_ID_Client_to_Server_Transmit_SDO = 0x60A;	/* 1546 */
                     UNS32 CANOpenShellSlaveOD_obj128A_COB_ID_Server_to_Client_Receive_SDO = 0x58A;	/* 1418 */
                     UNS8 CANOpenShellSlaveOD_obj128A_Node_ID_of_the_SDO_Server = 0xA;	/* 10 */
-                    subindex CANOpenShellSlaveOD_Index128A[] = 
+                    subindex CANOpenShellSlaveOD_Index128A[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128A, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128A_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128A_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128A_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128A, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128A_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128A_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128A_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x128B :   Client SDO 12 Parameter. */
@@ -258,12 +258,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj128B_COB_ID_Client_to_Server_Transmit_SDO = 0x60B;	/* 1547 */
                     UNS32 CANOpenShellSlaveOD_obj128B_COB_ID_Server_to_Client_Receive_SDO = 0x58B;	/* 1419 */
                     UNS8 CANOpenShellSlaveOD_obj128B_Node_ID_of_the_SDO_Server = 0xB;	/* 11 */
-                    subindex CANOpenShellSlaveOD_Index128B[] = 
+                    subindex CANOpenShellSlaveOD_Index128B[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128B, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128B_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128B_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128B_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128B, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128B_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128B_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128B_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x128C :   Client SDO 13 Parameter. */
@@ -271,12 +271,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj128C_COB_ID_Client_to_Server_Transmit_SDO = 0x60C;	/* 1548 */
                     UNS32 CANOpenShellSlaveOD_obj128C_COB_ID_Server_to_Client_Receive_SDO = 0x58C;	/* 1420 */
                     UNS8 CANOpenShellSlaveOD_obj128C_Node_ID_of_the_SDO_Server = 0xC;	/* 12 */
-                    subindex CANOpenShellSlaveOD_Index128C[] = 
+                    subindex CANOpenShellSlaveOD_Index128C[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128C, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128C_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128C_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128C_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128C, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128C_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128C_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128C_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x128D :   Client SDO 14 Parameter. */
@@ -284,12 +284,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj128D_COB_ID_Client_to_Server_Transmit_SDO = 0x60D;	/* 1549 */
                     UNS32 CANOpenShellSlaveOD_obj128D_COB_ID_Server_to_Client_Receive_SDO = 0x58D;	/* 1421 */
                     UNS8 CANOpenShellSlaveOD_obj128D_Node_ID_of_the_SDO_Server = 0xD;	/* 13 */
-                    subindex CANOpenShellSlaveOD_Index128D[] = 
+                    subindex CANOpenShellSlaveOD_Index128D[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128D, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128D_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128D_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128D_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128D, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128D_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128D_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128D_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x128E :   Client SDO 15 Parameter. */
@@ -297,12 +297,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj128E_COB_ID_Client_to_Server_Transmit_SDO = 0x60E;	/* 1550 */
                     UNS32 CANOpenShellSlaveOD_obj128E_COB_ID_Server_to_Client_Receive_SDO = 0x58E;	/* 1422 */
                     UNS8 CANOpenShellSlaveOD_obj128E_Node_ID_of_the_SDO_Server = 0xE;	/* 14 */
-                    subindex CANOpenShellSlaveOD_Index128E[] = 
+                    subindex CANOpenShellSlaveOD_Index128E[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128E, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128E_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128E_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128E_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128E, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128E_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128E_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128E_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x128F :   Client SDO 16 Parameter. */
@@ -310,12 +310,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj128F_COB_ID_Client_to_Server_Transmit_SDO = 0x60F;	/* 1551 */
                     UNS32 CANOpenShellSlaveOD_obj128F_COB_ID_Server_to_Client_Receive_SDO = 0x58F;	/* 1423 */
                     UNS8 CANOpenShellSlaveOD_obj128F_Node_ID_of_the_SDO_Server = 0xF;	/* 15 */
-                    subindex CANOpenShellSlaveOD_Index128F[] = 
+                    subindex CANOpenShellSlaveOD_Index128F[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128F, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128F_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128F_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128F_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj128F, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128F_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj128F_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj128F_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1290 :   Client SDO 17 Parameter. */
@@ -323,12 +323,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1290_COB_ID_Client_to_Server_Transmit_SDO = 0x610;	/* 1552 */
                     UNS32 CANOpenShellSlaveOD_obj1290_COB_ID_Server_to_Client_Receive_SDO = 0x590;	/* 1424 */
                     UNS8 CANOpenShellSlaveOD_obj1290_Node_ID_of_the_SDO_Server = 0x10;	/* 16 */
-                    subindex CANOpenShellSlaveOD_Index1290[] = 
+                    subindex CANOpenShellSlaveOD_Index1290[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1290, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1290_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1290_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1290_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1290, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1290_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1290_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1290_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1291 :   Client SDO 18 Parameter. */
@@ -336,12 +336,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1291_COB_ID_Client_to_Server_Transmit_SDO = 0x611;	/* 1553 */
                     UNS32 CANOpenShellSlaveOD_obj1291_COB_ID_Server_to_Client_Receive_SDO = 0x591;	/* 1425 */
                     UNS8 CANOpenShellSlaveOD_obj1291_Node_ID_of_the_SDO_Server = 0x11;	/* 17 */
-                    subindex CANOpenShellSlaveOD_Index1291[] = 
+                    subindex CANOpenShellSlaveOD_Index1291[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1291, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1291_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1291_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1291_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1291, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1291_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1291_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1291_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1292 :   Client SDO 19 Parameter. */
@@ -349,12 +349,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1292_COB_ID_Client_to_Server_Transmit_SDO = 0x612;	/* 1554 */
                     UNS32 CANOpenShellSlaveOD_obj1292_COB_ID_Server_to_Client_Receive_SDO = 0x592;	/* 1426 */
                     UNS8 CANOpenShellSlaveOD_obj1292_Node_ID_of_the_SDO_Server = 0x12;	/* 18 */
-                    subindex CANOpenShellSlaveOD_Index1292[] = 
+                    subindex CANOpenShellSlaveOD_Index1292[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1292, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1292_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1292_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1292_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1292, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1292_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1292_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1292_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1293 :   Client SDO 20 Parameter. */
@@ -362,12 +362,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1293_COB_ID_Client_to_Server_Transmit_SDO = 0x613;	/* 1555 */
                     UNS32 CANOpenShellSlaveOD_obj1293_COB_ID_Server_to_Client_Receive_SDO = 0x593;	/* 1427 */
                     UNS8 CANOpenShellSlaveOD_obj1293_Node_ID_of_the_SDO_Server = 0x13;	/* 19 */
-                    subindex CANOpenShellSlaveOD_Index1293[] = 
+                    subindex CANOpenShellSlaveOD_Index1293[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1293, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1293_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1293_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1293_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1293, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1293_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1293_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1293_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1294 :   Client SDO 21 Parameter. */
@@ -375,12 +375,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1294_COB_ID_Client_to_Server_Transmit_SDO = 0x614;	/* 1556 */
                     UNS32 CANOpenShellSlaveOD_obj1294_COB_ID_Server_to_Client_Receive_SDO = 0x594;	/* 1428 */
                     UNS8 CANOpenShellSlaveOD_obj1294_Node_ID_of_the_SDO_Server = 0x14;	/* 20 */
-                    subindex CANOpenShellSlaveOD_Index1294[] = 
+                    subindex CANOpenShellSlaveOD_Index1294[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1294, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1294_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1294_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1294_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1294, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1294_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1294_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1294_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1295 :   Client SDO 22 Parameter. */
@@ -388,12 +388,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1295_COB_ID_Client_to_Server_Transmit_SDO = 0x615;	/* 1557 */
                     UNS32 CANOpenShellSlaveOD_obj1295_COB_ID_Server_to_Client_Receive_SDO = 0x595;	/* 1429 */
                     UNS8 CANOpenShellSlaveOD_obj1295_Node_ID_of_the_SDO_Server = 0x15;	/* 21 */
-                    subindex CANOpenShellSlaveOD_Index1295[] = 
+                    subindex CANOpenShellSlaveOD_Index1295[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1295, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1295_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1295_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1295_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1295, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1295_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1295_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1295_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1296 :   Client SDO 23 Parameter. */
@@ -401,12 +401,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1296_COB_ID_Client_to_Server_Transmit_SDO = 0x616;	/* 1558 */
                     UNS32 CANOpenShellSlaveOD_obj1296_COB_ID_Server_to_Client_Receive_SDO = 0x596;	/* 1430 */
                     UNS8 CANOpenShellSlaveOD_obj1296_Node_ID_of_the_SDO_Server = 0x16;	/* 22 */
-                    subindex CANOpenShellSlaveOD_Index1296[] = 
+                    subindex CANOpenShellSlaveOD_Index1296[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1296, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1296_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1296_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1296_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1296, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1296_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1296_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1296_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1297 :   Client SDO 24 Parameter. */
@@ -414,12 +414,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1297_COB_ID_Client_to_Server_Transmit_SDO = 0x617;	/* 1559 */
                     UNS32 CANOpenShellSlaveOD_obj1297_COB_ID_Server_to_Client_Receive_SDO = 0x597;	/* 1431 */
                     UNS8 CANOpenShellSlaveOD_obj1297_Node_ID_of_the_SDO_Server = 0x17;	/* 23 */
-                    subindex CANOpenShellSlaveOD_Index1297[] = 
+                    subindex CANOpenShellSlaveOD_Index1297[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1297, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1297_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1297_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1297_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1297, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1297_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1297_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1297_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1298 :   Client SDO 25 Parameter. */
@@ -427,12 +427,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1298_COB_ID_Client_to_Server_Transmit_SDO = 0x618;	/* 1560 */
                     UNS32 CANOpenShellSlaveOD_obj1298_COB_ID_Server_to_Client_Receive_SDO = 0x598;	/* 1432 */
                     UNS8 CANOpenShellSlaveOD_obj1298_Node_ID_of_the_SDO_Server = 0x18;	/* 24 */
-                    subindex CANOpenShellSlaveOD_Index1298[] = 
+                    subindex CANOpenShellSlaveOD_Index1298[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1298, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1298_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1298_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1298_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1298, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1298_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1298_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1298_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1299 :   Client SDO 26 Parameter. */
@@ -440,12 +440,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj1299_COB_ID_Client_to_Server_Transmit_SDO = 0x619;	/* 1561 */
                     UNS32 CANOpenShellSlaveOD_obj1299_COB_ID_Server_to_Client_Receive_SDO = 0x599;	/* 1433 */
                     UNS8 CANOpenShellSlaveOD_obj1299_Node_ID_of_the_SDO_Server = 0x19;	/* 25 */
-                    subindex CANOpenShellSlaveOD_Index1299[] = 
+                    subindex CANOpenShellSlaveOD_Index1299[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1299, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1299_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1299_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1299_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj1299, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1299_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj1299_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj1299_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x129A :   Client SDO 27 Parameter. */
@@ -453,12 +453,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj129A_COB_ID_Client_to_Server_Transmit_SDO = 0x61A;	/* 1562 */
                     UNS32 CANOpenShellSlaveOD_obj129A_COB_ID_Server_to_Client_Receive_SDO = 0x59A;	/* 1434 */
                     UNS8 CANOpenShellSlaveOD_obj129A_Node_ID_of_the_SDO_Server = 0x1A;	/* 26 */
-                    subindex CANOpenShellSlaveOD_Index129A[] = 
+                    subindex CANOpenShellSlaveOD_Index129A[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129A, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129A_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129A_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129A_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129A, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129A_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129A_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129A_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x129B :   Client SDO 28 Parameter. */
@@ -466,12 +466,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj129B_COB_ID_Client_to_Server_Transmit_SDO = 0x61B;	/* 1563 */
                     UNS32 CANOpenShellSlaveOD_obj129B_COB_ID_Server_to_Client_Receive_SDO = 0x59B;	/* 1435 */
                     UNS8 CANOpenShellSlaveOD_obj129B_Node_ID_of_the_SDO_Server = 0x1B;	/* 27 */
-                    subindex CANOpenShellSlaveOD_Index129B[] = 
+                    subindex CANOpenShellSlaveOD_Index129B[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129B, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129B_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129B_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129B_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129B, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129B_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129B_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129B_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x129C :   Client SDO 29 Parameter. */
@@ -479,12 +479,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj129C_COB_ID_Client_to_Server_Transmit_SDO = 0x61C;	/* 1564 */
                     UNS32 CANOpenShellSlaveOD_obj129C_COB_ID_Server_to_Client_Receive_SDO = 0x59C;	/* 1436 */
                     UNS8 CANOpenShellSlaveOD_obj129C_Node_ID_of_the_SDO_Server = 0x1C;	/* 28 */
-                    subindex CANOpenShellSlaveOD_Index129C[] = 
+                    subindex CANOpenShellSlaveOD_Index129C[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129C, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129C_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129C_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129C_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129C, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129C_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129C_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129C_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x129D :   Client SDO 30 Parameter. */
@@ -492,12 +492,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj129D_COB_ID_Client_to_Server_Transmit_SDO = 0x61D;	/* 1565 */
                     UNS32 CANOpenShellSlaveOD_obj129D_COB_ID_Server_to_Client_Receive_SDO = 0x59D;	/* 1437 */
                     UNS8 CANOpenShellSlaveOD_obj129D_Node_ID_of_the_SDO_Server = 0x1D;	/* 29 */
-                    subindex CANOpenShellSlaveOD_Index129D[] = 
+                    subindex CANOpenShellSlaveOD_Index129D[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129D, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129D_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129D_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129D_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129D, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129D_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129D_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129D_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x129E :   Client SDO 31 Parameter. */
@@ -505,12 +505,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj129E_COB_ID_Client_to_Server_Transmit_SDO = 0x61E;	/* 1566 */
                     UNS32 CANOpenShellSlaveOD_obj129E_COB_ID_Server_to_Client_Receive_SDO = 0x59E;	/* 1438 */
                     UNS8 CANOpenShellSlaveOD_obj129E_Node_ID_of_the_SDO_Server = 0x1E;	/* 30 */
-                    subindex CANOpenShellSlaveOD_Index129E[] = 
+                    subindex CANOpenShellSlaveOD_Index129E[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129E, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129E_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129E_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129E_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129E, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129E_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129E_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129E_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x129F :   Client SDO 32 Parameter. */
@@ -518,12 +518,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj129F_COB_ID_Client_to_Server_Transmit_SDO = 0x61F;	/* 1567 */
                     UNS32 CANOpenShellSlaveOD_obj129F_COB_ID_Server_to_Client_Receive_SDO = 0x59F;	/* 1439 */
                     UNS8 CANOpenShellSlaveOD_obj129F_Node_ID_of_the_SDO_Server = 0x1F;	/* 31 */
-                    subindex CANOpenShellSlaveOD_Index129F[] = 
+                    subindex CANOpenShellSlaveOD_Index129F[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129F, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129F_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129F_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129F_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj129F, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129F_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj129F_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj129F_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12A0 :   Client SDO 33 Parameter. */
@@ -531,12 +531,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12A0_COB_ID_Client_to_Server_Transmit_SDO = 0x620;	/* 1568 */
                     UNS32 CANOpenShellSlaveOD_obj12A0_COB_ID_Server_to_Client_Receive_SDO = 0x5A0;	/* 1440 */
                     UNS8 CANOpenShellSlaveOD_obj12A0_Node_ID_of_the_SDO_Server = 0x20;	/* 32 */
-                    subindex CANOpenShellSlaveOD_Index12A0[] = 
+                    subindex CANOpenShellSlaveOD_Index12A0[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A0, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A0_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A0_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A0, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A0_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A0_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12A1 :   Client SDO 34 Parameter. */
@@ -544,12 +544,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12A1_COB_ID_Client_to_Server_Transmit_SDO = 0x621;	/* 1569 */
                     UNS32 CANOpenShellSlaveOD_obj12A1_COB_ID_Server_to_Client_Receive_SDO = 0x5A1;	/* 1441 */
                     UNS8 CANOpenShellSlaveOD_obj12A1_Node_ID_of_the_SDO_Server = 0x21;	/* 33 */
-                    subindex CANOpenShellSlaveOD_Index12A1[] = 
+                    subindex CANOpenShellSlaveOD_Index12A1[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A1, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A1_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A1_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A1, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A1_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A1_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12A2 :   Client SDO 35 Parameter. */
@@ -557,12 +557,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12A2_COB_ID_Client_to_Server_Transmit_SDO = 0x622;	/* 1570 */
                     UNS32 CANOpenShellSlaveOD_obj12A2_COB_ID_Server_to_Client_Receive_SDO = 0x5A2;	/* 1442 */
                     UNS8 CANOpenShellSlaveOD_obj12A2_Node_ID_of_the_SDO_Server = 0x22;	/* 34 */
-                    subindex CANOpenShellSlaveOD_Index12A2[] = 
+                    subindex CANOpenShellSlaveOD_Index12A2[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A2, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A2_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A2_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A2, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A2_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A2_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12A3 :   Client SDO 36 Parameter. */
@@ -570,12 +570,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12A3_COB_ID_Client_to_Server_Transmit_SDO = 0x623;	/* 1571 */
                     UNS32 CANOpenShellSlaveOD_obj12A3_COB_ID_Server_to_Client_Receive_SDO = 0x5A3;	/* 1443 */
                     UNS8 CANOpenShellSlaveOD_obj12A3_Node_ID_of_the_SDO_Server = 0x23;	/* 35 */
-                    subindex CANOpenShellSlaveOD_Index12A3[] = 
+                    subindex CANOpenShellSlaveOD_Index12A3[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A3, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A3_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A3_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A3, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A3_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A3_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12A4 :   Client SDO 37 Parameter. */
@@ -583,12 +583,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12A4_COB_ID_Client_to_Server_Transmit_SDO = 0x624;	/* 1572 */
                     UNS32 CANOpenShellSlaveOD_obj12A4_COB_ID_Server_to_Client_Receive_SDO = 0x5A4;	/* 1444 */
                     UNS8 CANOpenShellSlaveOD_obj12A4_Node_ID_of_the_SDO_Server = 0x24;	/* 36 */
-                    subindex CANOpenShellSlaveOD_Index12A4[] = 
+                    subindex CANOpenShellSlaveOD_Index12A4[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A4, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A4_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A4_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A4, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A4_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A4_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12A5 :   Client SDO 38 Parameter. */
@@ -596,12 +596,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12A5_COB_ID_Client_to_Server_Transmit_SDO = 0x625;	/* 1573 */
                     UNS32 CANOpenShellSlaveOD_obj12A5_COB_ID_Server_to_Client_Receive_SDO = 0x5A5;	/* 1445 */
                     UNS8 CANOpenShellSlaveOD_obj12A5_Node_ID_of_the_SDO_Server = 0x25;	/* 37 */
-                    subindex CANOpenShellSlaveOD_Index12A5[] = 
+                    subindex CANOpenShellSlaveOD_Index12A5[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A5, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A5_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A5_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A5, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A5_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A5_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12A6 :   Client SDO 39 Parameter. */
@@ -609,12 +609,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12A6_COB_ID_Client_to_Server_Transmit_SDO = 0x626;	/* 1574 */
                     UNS32 CANOpenShellSlaveOD_obj12A6_COB_ID_Server_to_Client_Receive_SDO = 0x5A6;	/* 1446 */
                     UNS8 CANOpenShellSlaveOD_obj12A6_Node_ID_of_the_SDO_Server = 0x26;	/* 38 */
-                    subindex CANOpenShellSlaveOD_Index12A6[] = 
+                    subindex CANOpenShellSlaveOD_Index12A6[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A6, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A6_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A6_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A6, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A6_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A6_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12A7 :   Client SDO 40 Parameter. */
@@ -622,12 +622,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12A7_COB_ID_Client_to_Server_Transmit_SDO = 0x627;	/* 1575 */
                     UNS32 CANOpenShellSlaveOD_obj12A7_COB_ID_Server_to_Client_Receive_SDO = 0x5A7;	/* 1447 */
                     UNS8 CANOpenShellSlaveOD_obj12A7_Node_ID_of_the_SDO_Server = 0x27;	/* 39 */
-                    subindex CANOpenShellSlaveOD_Index12A7[] = 
+                    subindex CANOpenShellSlaveOD_Index12A7[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A7, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A7_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A7_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A7, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A7_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A7_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12A8 :   Client SDO 41 Parameter. */
@@ -635,12 +635,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12A8_COB_ID_Client_to_Server_Transmit_SDO = 0x628;	/* 1576 */
                     UNS32 CANOpenShellSlaveOD_obj12A8_COB_ID_Server_to_Client_Receive_SDO = 0x5A8;	/* 1448 */
                     UNS8 CANOpenShellSlaveOD_obj12A8_Node_ID_of_the_SDO_Server = 0x28;	/* 40 */
-                    subindex CANOpenShellSlaveOD_Index12A8[] = 
+                    subindex CANOpenShellSlaveOD_Index12A8[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A8, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A8_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A8_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A8, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A8_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A8_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12A9 :   Client SDO 42 Parameter. */
@@ -648,12 +648,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12A9_COB_ID_Client_to_Server_Transmit_SDO = 0x629;	/* 1577 */
                     UNS32 CANOpenShellSlaveOD_obj12A9_COB_ID_Server_to_Client_Receive_SDO = 0x5A9;	/* 1449 */
                     UNS8 CANOpenShellSlaveOD_obj12A9_Node_ID_of_the_SDO_Server = 0x29;	/* 41 */
-                    subindex CANOpenShellSlaveOD_Index12A9[] = 
+                    subindex CANOpenShellSlaveOD_Index12A9[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A9, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A9_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A9_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12A9, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12A9_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12A9_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12AA :   Client SDO 43 Parameter. */
@@ -661,12 +661,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12AA_COB_ID_Client_to_Server_Transmit_SDO = 0x62A;	/* 1578 */
                     UNS32 CANOpenShellSlaveOD_obj12AA_COB_ID_Server_to_Client_Receive_SDO = 0x5AA;	/* 1450 */
                     UNS8 CANOpenShellSlaveOD_obj12AA_Node_ID_of_the_SDO_Server = 0x2A;	/* 42 */
-                    subindex CANOpenShellSlaveOD_Index12AA[] = 
+                    subindex CANOpenShellSlaveOD_Index12AA[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AA, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AA_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AA_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AA, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AA_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AA_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12AB :   Client SDO 44 Parameter. */
@@ -674,12 +674,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12AB_COB_ID_Client_to_Server_Transmit_SDO = 0x62B;	/* 1579 */
                     UNS32 CANOpenShellSlaveOD_obj12AB_COB_ID_Server_to_Client_Receive_SDO = 0x5AB;	/* 1451 */
                     UNS8 CANOpenShellSlaveOD_obj12AB_Node_ID_of_the_SDO_Server = 0x2B;	/* 43 */
-                    subindex CANOpenShellSlaveOD_Index12AB[] = 
+                    subindex CANOpenShellSlaveOD_Index12AB[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AB, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AB_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AB_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AB, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AB_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AB_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12AC :   Client SDO 45 Parameter. */
@@ -687,12 +687,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12AC_COB_ID_Client_to_Server_Transmit_SDO = 0x62C;	/* 1580 */
                     UNS32 CANOpenShellSlaveOD_obj12AC_COB_ID_Server_to_Client_Receive_SDO = 0x5AC;	/* 1452 */
                     UNS8 CANOpenShellSlaveOD_obj12AC_Node_ID_of_the_SDO_Server = 0x2C;	/* 44 */
-                    subindex CANOpenShellSlaveOD_Index12AC[] = 
+                    subindex CANOpenShellSlaveOD_Index12AC[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AC, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AC_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AC_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AC, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AC_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AC_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12AD :   Client SDO 46 Parameter. */
@@ -700,12 +700,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12AD_COB_ID_Client_to_Server_Transmit_SDO = 0x62D;	/* 1581 */
                     UNS32 CANOpenShellSlaveOD_obj12AD_COB_ID_Server_to_Client_Receive_SDO = 0x5AD;	/* 1453 */
                     UNS8 CANOpenShellSlaveOD_obj12AD_Node_ID_of_the_SDO_Server = 0x2D;	/* 45 */
-                    subindex CANOpenShellSlaveOD_Index12AD[] = 
+                    subindex CANOpenShellSlaveOD_Index12AD[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AD, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AD_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AD_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AD_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AD, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AD_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AD_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AD_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12AE :   Client SDO 47 Parameter. */
@@ -713,12 +713,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12AE_COB_ID_Client_to_Server_Transmit_SDO = 0x62E;	/* 1582 */
                     UNS32 CANOpenShellSlaveOD_obj12AE_COB_ID_Server_to_Client_Receive_SDO = 0x5AE;	/* 1454 */
                     UNS8 CANOpenShellSlaveOD_obj12AE_Node_ID_of_the_SDO_Server = 0x2E;	/* 46 */
-                    subindex CANOpenShellSlaveOD_Index12AE[] = 
+                    subindex CANOpenShellSlaveOD_Index12AE[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AE, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AE_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AE_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AE, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AE_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AE_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12AF :   Client SDO 48 Parameter. */
@@ -726,12 +726,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12AF_COB_ID_Client_to_Server_Transmit_SDO = 0x62F;	/* 1583 */
                     UNS32 CANOpenShellSlaveOD_obj12AF_COB_ID_Server_to_Client_Receive_SDO = 0x5AF;	/* 1455 */
                     UNS8 CANOpenShellSlaveOD_obj12AF_Node_ID_of_the_SDO_Server = 0x2F;	/* 47 */
-                    subindex CANOpenShellSlaveOD_Index12AF[] = 
+                    subindex CANOpenShellSlaveOD_Index12AF[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AF, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AF_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AF_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AF_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12AF, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AF_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12AF_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12AF_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12B0 :   Client SDO 49 Parameter. */
@@ -739,12 +739,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12B0_COB_ID_Client_to_Server_Transmit_SDO = 0x630;	/* 1584 */
                     UNS32 CANOpenShellSlaveOD_obj12B0_COB_ID_Server_to_Client_Receive_SDO = 0x5B0;	/* 1456 */
                     UNS8 CANOpenShellSlaveOD_obj12B0_Node_ID_of_the_SDO_Server = 0x30;	/* 48 */
-                    subindex CANOpenShellSlaveOD_Index12B0[] = 
+                    subindex CANOpenShellSlaveOD_Index12B0[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B0, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B0_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B0_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B0, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B0_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B0_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12B1 :   Client SDO 50 Parameter. */
@@ -752,12 +752,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12B1_COB_ID_Client_to_Server_Transmit_SDO = 0x631;	/* 1585 */
                     UNS32 CANOpenShellSlaveOD_obj12B1_COB_ID_Server_to_Client_Receive_SDO = 0x5B1;	/* 1457 */
                     UNS8 CANOpenShellSlaveOD_obj12B1_Node_ID_of_the_SDO_Server = 0x31;	/* 49 */
-                    subindex CANOpenShellSlaveOD_Index12B1[] = 
+                    subindex CANOpenShellSlaveOD_Index12B1[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B1, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B1_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B1_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B1, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B1_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B1_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12B2 :   Client SDO 51 Parameter. */
@@ -765,12 +765,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12B2_COB_ID_Client_to_Server_Transmit_SDO = 0x632;	/* 1586 */
                     UNS32 CANOpenShellSlaveOD_obj12B2_COB_ID_Server_to_Client_Receive_SDO = 0x5B2;	/* 1458 */
                     UNS8 CANOpenShellSlaveOD_obj12B2_Node_ID_of_the_SDO_Server = 0x32;	/* 50 */
-                    subindex CANOpenShellSlaveOD_Index12B2[] = 
+                    subindex CANOpenShellSlaveOD_Index12B2[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B2, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B2_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B2_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B2, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B2_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B2_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12B3 :   Client SDO 52 Parameter. */
@@ -778,12 +778,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12B3_COB_ID_Client_to_Server_Transmit_SDO = 0x633;	/* 1587 */
                     UNS32 CANOpenShellSlaveOD_obj12B3_COB_ID_Server_to_Client_Receive_SDO = 0x5B3;	/* 1459 */
                     UNS8 CANOpenShellSlaveOD_obj12B3_Node_ID_of_the_SDO_Server = 0x33;	/* 51 */
-                    subindex CANOpenShellSlaveOD_Index12B3[] = 
+                    subindex CANOpenShellSlaveOD_Index12B3[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B3, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B3_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B3_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B3, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B3_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B3_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12B4 :   Client SDO 53 Parameter. */
@@ -791,12 +791,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12B4_COB_ID_Client_to_Server_Transmit_SDO = 0x634;	/* 1588 */
                     UNS32 CANOpenShellSlaveOD_obj12B4_COB_ID_Server_to_Client_Receive_SDO = 0x5B4;	/* 1460 */
                     UNS8 CANOpenShellSlaveOD_obj12B4_Node_ID_of_the_SDO_Server = 0x34;	/* 52 */
-                    subindex CANOpenShellSlaveOD_Index12B4[] = 
+                    subindex CANOpenShellSlaveOD_Index12B4[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B4, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B4_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B4_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B4, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B4_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B4_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12B5 :   Client SDO 54 Parameter. */
@@ -804,12 +804,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12B5_COB_ID_Client_to_Server_Transmit_SDO = 0x635;	/* 1589 */
                     UNS32 CANOpenShellSlaveOD_obj12B5_COB_ID_Server_to_Client_Receive_SDO = 0x5B5;	/* 1461 */
                     UNS8 CANOpenShellSlaveOD_obj12B5_Node_ID_of_the_SDO_Server = 0x35;	/* 53 */
-                    subindex CANOpenShellSlaveOD_Index12B5[] = 
+                    subindex CANOpenShellSlaveOD_Index12B5[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B5, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B5_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B5_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B5, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B5_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B5_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12B6 :   Client SDO 55 Parameter. */
@@ -817,12 +817,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12B6_COB_ID_Client_to_Server_Transmit_SDO = 0x636;	/* 1590 */
                     UNS32 CANOpenShellSlaveOD_obj12B6_COB_ID_Server_to_Client_Receive_SDO = 0x5B6;	/* 1462 */
                     UNS8 CANOpenShellSlaveOD_obj12B6_Node_ID_of_the_SDO_Server = 0x36;	/* 54 */
-                    subindex CANOpenShellSlaveOD_Index12B6[] = 
+                    subindex CANOpenShellSlaveOD_Index12B6[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B6, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B6_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B6_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B6, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B6_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B6_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12B7 :   Client SDO 56 Parameter. */
@@ -830,12 +830,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12B7_COB_ID_Client_to_Server_Transmit_SDO = 0x637;	/* 1591 */
                     UNS32 CANOpenShellSlaveOD_obj12B7_COB_ID_Server_to_Client_Receive_SDO = 0x5B7;	/* 1463 */
                     UNS8 CANOpenShellSlaveOD_obj12B7_Node_ID_of_the_SDO_Server = 0x37;	/* 55 */
-                    subindex CANOpenShellSlaveOD_Index12B7[] = 
+                    subindex CANOpenShellSlaveOD_Index12B7[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B7, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B7_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B7_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B7, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B7_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B7_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12B8 :   Client SDO 57 Parameter. */
@@ -843,12 +843,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12B8_COB_ID_Client_to_Server_Transmit_SDO = 0x638;	/* 1592 */
                     UNS32 CANOpenShellSlaveOD_obj12B8_COB_ID_Server_to_Client_Receive_SDO = 0x5B8;	/* 1464 */
                     UNS8 CANOpenShellSlaveOD_obj12B8_Node_ID_of_the_SDO_Server = 0x38;	/* 56 */
-                    subindex CANOpenShellSlaveOD_Index12B8[] = 
+                    subindex CANOpenShellSlaveOD_Index12B8[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B8, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B8_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B8_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B8, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B8_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B8_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12B9 :   Client SDO 58 Parameter. */
@@ -856,12 +856,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12B9_COB_ID_Client_to_Server_Transmit_SDO = 0x639;	/* 1593 */
                     UNS32 CANOpenShellSlaveOD_obj12B9_COB_ID_Server_to_Client_Receive_SDO = 0x5B9;	/* 1465 */
                     UNS8 CANOpenShellSlaveOD_obj12B9_Node_ID_of_the_SDO_Server = 0x39;	/* 57 */
-                    subindex CANOpenShellSlaveOD_Index12B9[] = 
+                    subindex CANOpenShellSlaveOD_Index12B9[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B9, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B9_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B9_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12B9, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12B9_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12B9_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12BA :   Client SDO 59 Parameter. */
@@ -869,12 +869,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12BA_COB_ID_Client_to_Server_Transmit_SDO = 0x63A;	/* 1594 */
                     UNS32 CANOpenShellSlaveOD_obj12BA_COB_ID_Server_to_Client_Receive_SDO = 0x5BA;	/* 1466 */
                     UNS8 CANOpenShellSlaveOD_obj12BA_Node_ID_of_the_SDO_Server = 0x3A;	/* 58 */
-                    subindex CANOpenShellSlaveOD_Index12BA[] = 
+                    subindex CANOpenShellSlaveOD_Index12BA[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BA, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BA_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BA_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BA, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BA_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BA_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12BB :   Client SDO 60 Parameter. */
@@ -882,12 +882,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12BB_COB_ID_Client_to_Server_Transmit_SDO = 0x63B;	/* 1595 */
                     UNS32 CANOpenShellSlaveOD_obj12BB_COB_ID_Server_to_Client_Receive_SDO = 0x5BB;	/* 1467 */
                     UNS8 CANOpenShellSlaveOD_obj12BB_Node_ID_of_the_SDO_Server = 0x3B;	/* 59 */
-                    subindex CANOpenShellSlaveOD_Index12BB[] = 
+                    subindex CANOpenShellSlaveOD_Index12BB[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BB, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BB_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BB_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BB, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BB_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BB_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12BC :   Client SDO 61 Parameter. */
@@ -895,12 +895,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12BC_COB_ID_Client_to_Server_Transmit_SDO = 0x63C;	/* 1596 */
                     UNS32 CANOpenShellSlaveOD_obj12BC_COB_ID_Server_to_Client_Receive_SDO = 0x5BC;	/* 1468 */
                     UNS8 CANOpenShellSlaveOD_obj12BC_Node_ID_of_the_SDO_Server = 0x3C;	/* 60 */
-                    subindex CANOpenShellSlaveOD_Index12BC[] = 
+                    subindex CANOpenShellSlaveOD_Index12BC[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BC, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BC_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BC_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BC, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BC_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BC_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12BD :   Client SDO 62 Parameter. */
@@ -908,12 +908,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12BD_COB_ID_Client_to_Server_Transmit_SDO = 0x63D;	/* 1597 */
                     UNS32 CANOpenShellSlaveOD_obj12BD_COB_ID_Server_to_Client_Receive_SDO = 0x5BD;	/* 1469 */
                     UNS8 CANOpenShellSlaveOD_obj12BD_Node_ID_of_the_SDO_Server = 0x3D;	/* 61 */
-                    subindex CANOpenShellSlaveOD_Index12BD[] = 
+                    subindex CANOpenShellSlaveOD_Index12BD[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BD, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BD_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BD_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BD_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BD, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BD_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BD_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BD_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12BE :   Client SDO 63 Parameter. */
@@ -921,12 +921,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12BE_COB_ID_Client_to_Server_Transmit_SDO = 0x63E;	/* 1598 */
                     UNS32 CANOpenShellSlaveOD_obj12BE_COB_ID_Server_to_Client_Receive_SDO = 0x5BE;	/* 1470 */
                     UNS8 CANOpenShellSlaveOD_obj12BE_Node_ID_of_the_SDO_Server = 0x3E;	/* 62 */
-                    subindex CANOpenShellSlaveOD_Index12BE[] = 
+                    subindex CANOpenShellSlaveOD_Index12BE[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BE, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BE_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BE_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BE, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BE_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BE_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12BF :   Client SDO 64 Parameter. */
@@ -934,12 +934,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12BF_COB_ID_Client_to_Server_Transmit_SDO = 0x63F;	/* 1599 */
                     UNS32 CANOpenShellSlaveOD_obj12BF_COB_ID_Server_to_Client_Receive_SDO = 0x5BF;	/* 1471 */
                     UNS8 CANOpenShellSlaveOD_obj12BF_Node_ID_of_the_SDO_Server = 0x3F;	/* 63 */
-                    subindex CANOpenShellSlaveOD_Index12BF[] = 
+                    subindex CANOpenShellSlaveOD_Index12BF[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BF, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BF_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BF_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BF_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12BF, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BF_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12BF_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12BF_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12C0 :   Client SDO 65 Parameter. */
@@ -947,12 +947,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12C0_COB_ID_Client_to_Server_Transmit_SDO = 0x640;	/* 1600 */
                     UNS32 CANOpenShellSlaveOD_obj12C0_COB_ID_Server_to_Client_Receive_SDO = 0x5C0;	/* 1472 */
                     UNS8 CANOpenShellSlaveOD_obj12C0_Node_ID_of_the_SDO_Server = 0x40;	/* 64 */
-                    subindex CANOpenShellSlaveOD_Index12C0[] = 
+                    subindex CANOpenShellSlaveOD_Index12C0[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C0, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C0_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C0_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C0, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C0_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C0_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12C1 :   Client SDO 66 Parameter. */
@@ -960,12 +960,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12C1_COB_ID_Client_to_Server_Transmit_SDO = 0x641;	/* 1601 */
                     UNS32 CANOpenShellSlaveOD_obj12C1_COB_ID_Server_to_Client_Receive_SDO = 0x5C1;	/* 1473 */
                     UNS8 CANOpenShellSlaveOD_obj12C1_Node_ID_of_the_SDO_Server = 0x41;	/* 65 */
-                    subindex CANOpenShellSlaveOD_Index12C1[] = 
+                    subindex CANOpenShellSlaveOD_Index12C1[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C1, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C1_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C1_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C1, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C1_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C1_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12C2 :   Client SDO 67 Parameter. */
@@ -973,12 +973,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12C2_COB_ID_Client_to_Server_Transmit_SDO = 0x642;	/* 1602 */
                     UNS32 CANOpenShellSlaveOD_obj12C2_COB_ID_Server_to_Client_Receive_SDO = 0x5C2;	/* 1474 */
                     UNS8 CANOpenShellSlaveOD_obj12C2_Node_ID_of_the_SDO_Server = 0x42;	/* 66 */
-                    subindex CANOpenShellSlaveOD_Index12C2[] = 
+                    subindex CANOpenShellSlaveOD_Index12C2[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C2, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C2_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C2_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C2, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C2_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C2_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12C3 :   Client SDO 68 Parameter. */
@@ -986,12 +986,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12C3_COB_ID_Client_to_Server_Transmit_SDO = 0x643;	/* 1603 */
                     UNS32 CANOpenShellSlaveOD_obj12C3_COB_ID_Server_to_Client_Receive_SDO = 0x5C3;	/* 1475 */
                     UNS8 CANOpenShellSlaveOD_obj12C3_Node_ID_of_the_SDO_Server = 0x43;	/* 67 */
-                    subindex CANOpenShellSlaveOD_Index12C3[] = 
+                    subindex CANOpenShellSlaveOD_Index12C3[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C3, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C3_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C3_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C3, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C3_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C3_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12C4 :   Client SDO 69 Parameter. */
@@ -999,12 +999,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12C4_COB_ID_Client_to_Server_Transmit_SDO = 0x644;	/* 1604 */
                     UNS32 CANOpenShellSlaveOD_obj12C4_COB_ID_Server_to_Client_Receive_SDO = 0x5C4;	/* 1476 */
                     UNS8 CANOpenShellSlaveOD_obj12C4_Node_ID_of_the_SDO_Server = 0x44;	/* 68 */
-                    subindex CANOpenShellSlaveOD_Index12C4[] = 
+                    subindex CANOpenShellSlaveOD_Index12C4[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C4, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C4_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C4_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C4, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C4_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C4_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12C5 :   Client SDO 70 Parameter. */
@@ -1012,12 +1012,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12C5_COB_ID_Client_to_Server_Transmit_SDO = 0x645;	/* 1605 */
                     UNS32 CANOpenShellSlaveOD_obj12C5_COB_ID_Server_to_Client_Receive_SDO = 0x5C5;	/* 1477 */
                     UNS8 CANOpenShellSlaveOD_obj12C5_Node_ID_of_the_SDO_Server = 0x45;	/* 69 */
-                    subindex CANOpenShellSlaveOD_Index12C5[] = 
+                    subindex CANOpenShellSlaveOD_Index12C5[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C5, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C5_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C5_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C5, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C5_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C5_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12C6 :   Client SDO 71 Parameter. */
@@ -1025,12 +1025,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12C6_COB_ID_Client_to_Server_Transmit_SDO = 0x646;	/* 1606 */
                     UNS32 CANOpenShellSlaveOD_obj12C6_COB_ID_Server_to_Client_Receive_SDO = 0x5C6;	/* 1478 */
                     UNS8 CANOpenShellSlaveOD_obj12C6_Node_ID_of_the_SDO_Server = 0x46;	/* 70 */
-                    subindex CANOpenShellSlaveOD_Index12C6[] = 
+                    subindex CANOpenShellSlaveOD_Index12C6[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C6, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C6_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C6_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C6, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C6_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C6_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12C7 :   Client SDO 72 Parameter. */
@@ -1038,12 +1038,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12C7_COB_ID_Client_to_Server_Transmit_SDO = 0x647;	/* 1607 */
                     UNS32 CANOpenShellSlaveOD_obj12C7_COB_ID_Server_to_Client_Receive_SDO = 0x5C7;	/* 1479 */
                     UNS8 CANOpenShellSlaveOD_obj12C7_Node_ID_of_the_SDO_Server = 0x47;	/* 71 */
-                    subindex CANOpenShellSlaveOD_Index12C7[] = 
+                    subindex CANOpenShellSlaveOD_Index12C7[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C7, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C7_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C7_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C7, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C7_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C7_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12C8 :   Client SDO 73 Parameter. */
@@ -1051,12 +1051,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12C8_COB_ID_Client_to_Server_Transmit_SDO = 0x648;	/* 1608 */
                     UNS32 CANOpenShellSlaveOD_obj12C8_COB_ID_Server_to_Client_Receive_SDO = 0x5C8;	/* 1480 */
                     UNS8 CANOpenShellSlaveOD_obj12C8_Node_ID_of_the_SDO_Server = 0x48;	/* 72 */
-                    subindex CANOpenShellSlaveOD_Index12C8[] = 
+                    subindex CANOpenShellSlaveOD_Index12C8[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C8, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C8_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C8_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C8, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C8_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C8_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12C9 :   Client SDO 74 Parameter. */
@@ -1064,12 +1064,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12C9_COB_ID_Client_to_Server_Transmit_SDO = 0x649;	/* 1609 */
                     UNS32 CANOpenShellSlaveOD_obj12C9_COB_ID_Server_to_Client_Receive_SDO = 0x5C9;	/* 1481 */
                     UNS8 CANOpenShellSlaveOD_obj12C9_Node_ID_of_the_SDO_Server = 0x49;	/* 73 */
-                    subindex CANOpenShellSlaveOD_Index12C9[] = 
+                    subindex CANOpenShellSlaveOD_Index12C9[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C9, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C9_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C9_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12C9, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12C9_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12C9_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12CA :   Client SDO 75 Parameter. */
@@ -1077,12 +1077,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12CA_COB_ID_Client_to_Server_Transmit_SDO = 0x64A;	/* 1610 */
                     UNS32 CANOpenShellSlaveOD_obj12CA_COB_ID_Server_to_Client_Receive_SDO = 0x5CA;	/* 1482 */
                     UNS8 CANOpenShellSlaveOD_obj12CA_Node_ID_of_the_SDO_Server = 0x4A;	/* 74 */
-                    subindex CANOpenShellSlaveOD_Index12CA[] = 
+                    subindex CANOpenShellSlaveOD_Index12CA[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CA, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CA_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CA_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CA, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CA_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CA_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12CB :   Client SDO 76 Parameter. */
@@ -1090,12 +1090,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12CB_COB_ID_Client_to_Server_Transmit_SDO = 0x64B;	/* 1611 */
                     UNS32 CANOpenShellSlaveOD_obj12CB_COB_ID_Server_to_Client_Receive_SDO = 0x5CB;	/* 1483 */
                     UNS8 CANOpenShellSlaveOD_obj12CB_Node_ID_of_the_SDO_Server = 0x4B;	/* 75 */
-                    subindex CANOpenShellSlaveOD_Index12CB[] = 
+                    subindex CANOpenShellSlaveOD_Index12CB[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CB, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CB_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CB_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CB, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CB_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CB_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12CC :   Client SDO 77 Parameter. */
@@ -1103,12 +1103,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12CC_COB_ID_Client_to_Server_Transmit_SDO = 0x64C;	/* 1612 */
                     UNS32 CANOpenShellSlaveOD_obj12CC_COB_ID_Server_to_Client_Receive_SDO = 0x5CC;	/* 1484 */
                     UNS8 CANOpenShellSlaveOD_obj12CC_Node_ID_of_the_SDO_Server = 0x4C;	/* 76 */
-                    subindex CANOpenShellSlaveOD_Index12CC[] = 
+                    subindex CANOpenShellSlaveOD_Index12CC[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CC, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CC_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CC_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CC, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CC_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CC_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12CD :   Client SDO 78 Parameter. */
@@ -1116,12 +1116,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12CD_COB_ID_Client_to_Server_Transmit_SDO = 0x64D;	/* 1613 */
                     UNS32 CANOpenShellSlaveOD_obj12CD_COB_ID_Server_to_Client_Receive_SDO = 0x5CD;	/* 1485 */
                     UNS8 CANOpenShellSlaveOD_obj12CD_Node_ID_of_the_SDO_Server = 0x4D;	/* 77 */
-                    subindex CANOpenShellSlaveOD_Index12CD[] = 
+                    subindex CANOpenShellSlaveOD_Index12CD[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CD, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CD_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CD_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CD_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CD, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CD_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CD_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CD_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12CE :   Client SDO 79 Parameter. */
@@ -1129,12 +1129,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12CE_COB_ID_Client_to_Server_Transmit_SDO = 0x64E;	/* 1614 */
                     UNS32 CANOpenShellSlaveOD_obj12CE_COB_ID_Server_to_Client_Receive_SDO = 0x5CE;	/* 1486 */
                     UNS8 CANOpenShellSlaveOD_obj12CE_Node_ID_of_the_SDO_Server = 0x4E;	/* 78 */
-                    subindex CANOpenShellSlaveOD_Index12CE[] = 
+                    subindex CANOpenShellSlaveOD_Index12CE[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CE, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CE_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CE_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CE, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CE_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CE_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12CF :   Client SDO 80 Parameter. */
@@ -1142,12 +1142,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12CF_COB_ID_Client_to_Server_Transmit_SDO = 0x64F;	/* 1615 */
                     UNS32 CANOpenShellSlaveOD_obj12CF_COB_ID_Server_to_Client_Receive_SDO = 0x5CF;	/* 1487 */
                     UNS8 CANOpenShellSlaveOD_obj12CF_Node_ID_of_the_SDO_Server = 0x4F;	/* 79 */
-                    subindex CANOpenShellSlaveOD_Index12CF[] = 
+                    subindex CANOpenShellSlaveOD_Index12CF[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CF, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CF_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CF_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CF_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12CF, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CF_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12CF_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12CF_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12D0 :   Client SDO 81 Parameter. */
@@ -1155,12 +1155,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12D0_COB_ID_Client_to_Server_Transmit_SDO = 0x650;	/* 1616 */
                     UNS32 CANOpenShellSlaveOD_obj12D0_COB_ID_Server_to_Client_Receive_SDO = 0x5D0;	/* 1488 */
                     UNS8 CANOpenShellSlaveOD_obj12D0_Node_ID_of_the_SDO_Server = 0x50;	/* 80 */
-                    subindex CANOpenShellSlaveOD_Index12D0[] = 
+                    subindex CANOpenShellSlaveOD_Index12D0[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D0, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D0_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D0_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D0, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D0_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D0_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12D1 :   Client SDO 82 Parameter. */
@@ -1168,12 +1168,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12D1_COB_ID_Client_to_Server_Transmit_SDO = 0x651;	/* 1617 */
                     UNS32 CANOpenShellSlaveOD_obj12D1_COB_ID_Server_to_Client_Receive_SDO = 0x5D1;	/* 1489 */
                     UNS8 CANOpenShellSlaveOD_obj12D1_Node_ID_of_the_SDO_Server = 0x51;	/* 81 */
-                    subindex CANOpenShellSlaveOD_Index12D1[] = 
+                    subindex CANOpenShellSlaveOD_Index12D1[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D1, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D1_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D1_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D1, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D1_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D1_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12D2 :   Client SDO 83 Parameter. */
@@ -1181,12 +1181,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12D2_COB_ID_Client_to_Server_Transmit_SDO = 0x652;	/* 1618 */
                     UNS32 CANOpenShellSlaveOD_obj12D2_COB_ID_Server_to_Client_Receive_SDO = 0x5D2;	/* 1490 */
                     UNS8 CANOpenShellSlaveOD_obj12D2_Node_ID_of_the_SDO_Server = 0x52;	/* 82 */
-                    subindex CANOpenShellSlaveOD_Index12D2[] = 
+                    subindex CANOpenShellSlaveOD_Index12D2[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D2, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D2_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D2_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D2, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D2_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D2_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12D3 :   Client SDO 84 Parameter. */
@@ -1194,12 +1194,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12D3_COB_ID_Client_to_Server_Transmit_SDO = 0x653;	/* 1619 */
                     UNS32 CANOpenShellSlaveOD_obj12D3_COB_ID_Server_to_Client_Receive_SDO = 0x5D3;	/* 1491 */
                     UNS8 CANOpenShellSlaveOD_obj12D3_Node_ID_of_the_SDO_Server = 0x53;	/* 83 */
-                    subindex CANOpenShellSlaveOD_Index12D3[] = 
+                    subindex CANOpenShellSlaveOD_Index12D3[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D3, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D3_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D3_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D3, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D3_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D3_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12D4 :   Client SDO 85 Parameter. */
@@ -1207,12 +1207,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12D4_COB_ID_Client_to_Server_Transmit_SDO = 0x654;	/* 1620 */
                     UNS32 CANOpenShellSlaveOD_obj12D4_COB_ID_Server_to_Client_Receive_SDO = 0x5D4;	/* 1492 */
                     UNS8 CANOpenShellSlaveOD_obj12D4_Node_ID_of_the_SDO_Server = 0x54;	/* 84 */
-                    subindex CANOpenShellSlaveOD_Index12D4[] = 
+                    subindex CANOpenShellSlaveOD_Index12D4[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D4, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D4_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D4_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D4, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D4_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D4_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12D5 :   Client SDO 86 Parameter. */
@@ -1220,12 +1220,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12D5_COB_ID_Client_to_Server_Transmit_SDO = 0x655;	/* 1621 */
                     UNS32 CANOpenShellSlaveOD_obj12D5_COB_ID_Server_to_Client_Receive_SDO = 0x5D5;	/* 1493 */
                     UNS8 CANOpenShellSlaveOD_obj12D5_Node_ID_of_the_SDO_Server = 0x55;	/* 85 */
-                    subindex CANOpenShellSlaveOD_Index12D5[] = 
+                    subindex CANOpenShellSlaveOD_Index12D5[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D5, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D5_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D5_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D5, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D5_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D5_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12D6 :   Client SDO 87 Parameter. */
@@ -1233,12 +1233,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12D6_COB_ID_Client_to_Server_Transmit_SDO = 0x656;	/* 1622 */
                     UNS32 CANOpenShellSlaveOD_obj12D6_COB_ID_Server_to_Client_Receive_SDO = 0x5D6;	/* 1494 */
                     UNS8 CANOpenShellSlaveOD_obj12D6_Node_ID_of_the_SDO_Server = 0x56;	/* 86 */
-                    subindex CANOpenShellSlaveOD_Index12D6[] = 
+                    subindex CANOpenShellSlaveOD_Index12D6[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D6, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D6_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D6_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D6, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D6_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D6_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12D7 :   Client SDO 88 Parameter. */
@@ -1246,12 +1246,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12D7_COB_ID_Client_to_Server_Transmit_SDO = 0x657;	/* 1623 */
                     UNS32 CANOpenShellSlaveOD_obj12D7_COB_ID_Server_to_Client_Receive_SDO = 0x5D7;	/* 1495 */
                     UNS8 CANOpenShellSlaveOD_obj12D7_Node_ID_of_the_SDO_Server = 0x57;	/* 87 */
-                    subindex CANOpenShellSlaveOD_Index12D7[] = 
+                    subindex CANOpenShellSlaveOD_Index12D7[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D7, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D7_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D7_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D7, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D7_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D7_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12D8 :   Client SDO 89 Parameter. */
@@ -1259,12 +1259,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12D8_COB_ID_Client_to_Server_Transmit_SDO = 0x658;	/* 1624 */
                     UNS32 CANOpenShellSlaveOD_obj12D8_COB_ID_Server_to_Client_Receive_SDO = 0x5D8;	/* 1496 */
                     UNS8 CANOpenShellSlaveOD_obj12D8_Node_ID_of_the_SDO_Server = 0x58;	/* 88 */
-                    subindex CANOpenShellSlaveOD_Index12D8[] = 
+                    subindex CANOpenShellSlaveOD_Index12D8[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D8, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D8_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D8_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D8, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D8_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D8_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12D9 :   Client SDO 90 Parameter. */
@@ -1272,12 +1272,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12D9_COB_ID_Client_to_Server_Transmit_SDO = 0x659;	/* 1625 */
                     UNS32 CANOpenShellSlaveOD_obj12D9_COB_ID_Server_to_Client_Receive_SDO = 0x5D9;	/* 1497 */
                     UNS8 CANOpenShellSlaveOD_obj12D9_Node_ID_of_the_SDO_Server = 0x59;	/* 89 */
-                    subindex CANOpenShellSlaveOD_Index12D9[] = 
+                    subindex CANOpenShellSlaveOD_Index12D9[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D9, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D9_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D9_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12D9, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12D9_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12D9_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12DA :   Client SDO 91 Parameter. */
@@ -1285,12 +1285,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12DA_COB_ID_Client_to_Server_Transmit_SDO = 0x65A;	/* 1626 */
                     UNS32 CANOpenShellSlaveOD_obj12DA_COB_ID_Server_to_Client_Receive_SDO = 0x5DA;	/* 1498 */
                     UNS8 CANOpenShellSlaveOD_obj12DA_Node_ID_of_the_SDO_Server = 0x5A;	/* 90 */
-                    subindex CANOpenShellSlaveOD_Index12DA[] = 
+                    subindex CANOpenShellSlaveOD_Index12DA[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DA, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DA_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DA_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DA, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DA_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DA_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12DB :   Client SDO 92 Parameter. */
@@ -1298,12 +1298,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12DB_COB_ID_Client_to_Server_Transmit_SDO = 0x65B;	/* 1627 */
                     UNS32 CANOpenShellSlaveOD_obj12DB_COB_ID_Server_to_Client_Receive_SDO = 0x5DB;	/* 1499 */
                     UNS8 CANOpenShellSlaveOD_obj12DB_Node_ID_of_the_SDO_Server = 0x5B;	/* 91 */
-                    subindex CANOpenShellSlaveOD_Index12DB[] = 
+                    subindex CANOpenShellSlaveOD_Index12DB[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DB, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DB_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DB_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DB, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DB_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DB_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12DC :   Client SDO 93 Parameter. */
@@ -1311,12 +1311,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12DC_COB_ID_Client_to_Server_Transmit_SDO = 0x65C;	/* 1628 */
                     UNS32 CANOpenShellSlaveOD_obj12DC_COB_ID_Server_to_Client_Receive_SDO = 0x5DC;	/* 1500 */
                     UNS8 CANOpenShellSlaveOD_obj12DC_Node_ID_of_the_SDO_Server = 0x5C;	/* 92 */
-                    subindex CANOpenShellSlaveOD_Index12DC[] = 
+                    subindex CANOpenShellSlaveOD_Index12DC[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DC, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DC_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DC_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DC, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DC_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DC_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12DD :   Client SDO 94 Parameter. */
@@ -1324,12 +1324,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12DD_COB_ID_Client_to_Server_Transmit_SDO = 0x65D;	/* 1629 */
                     UNS32 CANOpenShellSlaveOD_obj12DD_COB_ID_Server_to_Client_Receive_SDO = 0x5DD;	/* 1501 */
                     UNS8 CANOpenShellSlaveOD_obj12DD_Node_ID_of_the_SDO_Server = 0x5D;	/* 93 */
-                    subindex CANOpenShellSlaveOD_Index12DD[] = 
+                    subindex CANOpenShellSlaveOD_Index12DD[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DD, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DD_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DD_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DD_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DD, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DD_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DD_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DD_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12DE :   Client SDO 95 Parameter. */
@@ -1337,12 +1337,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12DE_COB_ID_Client_to_Server_Transmit_SDO = 0x65E;	/* 1630 */
                     UNS32 CANOpenShellSlaveOD_obj12DE_COB_ID_Server_to_Client_Receive_SDO = 0x5DE;	/* 1502 */
                     UNS8 CANOpenShellSlaveOD_obj12DE_Node_ID_of_the_SDO_Server = 0x5E;	/* 94 */
-                    subindex CANOpenShellSlaveOD_Index12DE[] = 
+                    subindex CANOpenShellSlaveOD_Index12DE[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DE, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DE_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DE_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DE, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DE_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DE_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12DF :   Client SDO 96 Parameter. */
@@ -1350,12 +1350,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12DF_COB_ID_Client_to_Server_Transmit_SDO = 0x65F;	/* 1631 */
                     UNS32 CANOpenShellSlaveOD_obj12DF_COB_ID_Server_to_Client_Receive_SDO = 0x5DF;	/* 1503 */
                     UNS8 CANOpenShellSlaveOD_obj12DF_Node_ID_of_the_SDO_Server = 0x5F;	/* 95 */
-                    subindex CANOpenShellSlaveOD_Index12DF[] = 
+                    subindex CANOpenShellSlaveOD_Index12DF[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DF, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DF_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DF_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DF_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12DF, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DF_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12DF_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12DF_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12E0 :   Client SDO 97 Parameter. */
@@ -1363,12 +1363,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12E0_COB_ID_Client_to_Server_Transmit_SDO = 0x660;	/* 1632 */
                     UNS32 CANOpenShellSlaveOD_obj12E0_COB_ID_Server_to_Client_Receive_SDO = 0x5E0;	/* 1504 */
                     UNS8 CANOpenShellSlaveOD_obj12E0_Node_ID_of_the_SDO_Server = 0x60;	/* 96 */
-                    subindex CANOpenShellSlaveOD_Index12E0[] = 
+                    subindex CANOpenShellSlaveOD_Index12E0[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E0, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E0_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E0_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E0, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E0_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E0_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12E1 :   Client SDO 98 Parameter. */
@@ -1376,12 +1376,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12E1_COB_ID_Client_to_Server_Transmit_SDO = 0x661;	/* 1633 */
                     UNS32 CANOpenShellSlaveOD_obj12E1_COB_ID_Server_to_Client_Receive_SDO = 0x5E1;	/* 1505 */
                     UNS8 CANOpenShellSlaveOD_obj12E1_Node_ID_of_the_SDO_Server = 0x61;	/* 97 */
-                    subindex CANOpenShellSlaveOD_Index12E1[] = 
+                    subindex CANOpenShellSlaveOD_Index12E1[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E1, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E1_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E1_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E1, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E1_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E1_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12E2 :   Client SDO 99 Parameter. */
@@ -1389,12 +1389,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12E2_COB_ID_Client_to_Server_Transmit_SDO = 0x662;	/* 1634 */
                     UNS32 CANOpenShellSlaveOD_obj12E2_COB_ID_Server_to_Client_Receive_SDO = 0x5E2;	/* 1506 */
                     UNS8 CANOpenShellSlaveOD_obj12E2_Node_ID_of_the_SDO_Server = 0x62;	/* 98 */
-                    subindex CANOpenShellSlaveOD_Index12E2[] = 
+                    subindex CANOpenShellSlaveOD_Index12E2[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E2, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E2_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E2_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E2, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E2_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E2_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12E3 :   Client SDO 100 Parameter. */
@@ -1402,12 +1402,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12E3_COB_ID_Client_to_Server_Transmit_SDO = 0x663;	/* 1635 */
                     UNS32 CANOpenShellSlaveOD_obj12E3_COB_ID_Server_to_Client_Receive_SDO = 0x5E3;	/* 1507 */
                     UNS8 CANOpenShellSlaveOD_obj12E3_Node_ID_of_the_SDO_Server = 0x63;	/* 99 */
-                    subindex CANOpenShellSlaveOD_Index12E3[] = 
+                    subindex CANOpenShellSlaveOD_Index12E3[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E3, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E3_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E3_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E3, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E3_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E3_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12E4 :   Client SDO 101 Parameter. */
@@ -1415,12 +1415,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12E4_COB_ID_Client_to_Server_Transmit_SDO = 0x664;	/* 1636 */
                     UNS32 CANOpenShellSlaveOD_obj12E4_COB_ID_Server_to_Client_Receive_SDO = 0x5E4;	/* 1508 */
                     UNS8 CANOpenShellSlaveOD_obj12E4_Node_ID_of_the_SDO_Server = 0x64;	/* 100 */
-                    subindex CANOpenShellSlaveOD_Index12E4[] = 
+                    subindex CANOpenShellSlaveOD_Index12E4[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E4, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E4_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E4_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E4, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E4_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E4_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12E5 :   Client SDO 102 Parameter. */
@@ -1428,12 +1428,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12E5_COB_ID_Client_to_Server_Transmit_SDO = 0x665;	/* 1637 */
                     UNS32 CANOpenShellSlaveOD_obj12E5_COB_ID_Server_to_Client_Receive_SDO = 0x5E5;	/* 1509 */
                     UNS8 CANOpenShellSlaveOD_obj12E5_Node_ID_of_the_SDO_Server = 0x65;	/* 101 */
-                    subindex CANOpenShellSlaveOD_Index12E5[] = 
+                    subindex CANOpenShellSlaveOD_Index12E5[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E5, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E5_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E5_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E5, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E5_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E5_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12E6 :   Client SDO 103 Parameter. */
@@ -1441,12 +1441,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12E6_COB_ID_Client_to_Server_Transmit_SDO = 0x666;	/* 1638 */
                     UNS32 CANOpenShellSlaveOD_obj12E6_COB_ID_Server_to_Client_Receive_SDO = 0x5E6;	/* 1510 */
                     UNS8 CANOpenShellSlaveOD_obj12E6_Node_ID_of_the_SDO_Server = 0x66;	/* 102 */
-                    subindex CANOpenShellSlaveOD_Index12E6[] = 
+                    subindex CANOpenShellSlaveOD_Index12E6[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E6, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E6_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E6_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E6, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E6_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E6_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12E7 :   Client SDO 104 Parameter. */
@@ -1454,12 +1454,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12E7_COB_ID_Client_to_Server_Transmit_SDO = 0x667;	/* 1639 */
                     UNS32 CANOpenShellSlaveOD_obj12E7_COB_ID_Server_to_Client_Receive_SDO = 0x5E7;	/* 1511 */
                     UNS8 CANOpenShellSlaveOD_obj12E7_Node_ID_of_the_SDO_Server = 0x67;	/* 103 */
-                    subindex CANOpenShellSlaveOD_Index12E7[] = 
+                    subindex CANOpenShellSlaveOD_Index12E7[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E7, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E7_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E7_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E7, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E7_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E7_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12E8 :   Client SDO 105 Parameter. */
@@ -1467,12 +1467,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12E8_COB_ID_Client_to_Server_Transmit_SDO = 0x668;	/* 1640 */
                     UNS32 CANOpenShellSlaveOD_obj12E8_COB_ID_Server_to_Client_Receive_SDO = 0x5E8;	/* 1512 */
                     UNS8 CANOpenShellSlaveOD_obj12E8_Node_ID_of_the_SDO_Server = 0x68;	/* 104 */
-                    subindex CANOpenShellSlaveOD_Index12E8[] = 
+                    subindex CANOpenShellSlaveOD_Index12E8[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E8, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E8_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E8_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E8, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E8_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E8_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12E9 :   Client SDO 106 Parameter. */
@@ -1480,12 +1480,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12E9_COB_ID_Client_to_Server_Transmit_SDO = 0x669;	/* 1641 */
                     UNS32 CANOpenShellSlaveOD_obj12E9_COB_ID_Server_to_Client_Receive_SDO = 0x5E9;	/* 1513 */
                     UNS8 CANOpenShellSlaveOD_obj12E9_Node_ID_of_the_SDO_Server = 0x69;	/* 105 */
-                    subindex CANOpenShellSlaveOD_Index12E9[] = 
+                    subindex CANOpenShellSlaveOD_Index12E9[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E9, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E9_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E9_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12E9, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12E9_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12E9_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12EA :   Client SDO 107 Parameter. */
@@ -1493,12 +1493,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12EA_COB_ID_Client_to_Server_Transmit_SDO = 0x66A;	/* 1642 */
                     UNS32 CANOpenShellSlaveOD_obj12EA_COB_ID_Server_to_Client_Receive_SDO = 0x5EA;	/* 1514 */
                     UNS8 CANOpenShellSlaveOD_obj12EA_Node_ID_of_the_SDO_Server = 0x6A;	/* 106 */
-                    subindex CANOpenShellSlaveOD_Index12EA[] = 
+                    subindex CANOpenShellSlaveOD_Index12EA[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12EA, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EA_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12EA_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12EA, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EA_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12EA_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12EB :   Client SDO 108 Parameter. */
@@ -1506,12 +1506,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12EB_COB_ID_Client_to_Server_Transmit_SDO = 0x66B;	/* 1643 */
                     UNS32 CANOpenShellSlaveOD_obj12EB_COB_ID_Server_to_Client_Receive_SDO = 0x5EB;	/* 1515 */
                     UNS8 CANOpenShellSlaveOD_obj12EB_Node_ID_of_the_SDO_Server = 0x6B;	/* 107 */
-                    subindex CANOpenShellSlaveOD_Index12EB[] = 
+                    subindex CANOpenShellSlaveOD_Index12EB[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12EB, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EB_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12EB_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12EB, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EB_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12EB_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12EC :   Client SDO 109 Parameter. */
@@ -1519,12 +1519,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12EC_COB_ID_Client_to_Server_Transmit_SDO = 0x66C;	/* 1644 */
                     UNS32 CANOpenShellSlaveOD_obj12EC_COB_ID_Server_to_Client_Receive_SDO = 0x5EC;	/* 1516 */
                     UNS8 CANOpenShellSlaveOD_obj12EC_Node_ID_of_the_SDO_Server = 0x6C;	/* 108 */
-                    subindex CANOpenShellSlaveOD_Index12EC[] = 
+                    subindex CANOpenShellSlaveOD_Index12EC[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12EC, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EC_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12EC_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12EC, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EC_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12EC_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12ED :   Client SDO 110 Parameter. */
@@ -1532,12 +1532,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12ED_COB_ID_Client_to_Server_Transmit_SDO = 0x66D;	/* 1645 */
                     UNS32 CANOpenShellSlaveOD_obj12ED_COB_ID_Server_to_Client_Receive_SDO = 0x5ED;	/* 1517 */
                     UNS8 CANOpenShellSlaveOD_obj12ED_Node_ID_of_the_SDO_Server = 0x6D;	/* 109 */
-                    subindex CANOpenShellSlaveOD_Index12ED[] = 
+                    subindex CANOpenShellSlaveOD_Index12ED[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12ED, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12ED_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12ED_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12ED_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12ED, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12ED_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12ED_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12ED_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12EE :   Client SDO 111 Parameter. */
@@ -1545,12 +1545,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12EE_COB_ID_Client_to_Server_Transmit_SDO = 0x66E;	/* 1646 */
                     UNS32 CANOpenShellSlaveOD_obj12EE_COB_ID_Server_to_Client_Receive_SDO = 0x5EE;	/* 1518 */
                     UNS8 CANOpenShellSlaveOD_obj12EE_Node_ID_of_the_SDO_Server = 0x6E;	/* 110 */
-                    subindex CANOpenShellSlaveOD_Index12EE[] = 
+                    subindex CANOpenShellSlaveOD_Index12EE[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12EE, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EE_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12EE_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12EE, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EE_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12EE_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12EF :   Client SDO 112 Parameter. */
@@ -1558,12 +1558,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12EF_COB_ID_Client_to_Server_Transmit_SDO = 0x66F;	/* 1647 */
                     UNS32 CANOpenShellSlaveOD_obj12EF_COB_ID_Server_to_Client_Receive_SDO = 0x5EF;	/* 1519 */
                     UNS8 CANOpenShellSlaveOD_obj12EF_Node_ID_of_the_SDO_Server = 0x6F;	/* 111 */
-                    subindex CANOpenShellSlaveOD_Index12EF[] = 
+                    subindex CANOpenShellSlaveOD_Index12EF[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12EF, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EF_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EF_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12EF_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12EF, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EF_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12EF_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12EF_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12F0 :   Client SDO 113 Parameter. */
@@ -1571,12 +1571,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12F0_COB_ID_Client_to_Server_Transmit_SDO = 0x670;	/* 1648 */
                     UNS32 CANOpenShellSlaveOD_obj12F0_COB_ID_Server_to_Client_Receive_SDO = 0x5F0;	/* 1520 */
                     UNS8 CANOpenShellSlaveOD_obj12F0_Node_ID_of_the_SDO_Server = 0x70;	/* 112 */
-                    subindex CANOpenShellSlaveOD_Index12F0[] = 
+                    subindex CANOpenShellSlaveOD_Index12F0[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F0, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F0_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F0_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F0, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F0_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F0_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F0_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12F1 :   Client SDO 114 Parameter. */
@@ -1584,12 +1584,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12F1_COB_ID_Client_to_Server_Transmit_SDO = 0x671;	/* 1649 */
                     UNS32 CANOpenShellSlaveOD_obj12F1_COB_ID_Server_to_Client_Receive_SDO = 0x5F1;	/* 1521 */
                     UNS8 CANOpenShellSlaveOD_obj12F1_Node_ID_of_the_SDO_Server = 0x71;	/* 113 */
-                    subindex CANOpenShellSlaveOD_Index12F1[] = 
+                    subindex CANOpenShellSlaveOD_Index12F1[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F1, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F1_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F1_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F1, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F1_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F1_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F1_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12F2 :   Client SDO 115 Parameter. */
@@ -1597,12 +1597,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12F2_COB_ID_Client_to_Server_Transmit_SDO = 0x672;	/* 1650 */
                     UNS32 CANOpenShellSlaveOD_obj12F2_COB_ID_Server_to_Client_Receive_SDO = 0x5F2;	/* 1522 */
                     UNS8 CANOpenShellSlaveOD_obj12F2_Node_ID_of_the_SDO_Server = 0x72;	/* 114 */
-                    subindex CANOpenShellSlaveOD_Index12F2[] = 
+                    subindex CANOpenShellSlaveOD_Index12F2[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F2, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F2_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F2_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F2, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F2_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F2_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F2_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12F3 :   Client SDO 116 Parameter. */
@@ -1610,12 +1610,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12F3_COB_ID_Client_to_Server_Transmit_SDO = 0x673;	/* 1651 */
                     UNS32 CANOpenShellSlaveOD_obj12F3_COB_ID_Server_to_Client_Receive_SDO = 0x5F3;	/* 1523 */
                     UNS8 CANOpenShellSlaveOD_obj12F3_Node_ID_of_the_SDO_Server = 0x73;	/* 115 */
-                    subindex CANOpenShellSlaveOD_Index12F3[] = 
+                    subindex CANOpenShellSlaveOD_Index12F3[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F3, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F3_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F3_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F3, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F3_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F3_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F3_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12F4 :   Client SDO 117 Parameter. */
@@ -1623,12 +1623,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12F4_COB_ID_Client_to_Server_Transmit_SDO = 0x674;	/* 1652 */
                     UNS32 CANOpenShellSlaveOD_obj12F4_COB_ID_Server_to_Client_Receive_SDO = 0x5F4;	/* 1524 */
                     UNS8 CANOpenShellSlaveOD_obj12F4_Node_ID_of_the_SDO_Server = 0x74;	/* 116 */
-                    subindex CANOpenShellSlaveOD_Index12F4[] = 
+                    subindex CANOpenShellSlaveOD_Index12F4[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F4, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F4_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F4_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F4, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F4_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F4_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F4_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12F5 :   Client SDO 118 Parameter. */
@@ -1636,12 +1636,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12F5_COB_ID_Client_to_Server_Transmit_SDO = 0x675;	/* 1653 */
                     UNS32 CANOpenShellSlaveOD_obj12F5_COB_ID_Server_to_Client_Receive_SDO = 0x5F5;	/* 1525 */
                     UNS8 CANOpenShellSlaveOD_obj12F5_Node_ID_of_the_SDO_Server = 0x75;	/* 117 */
-                    subindex CANOpenShellSlaveOD_Index12F5[] = 
+                    subindex CANOpenShellSlaveOD_Index12F5[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F5, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F5_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F5_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F5, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F5_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F5_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F5_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12F6 :   Client SDO 119 Parameter. */
@@ -1649,12 +1649,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12F6_COB_ID_Client_to_Server_Transmit_SDO = 0x676;	/* 1654 */
                     UNS32 CANOpenShellSlaveOD_obj12F6_COB_ID_Server_to_Client_Receive_SDO = 0x5F6;	/* 1526 */
                     UNS8 CANOpenShellSlaveOD_obj12F6_Node_ID_of_the_SDO_Server = 0x76;	/* 118 */
-                    subindex CANOpenShellSlaveOD_Index12F6[] = 
+                    subindex CANOpenShellSlaveOD_Index12F6[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F6, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F6_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F6_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F6, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F6_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F6_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F6_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12F7 :   Client SDO 120 Parameter. */
@@ -1662,12 +1662,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12F7_COB_ID_Client_to_Server_Transmit_SDO = 0x677;	/* 1655 */
                     UNS32 CANOpenShellSlaveOD_obj12F7_COB_ID_Server_to_Client_Receive_SDO = 0x5F7;	/* 1527 */
                     UNS8 CANOpenShellSlaveOD_obj12F7_Node_ID_of_the_SDO_Server = 0x77;	/* 119 */
-                    subindex CANOpenShellSlaveOD_Index12F7[] = 
+                    subindex CANOpenShellSlaveOD_Index12F7[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F7, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F7_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F7_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F7, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F7_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F7_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F7_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12F8 :   Client SDO 121 Parameter. */
@@ -1675,12 +1675,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12F8_COB_ID_Client_to_Server_Transmit_SDO = 0x678;	/* 1656 */
                     UNS32 CANOpenShellSlaveOD_obj12F8_COB_ID_Server_to_Client_Receive_SDO = 0x5F8;	/* 1528 */
                     UNS8 CANOpenShellSlaveOD_obj12F8_Node_ID_of_the_SDO_Server = 0x78;	/* 120 */
-                    subindex CANOpenShellSlaveOD_Index12F8[] = 
+                    subindex CANOpenShellSlaveOD_Index12F8[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F8, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F8_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F8_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F8, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F8_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F8_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F8_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12F9 :   Client SDO 122 Parameter. */
@@ -1688,12 +1688,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12F9_COB_ID_Client_to_Server_Transmit_SDO = 0x679;	/* 1657 */
                     UNS32 CANOpenShellSlaveOD_obj12F9_COB_ID_Server_to_Client_Receive_SDO = 0x5F9;	/* 1529 */
                     UNS8 CANOpenShellSlaveOD_obj12F9_Node_ID_of_the_SDO_Server = 0x79;	/* 121 */
-                    subindex CANOpenShellSlaveOD_Index12F9[] = 
+                    subindex CANOpenShellSlaveOD_Index12F9[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F9, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F9_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F9_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12F9, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F9_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12F9_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12F9_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12FA :   Client SDO 123 Parameter. */
@@ -1701,12 +1701,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12FA_COB_ID_Client_to_Server_Transmit_SDO = 0x67A;	/* 1658 */
                     UNS32 CANOpenShellSlaveOD_obj12FA_COB_ID_Server_to_Client_Receive_SDO = 0x5FA;	/* 1530 */
                     UNS8 CANOpenShellSlaveOD_obj12FA_Node_ID_of_the_SDO_Server = 0x7A;	/* 122 */
-                    subindex CANOpenShellSlaveOD_Index12FA[] = 
+                    subindex CANOpenShellSlaveOD_Index12FA[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12FA, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FA_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12FA_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12FA, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FA_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FA_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12FA_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12FB :   Client SDO 124 Parameter. */
@@ -1714,12 +1714,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12FB_COB_ID_Client_to_Server_Transmit_SDO = 0x67B;	/* 1659 */
                     UNS32 CANOpenShellSlaveOD_obj12FB_COB_ID_Server_to_Client_Receive_SDO = 0x5FB;	/* 1531 */
                     UNS8 CANOpenShellSlaveOD_obj12FB_Node_ID_of_the_SDO_Server = 0x7B;	/* 123 */
-                    subindex CANOpenShellSlaveOD_Index12FB[] = 
+                    subindex CANOpenShellSlaveOD_Index12FB[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12FB, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FB_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12FB_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12FB, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FB_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FB_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12FB_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12FC :   Client SDO 125 Parameter. */
@@ -1727,12 +1727,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12FC_COB_ID_Client_to_Server_Transmit_SDO = 0x67C;	/* 1660 */
                     UNS32 CANOpenShellSlaveOD_obj12FC_COB_ID_Server_to_Client_Receive_SDO = 0x5FC;	/* 1532 */
                     UNS8 CANOpenShellSlaveOD_obj12FC_Node_ID_of_the_SDO_Server = 0x7C;	/* 124 */
-                    subindex CANOpenShellSlaveOD_Index12FC[] = 
+                    subindex CANOpenShellSlaveOD_Index12FC[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12FC, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FC_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12FC_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12FC, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FC_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FC_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12FC_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12FD :   Client SDO 126 Parameter. */
@@ -1740,12 +1740,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12FD_COB_ID_Client_to_Server_Transmit_SDO = 0x67D;	/* 1661 */
                     UNS32 CANOpenShellSlaveOD_obj12FD_COB_ID_Server_to_Client_Receive_SDO = 0x5FD;	/* 1533 */
                     UNS8 CANOpenShellSlaveOD_obj12FD_Node_ID_of_the_SDO_Server = 0x7D;	/* 125 */
-                    subindex CANOpenShellSlaveOD_Index12FD[] = 
+                    subindex CANOpenShellSlaveOD_Index12FD[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12FD, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FD_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FD_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12FD_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12FD, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FD_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FD_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12FD_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x12FE :   Client SDO 127 Parameter. */
@@ -1753,19 +1753,19 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 CANOpenShellSlaveOD_obj12FE_COB_ID_Client_to_Server_Transmit_SDO = 0x67E;	/* 1662 */
                     UNS32 CANOpenShellSlaveOD_obj12FE_COB_ID_Server_to_Client_Receive_SDO = 0x5FE;	/* 1534 */
                     UNS8 CANOpenShellSlaveOD_obj12FE_Node_ID_of_the_SDO_Server = 0x7E;	/* 126 */
-                    subindex CANOpenShellSlaveOD_Index12FE[] = 
+                    subindex CANOpenShellSlaveOD_Index12FE[] =
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12FE, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FE_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12FE_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_highestSubIndex_obj12FE, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FE_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&CANOpenShellSlaveOD_obj12FE_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&CANOpenShellSlaveOD_obj12FE_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /**************************************************************************/
 /* Declaration of pointed variables                                       */
 /**************************************************************************/
 
-const indextable CANOpenShellSlaveOD_objdict[] = 
+const indextable CANOpenShellSlaveOD_objdict[] =
 {
   { (subindex*)CANOpenShellSlaveOD_Index1000,sizeof(CANOpenShellSlaveOD_Index1000)/sizeof(CANOpenShellSlaveOD_Index1000[0]), 0x1000},
   { (subindex*)CANOpenShellSlaveOD_Index1001,sizeof(CANOpenShellSlaveOD_Index1001)/sizeof(CANOpenShellSlaveOD_Index1001[0]), 0x1001},
@@ -2044,7 +2044,7 @@ const indextable * CANOpenShellSlaveOD_scanIndexOD (CO_Data *d, UNS16 wIndex, UN
 	return &CANOpenShellSlaveOD_objdict[i];
 }
 
-/* 
+/*
  * To count at which received SYNC a PDO must be sent.
  * Even if no pdoTransmit are defined, at least one entry is computed
  * for compilations issues.
@@ -2069,7 +2069,6 @@ const quick_index CANOpenShellSlaveOD_lastIndex = {
   0 /* PDO_TRS_MAP */
 };
 
-const UNS16 CANOpenShellSlaveOD_ObjdictSize = sizeof(CANOpenShellSlaveOD_objdict)/sizeof(CANOpenShellSlaveOD_objdict[0]); 
+const UNS16 CANOpenShellSlaveOD_ObjdictSize = sizeof(CANOpenShellSlaveOD_objdict)/sizeof(CANOpenShellSlaveOD_objdict[0]);
 
 CO_Data CANOpenShellSlaveOD_Data = CANOPEN_NODE_DATA_INITIALIZER(CANOpenShellSlaveOD);
-
