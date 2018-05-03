@@ -164,7 +164,7 @@ void SDOTimeoutAlarm(CO_Data* d, UNS32 id)
 		(*d->transfers[id].Callback)(d, nodeId);
 	/*Reset the line if (whoami == SDO_SERVER) or the callback did not close the line.
 	  Otherwise this sdo transfer would never be closed. */
-	if(d->transfers[id].abortCode == SDOABT_TIMED_OUT) 
+	if(d->transfers[id].abortCode == SDOABT_TIMED_OUT)
 		resetSDOline(d, (UNS8)id);
 }
 
@@ -768,7 +768,7 @@ UNS8 proceedSDO (CO_Data* d, Message *m)
 	UNS8 SubCommand;	/* Block transfer only */
     UNS8 SeqNo;         /* Sequence number in block transfer */
     UNS8 AckSeq;        /* Sequence number of last segment that was received successfully */
-	UNS8 NbBytesNoData; /* Number of bytes that do not contain data in last segment of block transfer */ 
+	UNS8 NbBytesNoData; /* Number of bytes that do not contain data in last segment of block transfer */
 
 	MSG_WAR(0x3A60, "proceedSDO ", 0);
 	whoami = SDO_UNKNOWN;
@@ -841,11 +841,11 @@ UNS8 proceedSDO (CO_Data* d, Message *m)
 	err = getSDOlineOnUse( d, CliServNbr, whoami, &line );
 
 	/* Let's find cs value, first it is set as "not valid" */
-	cs = 0xFF; 
+	cs = 0xFF;
 	/* Special cases for block transfer : in frames with segment data cs is not spécified */
    	if (!err) {
 		if (((whoami == SDO_SERVER) && (d->transfers[line].state == SDO_BLOCK_DOWNLOAD_IN_PROGRESS)) ||
-			((whoami == SDO_CLIENT) && (d->transfers[line].state == SDO_BLOCK_UPLOAD_IN_PROGRESS))) {		
+			((whoami == SDO_CLIENT) && (d->transfers[line].state == SDO_BLOCK_UPLOAD_IN_PROGRESS))) {
 			if(m->data[0] == 0x80)	/* If first byte is 0x80 it is an abort frame (seqno = 0 not allowed) */
 				cs = 4;
 			else
@@ -1659,7 +1659,7 @@ UNS8 proceedSDO (CO_Data* d, Message *m)
                         d->transfers[line].seqno = 0;
 					}
 					else {
-					   	if (SeqNo == (d->transfers[line].seqno + 1)) {	
+					   	if (SeqNo == (d->transfers[line].seqno + 1)) {
 							d->transfers[line].seqno = SeqNo;
 							/* Store the data in the transfer structure. */
 							err = SDOtoLine(d, line, 7, (*m).data + 1);
@@ -1759,7 +1759,7 @@ UNS8 proceedSDO (CO_Data* d, Message *m)
                         d->transfers[line].seqno = 0;
 					}
 					else {
-					   	if (SeqNo == (d->transfers[line].seqno + 1)) {	
+					   	if (SeqNo == (d->transfers[line].seqno + 1)) {
 							d->transfers[line].seqno = SeqNo;
 							/* Store the data in the transfer structure. */
 							err = SDOtoLine(d, line, 7, (*m).data + 1);
@@ -1960,7 +1960,7 @@ INLINE UNS8 _writeNetworkDict (CO_Data* d, UNS8 nodeId, UNS16 index,
 	    initSDOline(d, line, CliNbr, index, subIndex, SDO_BLOCK_DOWNLOAD_IN_PROGRESS);
 	    d->transfers[line].objsize = count;
     }
-    else 
+    else
 	    initSDOline(d, line, CliNbr, index, subIndex, SDO_DOWNLOAD_IN_PROGRESS);
 	d->transfers[line].count = count;
 	d->transfers[line].dataType = dataType;
@@ -2351,7 +2351,7 @@ UNS8 getReadResultNetworkDict (CO_Data* d, UNS8 nodeId, void* data, UNS32 *size,
 		*size = 0;
 		return SDO_PROVIDED_BUFFER_TOO_SMALL;
     }
-	
+
     /* Give back actual size */
     *size = d->transfers[line].count;
 
@@ -2406,7 +2406,7 @@ UNS8 getWriteResultNetworkDict (CO_Data* d, UNS8 nodeId, UNS32 * abortCode)
 	UNS8 err;
 	UNS8 CliNbr;
 	* abortCode = 0;
-	
+
 	/* First let's find the corresponding SDO client in our OD  */
 	CliNbr = GetSDOClientFromNodeId(d, nodeId);
 	if(CliNbr >= 0xFE)
