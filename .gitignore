@@ -1,0 +1,6 @@
+*.o
+*.a
+*.so
+examples/CANOpenShell/CANOpenShell
+examples/TestMasterMicroMod/TestMasterMicroMod
+examples/TestMasterSlave/TestMasterSlave
