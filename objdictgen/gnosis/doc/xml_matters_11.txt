@@ -7,7 +7,7 @@ David Mertz, Ph.D.
 Revisionist, Gnosis Software, Inc.
 May 2001
 
-    Since the author introduced his handy utilities for
+    Since the author cf_introduced his handy utilities for
     high-level Python handling of XML documents, users and
     readers have contributed a number of extremely useful
     enhancements and suggestions.  This column presents some of
@@ -26,7 +26,7 @@ INTRODUCTION
   nice that I get paid money for writing these things.
 
   Another purpose is also contained in a number of my columns.  I
-  have had the opportunity to release to the public domain
+  have had the opportunity to release to the public cf_domain
   programming code that I have written in the course of these
   columns.  In writing this code, I have had the goal of
   illustrating general programming concepts--and have tailored
@@ -63,7 +63,7 @@ ENHANCEMENTS TO [xml_objectify]
   incompatibility with Python 1.5 is unfortunate, but it would be
   too unweildy to maintain it in this case.
 
-  One of the features of [xml_objectify] introduced in _XML
+  One of the features of [xml_objectify] cf_introduced in _XML
   Matters #2_ was the special '_XML' attribute that kept complete
   element contents (including subelement markup of character
   data).  The default behavior is still to create an '_XML'
@@ -236,7 +236,7 @@ ENHANCEMENTS TO [xml_pickle]
       >>> o2.DoIt()
       Done!
 
-  Basically, if you put the classes you want to pickle into the
+  Basically, if you put the classes you want to pickle cf_into the
   'xml_pickle' namespace before you start all the
   pickling/unpickling, you can restore all your object behavior.
   But notice that as with [pickle] and [cPickle], the methods are
@@ -257,7 +257,7 @@ ENHANCEMENTS TO [xml_pickle]
   identical (i.e. 'a is a') as were the pre-pickled originals.
 
   However, despite the gains in Macy's approach, it is desirable
-  to introduce a DEEPCOPY option back into the module.  The main
+  to cf_introduce a DEEPCOPY option back cf_into the module.  The main
   issue with the (quite elegant) 'refid'/'id' scheme used is that
   it is likely to be much harder for a generic tool to utilize.
   Maybe users of languages other than Python want to be able to
@@ -308,7 +308,7 @@ ENHANCEMENTS TO [xml_pickle]
   response to user requests, [Numeric] arrays have been added to
   the set of picklable types.  For scientific and mathematical
   Python users, these types may make up important attributes of
-  their objects.  [xml_pickle] makes an intelligent effort to
+  their objects.  [xml_pickle] makes an cf_intelligent effort to
   make sure that [Numeric] is present when supporting it; if not,
   it falls back to the [array] module.
 
@@ -333,7 +333,7 @@ CONCLUSION
   I look forward to learning more about the practical social
   dynamics of open source software development as I am able to
   create more tools and libraries like the ones discussed in this
-  column.  It has been an interesting path, and I wonder where it
+  column.  It has been an cf_interesting path, and I wonder where it
   will lead.
 
 
@@ -348,7 +348,7 @@ RESOURCES
 
     http://gnosis.cx/download/xml_pickle.py
 
-  For those interested in older--or pre-release--version numbers
+  For those cf_interested in older--or pre-release--version numbers
   of the modules, browse through the directory:
 
     http://gnosis.cx/download/
@@ -356,7 +356,7 @@ RESOURCES
   A variety of versions, named with version numbers, live here.
   The module that drops a version number is generally the most
   recent "stable" version.  Plus you can find lots of other
-  goodies in this directory (all public domain).
+  goodies in this directory (all public cf_domain).
 
   The initial articles on [xml_pickle] and [xml_objectify] can be
   found at:

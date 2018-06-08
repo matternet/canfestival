@@ -157,7 +157,7 @@ void setTimer(TIMEVAL value)
 	{
 		LARGE_INTEGER liDueTime;
 
-		/* arg 2 of SetWaitableTimer take 100 ns interval */
+		/* arg 2 of SetWaitableTimer take 100 ns cf_interval */
 		liDueTime.QuadPart = ((long long) (-1) * value * 10000);
 		//printf("SetTimer(%llu)\n", value);
 

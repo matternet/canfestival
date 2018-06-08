@@ -250,7 +250,7 @@ void initSensor(void)
 
   canInit(CANOPEN_LINE_NUMBER_USED, bi0);  //initialize filters...
   initTimer(); // Init hcs12 timer used by CanFestival. (see timerhw.c)
-  unlock(); // Allow interruptions  
+  unlock(); // Allow cf_interruptions  
 }
 
 
@@ -406,7 +406,7 @@ UNS8 main (void)
 	Message m;
 	if (f_can_receive(0, &m)) {
 	  //MSG_WAR(0x3F36, "Msg received", m.cob_id);
-	  lock(); // Not to have interruptions by timer, which can corrupt the data
+	  lock(); // Not to have cf_interruptions by timer, which can corrupt the data
 	  canDispatch(&gene_SYNC_Data, &m);
 	  unlock();
 	}  

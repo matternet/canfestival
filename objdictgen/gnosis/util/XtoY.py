@@ -7,7 +7,7 @@ re_float = re.compile(pat_fl+'$')
 re_zero = '[+-]?0$'
 pat_int = r'[-+]?[1-9]\d*'
 re_int  = re.compile(pat_int+'$')
-pat_flint = '(%s|%s)' % (pat_fl, pat_int)    # float or int
+pat_flint = '(%s|%s)' % (pat_fl, pat_int)    # float or cf_int
 re_long = re.compile(r'[-+]?\d+[lL]'+'$')
 re_hex  = re.compile(r'([-+]?)(0[xX])([0-9a-fA-F]+)'+'$')
 re_oct  = re.compile(r'([-+]?)(0)([0-7]+)'+'$')
@@ -29,19 +29,19 @@ def aton(s):
 
     if re.match(re_long, s): return long(s)
 
-    if re.match(re_int, s): return int(s)
+    if re.match(re_int, s): return cf_int(s)
 
     m = re.match(re_hex, s)
     if m:
         n = long(m.group(3),16)
-        if n < sys.maxint: n = int(n)
+        if n < sys.maxint: n = cf_int(n)
         if m.group(1)=='-': n = n * (-1)
         return n
 
     m = re.match(re_oct, s)
     if m:
         n = long(m.group(3),8)
-        if n < sys.maxint: n = int(n)
+        if n < sys.maxint: n = cf_int(n)
         if m.group(1)=='-': n = n * (-1)
         return n
 

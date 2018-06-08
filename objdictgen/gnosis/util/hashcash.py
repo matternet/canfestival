@@ -79,13 +79,13 @@ def _mint(challenge, bits):
     """Answer a 'generalized hashcash' challenge'
 
     Hashcash requires stamps of form 'ver:bits:date:res:ext:rand:counter'
-    This internal function accepts a generalized prefix 'challenge',
+    This cf_internal function accepts a generalized prefix 'challenge',
     and returns only a suffix that produces the requested SHA leading zeros.
 
     NOTE: Number of requested bits is rounded up to the nearest multiple of 4
     """
     counter = 0
-    hex_digits = int(ceil(bits/4.))
+    hex_digits = cf_int(ceil(bits/4.))
     zeros = '0'*hex_digits
     while 1:
         digest = sha(challenge+hex(counter)[2:]).hexdigest()
@@ -126,10 +126,10 @@ def check(stamp, resource=None, bits=None,
                 return False
         elif callable(ds_callback) and ds_callback(stamp):
             return False
-        elif type(bits) is not int:
+        elif type(bits) is not cf_int:
             return True
         else:
-            hex_digits = int(floor(bits/4))
+            hex_digits = cf_int(floor(bits/4))
             return sha(stamp).hexdigest().startswith('0'*hex_digits)
     elif stamp.startswith('1:'):        # Version 1
         try:
@@ -139,7 +139,7 @@ def check(stamp, resource=None, bits=None,
             return False
         if resource is not None and resource != res:
             return False
-        elif type(bits) is int and bits > int(claim):
+        elif type(bits) is int and bits > cf_int(claim):
             return False
         elif check_expiration is not None:
             good_until = strftime("%y%m%d%H%M%S", localtime(time()-check_expiration))
@@ -148,16 +148,16 @@ def check(stamp, resource=None, bits=None,
         elif callable(ds_callback) and ds_callback(stamp):
             return False
         else:
-            hex_digits = int(floor(int(claim)/4))
+            hex_digits = cf_int(floor(int(claim)/4))
             return sha(stamp).hexdigest().startswith('0'*hex_digits)
     else:                               # Unknown ver or generalized hashcash
         ERR.write("Unknown hashcash version: Minimal authentication!\n")
-        if type(bits) is not int:
+        if type(bits) is not cf_int:
             return True
         elif resource is not None and stamp.find(resource) < 0:
             return False
         else:
-            hex_digits = int(floor(bits/4))
+            hex_digits = cf_int(floor(bits/4))
             return sha(stamp).hexdigest().startswith('0'*hex_digits)
 
 def is_doublespent(stamp):

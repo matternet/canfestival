@@ -43,7 +43,7 @@ void dcf_data_display(uint8_t dcfdata[][DCF_MAX_SIZE])
 {
 	uint32_t var, NbEntries, Index, SubIdx, NbData;
 	uint8_t *pDico;
-    uint8_t NodeId;
+    cf_uint8_t NodeId;
 	printf("Concise DCF data found in file :\n");
 	for(NodeId = 1 ; NodeId < DCF_MAX_NODE_ID ; NodeId++) {
 	    pDico = dcfdata[NodeId-1];
@@ -78,7 +78,7 @@ void dcf_data_display(uint8_t dcfdata[][DCF_MAX_SIZE])
  **    -4 : out of bounds value 
  **    -5 : syntax error in file
  */
-int dcf_read_in_file(char *fileName, uint8_t dcfdata[][DCF_MAX_SIZE])
+int dcf_read_in_file(char *fileName, cf_uint8_t dcfdata[][DCF_MAX_SIZE])
 {
 	FILE *DicoFile;
 	char ligne[65];
@@ -180,7 +180,7 @@ int dcf_read_in_file(char *fileName, uint8_t dcfdata[][DCF_MAX_SIZE])
 int main(void)
 {
     int ret;
-    uint8_t TabConciseDCF[DCF_MAX_NODE_ID][DCF_MAX_SIZE] = {{0}};
+    cf_uint8_t TabConciseDCF[DCF_MAX_NODE_ID][DCF_MAX_SIZE] = {{0}};
     ret = dcf_read_in_file(DEVICE_DICT_NAME, TabConciseDCF);
     if(ret){
         printf("Erreur %d\n", ret);

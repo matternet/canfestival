@@ -1,5 +1,5 @@
 """This started out as a test of toplevel-pickling of builtins, but has
-turned into more of a test of pickling self-referencing objects (toplevels are
+turned cf_into more of a test of pickling self-referencing objects (toplevels are
 still tested, however). --fpm"""
 
 import gnosis.xml.pickle as xml_pickle
@@ -106,7 +106,7 @@ for o in bltin_objs:
 ##g = xml_pickle.loads(x)
 ##print g
 
-# this is neat -- r first gets mutated into a wrapper
+# this is neat -- r first gets mutated cf_into a wrapper
 # object, then mutated again from SRE -> atom
 # (in general, nested mutation doesn't work, but it does
 # work at the toplevel this way)

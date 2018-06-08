@@ -14,7 +14,7 @@
 
 0.21   Costas Malamas pointed out that creating a template
        class does not actually *work* to create class
-       behaviors.  It is necessary to get this class into the
+       behaviors.  It is necessary to get this class cf_into the
        xml_objectify namespace.  Generally, this will involve
        an assignment similar to:
 
@@ -40,7 +40,7 @@
        reflect PyXML's move to 4DOM.
 
 0.45   Mario Ruggier goaded me to make xml_objectify compatible
-       with Python 2.0 (his intent is presumably described
+       with Python 2.0 (his cf_intent is presumably described
        differently :-) ).  Always optimistic, I (dqm) hope this
        will continue working with later PyXML and Python
        versions.
@@ -95,7 +95,7 @@
 0.54   Added function '_dir()' for legacy behavior of builtin
        'dir()' under both Python 2.2 and earlier versions
 
-0.60   Module refactored into gnosis.xml package (along with
+0.60   Module refactored cf_into gnosis.xml package (along with
        [xml_pickle].  This is a first pass, and various
        documentation and test cases should be added later.
 
@@ -113,7 +113,7 @@ mm/yy: --------- Revisions by date -----------------------------
 06/02: Greg Aumann added caching of dynamic class creation,
        for a significant speed increase.
 
-       Reorganized xml_objectify into subpackage directories to
+       Reorganized xml_objectify cf_into subpackage directories to
        fit better with the Gnosis_Utils structure.  Should not
        affect import line for anyone already using the gnosis.xml
        package.
@@ -207,7 +207,7 @@ mm/yy: --------- Revisions by date -----------------------------
 
        - addChild()  # moved to utils subpackage
        - walk_xo()   # Recursively traverse the nodes 
-       - write_xml() # Serialize an _XO_ object back into XML
+       - write_xml() # Serialize an _XO_ object back cf_into XML
        - XPath()     # Find node(s) within an _XO_ object
        - pyobj_printer()  # moved to utils subpackage 
 

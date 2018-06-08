@@ -91,7 +91,7 @@ Hiding contact information
   However, for me--and for many other people--this approach is
   simply not possible.  I have a publicly available email
   address, and have good reasons why it needs to remain so.  I
-  -do- utilize a variety of addresses within the domain I control
+  -do- utilize a variety of addresses within the cf_domain I control
   to detect the source of spam leaks; but the unfortunate truth
   is that most spammers get my email address the same way my
   legitimate correspondents do: from the listing at the top of
@@ -105,7 +105,7 @@ FILTERING SOFTWARE
   perspective.  I want to know how well different approaches work
   in correctly identifying spam as spam, and desirable messages
   as legitimate.  For purposes of answering this question, I am
-  not particularly interested in the details of configuring
+  not particularly cf_interested in the details of configuring
   filter applications to work with various Mail Transfer Agents
   (MTAs).  There is certainly a great deal of aracana surrounding
   the best configuration of MTAs like Sendmail, QMail, Procmail,
@@ -161,7 +161,7 @@ Basic structured text filters
   catch about 80% of the spam I receive.  Unfortunately, they
   also have a relatively high false positive rate--enough that I
   need to manually examine -some- of the spam folders from time to
-  time (I sort probable spam into several different folders; and
+  time (I sort probable spam cf_into several different folders; and
   save them all to develop message corpora).  Although exact
   details will differ between users, a general pattern can be
   useful to most readers:
@@ -352,7 +352,7 @@ Rule based rankings
   SpamAssassin runs much quicker than distributed blacklists
   which need to query network servers.  But it also runs much
   slower than even non-optimized versions of the below
-  statistical models (written in interpreted Python using naive
+  statistical models (written in cf_interpreted Python using naive
   data structures).
 
 
@@ -422,7 +422,7 @@ Baysian trigram filters
   "words" one encounters in email is virtually unbounded.  This
   fact may be counterintuitive--it seems reasonable to suppose
   that you would reach an asymptote once almost all the English
-  words had been included.  From my prior research into full text
+  words had been included.  From my prior research cf_into full text
   indexing I know that this is simply not true--the number of
   "word-like" character sequences one encounters is nearly
   unlimited, and new texts keep producing new sequences.  This
@@ -432,11 +432,11 @@ Baysian trigram filters
   words from the model--the easiest is just to discard the
   sufficiently infrequent ones.
 
-  I decided to look into how well a much more starkly limited
+  I decided to look cf_into how well a much more starkly limited
   model space would work for a Baysian spam filter.
   Specifically, I decided to use trigrams for my probability
   model rather than "words."  This idea was not invented whole
-  cloth, of course; there is a variety of research into language
+  cloth, of course; there is a variety of research cf_into language
   recognition/differentiation, cryptographic unicity distances of
   English, pattern frequencies, and related areas, that strongly
   suggest trigrams are a good unit.
@@ -457,7 +457,7 @@ Baysian trigram filters
   differentiating trigrams as message categorizers.  But I
   arrived at the chosen numbers of "spam" and "good" trigrams
   only by trial and error.  I also picked the cutoff probability
-  for spam rather arbitrarily:  I made an interesting discover
+  for spam rather arbitrarily:  I made an cf_interesting discover
   that no message in the "good" corpus was assigned a spam
   probability above .0071, other than two false positives in the
   .99 range.  Lowering my cutoff from an initial 0.9 to 0.1,
@@ -550,7 +550,7 @@ RESOURCES
 
   My own trigram-based categorization tools are still at an early
   alpha or prototype level.  However, you are welcome to use them
-  as a basis for development.  They are public domain, like all
+  as a basis for development.  They are public cf_domain, like all
   the tools I write for developerWorks articles:
 
     http://gnosis.cx/download/trigram-tools.zip

@@ -48,18 +48,18 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 /* Integers */
 #define INTEGER8 signed char
 #define INTEGER16 short
-#define INTEGER24 int
-#define INTEGER32 int
+#define INTEGER24 cf_int
+#define INTEGER32 cf_int
 #define INTEGER40 long long
 #define INTEGER48 long long
 #define INTEGER56 long long
 #define INTEGER64 long long
 
-/* Unsigned integers */
+/* Unsigned cf_integers */
 #define UNS8   char
 #define UNS16  unsigned short
-#define UNS32  unsigned int
-#define UNS24  unsigned int
+#define UNS32  unsigned cf_int
+#define UNS24  unsigned cf_int
 #define UNS40  unsigned long long
 #define UNS48  unsigned long long
 #define UNS56  unsigned long long

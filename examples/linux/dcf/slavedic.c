@@ -49,14 +49,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 slavedic_obj1000 = 0x0;	/* 0 */
                     subindex slavedic_Index1000[] = 
                      {
-                       { RO, uint32, sizeof (UNS32), (void*)&slavedic_obj1000, NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1000, NULL }
                      };
 
 /* index 0x1001 :   Error Register. */
                     UNS8 slavedic_obj1001 = 0x0;	/* 0 */
                     subindex slavedic_Index1001[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&slavedic_obj1001, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&slavedic_obj1001, NULL }
                      };
 
 /* index 0x1003 :   Pre-defined Error Field */
@@ -68,7 +68,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     subindex slavedic_Index1003[] = 
                      {
                        { RW, valueRange_EMC, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1003, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&slavedic_obj1003[0], NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1003[0], NULL }
                      };
 
 /* index 0x1005 :   SYNC COB ID */
@@ -94,7 +94,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS16 slavedic_obj1017 = 0x0;	/* 0 */
                     subindex slavedic_Index1017[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&slavedic_obj1017, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&slavedic_obj1017, NULL }
                      };
 
 /* index 0x1018 :   Identity. */
@@ -105,11 +105,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 slavedic_obj1018_Serial_Number = 0x0;	/* 0 */
                     subindex slavedic_Index1018[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1018, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&slavedic_obj1018_Vendor_ID, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&slavedic_obj1018_Product_Code, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&slavedic_obj1018_Revision_Number, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&slavedic_obj1018_Serial_Number, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1018, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1018_Vendor_ID, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1018_Product_Code, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1018_Revision_Number, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1018_Serial_Number, NULL }
                      };
 
 /* index 0x1200 :   Server SDO Parameter. */
@@ -118,9 +118,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 slavedic_obj1200_COB_ID_Server_to_Client_Transmit_SDO = 0x580;	/* 1408 */
                     subindex slavedic_Index1200[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1200, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&slavedic_obj1200_COB_ID_Client_to_Server_Receive_SDO, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&slavedic_obj1200_COB_ID_Server_to_Client_Transmit_SDO, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1200, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1200_COB_ID_Client_to_Server_Receive_SDO, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1200_COB_ID_Server_to_Client_Transmit_SDO, NULL }
                      };
 
 /* index 0x1400 :   Receive PDO 1 Parameter. */
@@ -133,13 +133,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 slavedic_obj1400_SYNC_start_value = 0x0;	/* 0 */
                     subindex slavedic_Index1400[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1400, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&slavedic_obj1400_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&slavedic_obj1400_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&slavedic_obj1400_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&slavedic_obj1400_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&slavedic_obj1400_Event_Timer, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&slavedic_obj1400_SYNC_start_value, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1400, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1400_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&slavedic_obj1400_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&slavedic_obj1400_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&slavedic_obj1400_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&slavedic_obj1400_Event_Timer, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&slavedic_obj1400_SYNC_start_value, NULL }
                      };
 
 /* index 0x1600 :   Receive PDO 1 Mapping. */
@@ -150,8 +150,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex slavedic_Index1600[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1600, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&slavedic_obj1600[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1600, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1600[0], NULL }
                      };
 
 /* index 0x1800 :   Transmit PDO 1 Parameter. */
@@ -164,13 +164,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 slavedic_obj1800_SYNC_start_value = 0x0;	/* 0 */
                     subindex slavedic_Index1800[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1800, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&slavedic_obj1800_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&slavedic_obj1800_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&slavedic_obj1800_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&slavedic_obj1800_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&slavedic_obj1800_Event_Timer, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&slavedic_obj1800_SYNC_start_value, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1800, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1800_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&slavedic_obj1800_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&slavedic_obj1800_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&slavedic_obj1800_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&slavedic_obj1800_Event_Timer, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&slavedic_obj1800_SYNC_start_value, NULL }
                      };
 
 /* index 0x1A00 :   Transmit PDO 1 Mapping. */
@@ -181,20 +181,20 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex slavedic_Index1A00[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1A00, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&slavedic_obj1A00[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&slavedic_highestSubIndex_obj1A00, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&slavedic_obj1A00[0], NULL }
                      };
 
 /* index 0x2000 :   Mapped variable counter */
                     subindex slavedic_Index2000[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&counter, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&counter, NULL }
                      };
 
 /* index 0x2001 :   Mapped variable position */
                     subindex slavedic_Index2001[] = 
                      {
-                       { RW, int16, sizeof (INTEGER16), (void*)&position, NULL }
+                       { RW, cf_int16, sizeof (INTEGER16), (void*)&position, NULL }
                      };
 
 /**************************************************************************/

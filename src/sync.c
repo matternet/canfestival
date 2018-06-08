@@ -41,7 +41,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include "canfestival.h"
 #include "sysdep.h"
 
-/* Prototypes for internals functions */
+/* Prototypes for cf_internals functions */
 
 /*!                                                                                                
 **                                                                                                 

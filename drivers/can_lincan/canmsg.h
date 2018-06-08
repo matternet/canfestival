@@ -75,7 +75,7 @@ struct canmsg_t {
 	int		cob;
 	canmsg_id_t	id;
 	unsigned long	timestamp;
-	unsigned int	length;
+	unsigned cf_int	length;
 	unsigned char	data[CAN_MSG_LENGTH];
 } PACKED;
 #endif /*CAN_MSG_VERSION_2*/

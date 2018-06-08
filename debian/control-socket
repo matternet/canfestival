@@ -31,7 +31,7 @@ Description: Documentation for canfestival
 
 Package: canfestival-socket
 Architecture: all
-Description: Can interface for Socket-CAN
+Description: Can cf_interface for Socket-CAN
 
 Package: canfestival-objdictedit
 Architecture: all

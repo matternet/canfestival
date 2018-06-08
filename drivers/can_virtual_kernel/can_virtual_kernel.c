@@ -59,7 +59,7 @@ UNS8 canReceive_driver(CAN_HANDLE fd0, Message *m)
 	long ret = wait_event_interruptible (((CANPipe*)fd0)->w_queue,
 		kfifo_len (((CANPipe*)fd0)->pipe) >= sizeof(Message));
 
-	// interrupted by signal
+	// cf_interrupted by signal
 	if (ret == -ERESTARTSYS)
 		return 2;
 

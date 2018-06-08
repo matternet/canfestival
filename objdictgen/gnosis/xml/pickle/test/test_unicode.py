@@ -72,7 +72,7 @@ try:
     xml = dumps(o)
     raise "FAIL: We should not be allowed to put Unicode in attrs"
 except TypeError:
-    #print "As intended, a TypeError is encountered putting Unicode in attrs"
+    #print "As cf_intended, a TypeError is encountered putting Unicode in attrs"
     pass	
 
 print "** OK **"

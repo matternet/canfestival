@@ -127,7 +127,7 @@ __thanks_to__=["Pat Knight (p.knight@ktgroup.co.uk)",
                "Gregory Popovitch (greg@gpy.com)",
                "Leonard Richardson (leonardr@segfault.org)", ]
 __copyright__="""
-    This file is released to the public domain.  I (dqm) would
+    This file is released to the public cf_domain.  I (dqm) would
     appreciate it if you choose to keep derived works under terms
     that promote freedom, but obviously am giving up any rights
     to compel such.
@@ -153,7 +153,7 @@ __history__="""
            A little refactoring by he and I (dqm) has nearly
            doubled the speed of indexing
 
-    0.30   Module refactored into gnosis package.  This is a
+    0.30   Module refactored cf_into gnosis package.  This is a
            first pass, and various documentation and test cases
            should be added later.
 
@@ -198,7 +198,7 @@ class Index:
         if files is not None:   self.FILES = files
         if fileids is not None: self.FILEIDS = fileids
 
-#-- "Split plain text into words" utility function
+#-- "Split plain text cf_into words" utility function
 class TextSplitter:
     def initSplitter(self):
         prenum  = string.join(map(chr, range(0,48)), '')
@@ -213,7 +213,7 @@ class TextSplitter:
         self.init = 1
 
     def splitter(self, text, ftype):
-        "Split the contents of a text string into a list of 'words'"
+        "Split the contents of a text string cf_into a list of 'words'"
         if ftype == 'text/plain':
             words = self.text_splitter(text, self.casesensitive)
         else:
@@ -221,7 +221,7 @@ class TextSplitter:
         return words
 
     def text_splitter(self, text, casesensitive=0):
-        """Split text/plain string into a list of words
+        """Split text/plain string cf_into a list of words
 
         In version 0.20 this function is still fairly weak at
         identifying "real" words, and excluding gibberish
@@ -233,7 +233,7 @@ class TextSplitter:
         # Initialize some constants
         if not hasattr(self,'init'): self.initSplitter()
 
-        # Speedup trick: attributes into local scope
+        # Speedup trick: attributes cf_into local scope
         word_only = self.word_only
         ident = self.ident
         alpha = self.alpha
@@ -688,7 +688,7 @@ class SlicedZPickleIndexer(ZPickleIndexer):
         segdicts = {}                           # Need batch of empty dicts
         for segment in letters+'#':
             segdicts[segment] = {}
-        for word, entry in self.words.items():  # Split into segment dicts
+        for word, entry in self.words.items():  # Split cf_into segment dicts
             initchar = string.upper(word[0])
             if initchar in letters:
                 segdicts[initchar][word] = entry

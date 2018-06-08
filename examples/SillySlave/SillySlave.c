@@ -48,14 +48,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 SillySlave_obj1000 = 0x2000000;	/* 33554432 */
                     subindex SillySlave_Index1000[] = 
                      {
-                       { RO, uint32, sizeof (UNS32), (void*)&SillySlave_obj1000, NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1000, NULL }
                      };
 
 /* index 0x1001 :   Error Register. */
                     UNS8 SillySlave_obj1001 = 0x0;	/* 0 */
                     subindex SillySlave_Index1001[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&SillySlave_obj1001, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&SillySlave_obj1001, NULL }
                      };
 
 /* index 0x1003 :   Pre-defined Error Field */
@@ -67,7 +67,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     subindex SillySlave_Index1003[] = 
                      {
                        { RW, valueRange_EMC, sizeof (UNS8), (void*)&SillySlave_highestSubIndex_obj1003, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&SillySlave_obj1003[0], NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1003[0], NULL }
                      };
 
 /* index 0x1005 :   SYNC COB ID */
@@ -86,14 +86,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 SillySlave_obj1012 = 0x80000100;	/* 2147483904 */
                     subindex SillySlave_Index1012[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&SillySlave_obj1012, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1012, NULL }
                      };
 
 /* index 0x1013 :   High Resolution Timestamp. */
                     UNS32 SillySlave_obj1013 = 0x0;	/* 0 */
                     subindex SillySlave_Index1013[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&SillySlave_obj1013, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1013, NULL }
                      };
 
 /* index 0x1014 :   Emergency COB ID */
@@ -114,11 +114,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 SillySlave_obj1018_Serial_Number = 0x1;	/* 1 */
                     subindex SillySlave_Index1018[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&SillySlave_highestSubIndex_obj1018, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&SillySlave_obj1018_Vendor_ID, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&SillySlave_obj1018_Product_Code, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&SillySlave_obj1018_Revision_Number, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&SillySlave_obj1018_Serial_Number, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&SillySlave_highestSubIndex_obj1018, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1018_Vendor_ID, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1018_Product_Code, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1018_Revision_Number, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1018_Serial_Number, NULL }
                      };
 
 /* index 0x1200 :   Server SDO Parameter. */
@@ -127,9 +127,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 SillySlave_obj1200_COB_ID_Server_to_Client_Transmit_SDO = 0x580;	/* 1408 */
                     subindex SillySlave_Index1200[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&SillySlave_highestSubIndex_obj1200, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&SillySlave_obj1200_COB_ID_Client_to_Server_Receive_SDO, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&SillySlave_obj1200_COB_ID_Server_to_Client_Transmit_SDO, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&SillySlave_highestSubIndex_obj1200, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1200_COB_ID_Client_to_Server_Receive_SDO, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1200_COB_ID_Server_to_Client_Transmit_SDO, NULL }
                      };
 
 /* index 0x1800 :   Transmit PDO 1 Parameter. */
@@ -141,12 +141,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS16 SillySlave_obj1800_Event_Timer = 0x0;	/* 0 */
                     subindex SillySlave_Index1800[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&SillySlave_highestSubIndex_obj1800, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&SillySlave_obj1800_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&SillySlave_obj1800_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&SillySlave_obj1800_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&SillySlave_obj1800_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&SillySlave_obj1800_Event_Timer, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&SillySlave_highestSubIndex_obj1800, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1800_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&SillySlave_obj1800_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&SillySlave_obj1800_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&SillySlave_obj1800_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&SillySlave_obj1800_Event_Timer, NULL }
                      };
 
 /* index 0x1A00 :   Transmit PDO 1 Mapping. */
@@ -157,14 +157,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex SillySlave_Index1A00[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&SillySlave_highestSubIndex_obj1A00, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&SillySlave_obj1A00[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&SillySlave_highestSubIndex_obj1A00, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&SillySlave_obj1A00[0], NULL }
                      };
 
 /* index 0x2001 :   Mapped variable LifeSignal */
                     subindex SillySlave_Index2001[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&LifeSignal, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&LifeSignal, NULL }
                      };
 
 /**************************************************************************/

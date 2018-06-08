@@ -348,12 +348,12 @@ class MapVariableDialog(wx.Dialog):
     def OnOK(self, event):
         error = []
         try:
-            int(self.Index.GetValue(), 16)
+            cf_int(self.Index.GetValue(), 16)
         except:
             error.append(_("Index"))
         if self.radioButton2.GetValue() or self.radioButton3.GetValue():
             try:
-                int(self.Number.GetValue())
+                cf_int(self.Number.GetValue())
             except:
                 error.append(_("Number"))
         if len(error) > 0:
@@ -362,9 +362,9 @@ class MapVariableDialog(wx.Dialog):
                 if i == 0:
                     text += item
                 elif i == len(error) - 1:
-                    text += (" and %s")%item + _(" must be integers!")
+                    text += (" and %s")%item + _(" must be cf_integers!")
                 else:
-                    text += _(", %s")%item + _(" must be integer!")
+                    text += _(", %s")%item + _(" must be cf_integer!")
             message = wx.MessageDialog(self, _("Form isn't valid. %s")%text, _("Error"), wx.OK|wx.ICON_ERROR)
             message.ShowModal()
             message.Destroy()
@@ -373,16 +373,16 @@ class MapVariableDialog(wx.Dialog):
 
     def GetValues(self):
         name = self.IndexName.GetValue()
-        index = int(self.Index.GetValue(), 16)
+        index = cf_int(self.Index.GetValue(), 16)
         if self.radioButton1.GetValue():
             struct = 1
             number = None
         elif self.radioButton2.GetValue():
             struct = 7
-            number = int(self.Number.GetValue())
+            number = cf_int(self.Number.GetValue())
         elif self.radioButton3.GetValue():
             struct = 3
-            number = int(self.Number.GetValue())
+            number = cf_int(self.Number.GetValue())
         return index, name, struct, number
 
     def OnRadioButton1Click(self, event):
@@ -536,18 +536,18 @@ class UserTypeDialog(wx.Dialog):
             valuetype = self.TypeDictionary[name][1]
             if valuetype == 0:
                 try:
-                    int(self.Min.GetValue(), 16)
+                    cf_int(self.Min.GetValue(), 16)
                 except:
                     error.append(_("Minimum"))
                     good = False
                 try:
-                    int(self.Max.GetValue(), 16)
+                    cf_int(self.Max.GetValue(), 16)
                 except:
                     error.append(_("Maximum"))
                     good = False
             elif valuetype == 1:
                 try:
-                    int(self.Length.GetValue(), 16)
+                    cf_int(self.Length.GetValue(), 16)
                 except:
                     error.append(_("Length"))
                     good = False
@@ -557,9 +557,9 @@ class UserTypeDialog(wx.Dialog):
                     if i == 0:
                         message += item
                     elif i == len(error) - 1:
-                        message += _(" and %s")%item + _(" must be integers!")
+                        message += _(" and %s")%item + _(" must be cf_integers!")
                     else:
-                        message += _(", %s")%item + _(" must be integer!")
+                        message += _(", %s")%item + _(" must be cf_integer!")
         else:
             message = _("A type must be selected!")
         if message is not None:
@@ -623,9 +623,9 @@ class UserTypeDialog(wx.Dialog):
     def GetValues(self):
         name = self.Type.GetStringSelection()
         type = self.TypeDictionary[name][0]
-        min = int(self.Min.GetValue())
-        max = int(self.Max.GetValue())
-        length = int(self.Length.GetValue())
+        min = cf_int(self.Min.GetValue())
+        max = cf_int(self.Max.GetValue())
+        length = cf_int(self.Length.GetValue())
         return type, min, max, length
 
 
@@ -755,9 +755,9 @@ class NodeInfosDialog(wx.Dialog):
                 message = _("Node name can't be undefined or start with a digit and must be composed of alphanumerical characters or underscore!")
         if message != "":
             try:
-                nodeid = int(self.NodeID.GetValue(), 16)
+                nodeid = cf_int(self.NodeID.GetValue(), 16)
             except:
-                message = _("Node ID must be integer!")
+                message = _("Node ID must be cf_integer!")
         if message != "":
             message = wx.MessageDialog(self, message, _("ERROR"), wx.OK|wx.ICON_ERROR)
             message.ShowModal()
@@ -775,7 +775,7 @@ class NodeInfosDialog(wx.Dialog):
 
     def GetValues(self):
         name = self.NodeName.GetValue()
-        nodeid = int(self.NodeID.GetValue(), 16)
+        nodeid = cf_int(self.NodeID.GetValue(), 16)
         type = NODE_TYPES_DICT[self.Type.GetStringSelection()]
         description = self.Description.GetValue()
         defaultstringsize = self.DefaultStringSize.GetValue()
@@ -1030,9 +1030,9 @@ class CreateNodeDialog(wx.Dialog):
                 message = _("Node name can't be undefined or start with a digit and must be composed of alphanumerical characters or underscore!")
         if message != "":
             try:
-                nodeid = int(self.NodeID.GetValue(), 16)
+                nodeid = cf_int(self.NodeID.GetValue(), 16)
             except:
-                message = _("Node ID must be integer!")
+                message = _("Node ID must be cf_integer!")
         if message != "":
             message = wx.MessageDialog(self, message, _("ERROR"), wx.OK|wx.ICON_ERROR)
             message.ShowModal()
@@ -1045,7 +1045,7 @@ class CreateNodeDialog(wx.Dialog):
         name = self.NodeName.GetValue()
         nodeid = 0
         if self.NodeID.GetValue() != "":
-            nodeid = int(self.NodeID.GetValue(), 16)
+            nodeid = cf_int(self.NodeID.GetValue(), 16)
         type = NODE_TYPES_DICT[self.Type.GetStringSelection()]
         description = self.Description.GetValue()
         return name, nodeid, type, description
@@ -1215,9 +1215,9 @@ class AddSlaveDialog(wx.Dialog):
             try:
                 nodeid = self.SlaveNodeID.GetValue()
                 if nodeid.find("x") != -1:
-                    nodeid = int(nodeid, 16)
+                    nodeid = cf_int(nodeid, 16)
                 else:
-                    nodeid = int(nodeid)
+                    nodeid = cf_int(nodeid)
             except:
                 message = wx.MessageDialog(self, _("Slave Node ID must be a value in decimal or hexadecimal!"), _("Error"), wx.OK|wx.ICON_ERROR)
                 message.ShowModal()
@@ -1277,9 +1277,9 @@ class AddSlaveDialog(wx.Dialog):
         values["slaveName"] = self.SlaveName.GetValue()
         nodeid = self.SlaveNodeID.GetValue()
         if nodeid.find("x") != -1:
-            values["slaveNodeID"] = int(nodeid, 16)
+            values["slaveNodeID"] = cf_int(nodeid, 16)
         else:
-            values["slaveNodeID"] = int(nodeid)
+            values["slaveNodeID"] = cf_int(nodeid)
         values["edsFile"] = self.EDSFile.GetStringSelection()
         return values
 
@@ -1510,7 +1510,7 @@ class DCFEntryValuesDialog(wx.Dialog):
         colname = self.Table.GetColLabelValue(col)
         value = self.Table.GetValue(row, col)
         try:
-            self.Values[row][colname] = int(value, 16)
+            self.Values[row][colname] = cf_int(value, 16)
         except:
             message = wx.MessageDialog(self, _("\"%s\" is not a valid value!")%value, _("Error"), wx.OK|wx.ICON_ERROR)
             message.ShowModal()

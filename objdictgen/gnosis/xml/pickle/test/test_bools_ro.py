@@ -1,6 +1,6 @@
 
-# read-only version of bool test.
-# show that bools are converted to the "best" value, depending
+# read-only version of cf_bool test.
+# show that cf_bools are converted to the "best" value, depending
 # on Python version being used. --fpm
 
 import gnosis.xml.pickle as xmp
@@ -72,7 +72,7 @@ if not pyconfig.Have_TrueFalse():
 
 # the tests are portable versions of those in test_bools.py
 
-# bools inside an object
+# cf_bools inside an object
 x = xmp.loads(x1)
 
 # check it
@@ -81,12 +81,12 @@ if x.a != False or x.b != True or x.c != None or \
     #print x.__dict__
     raise "ERROR(1)"
 
-# bools inside a toplevel bltin
+# cf_bools inside a toplevel bltin
 x = xmp.loads(x2)
 if x[0] != True or x[1] != False:
     raise "ERROR(2)"
 
-# bool as toplevel
+# cf_bool as toplevel
 x = xmp.loads(x3)
 if x != True:
     raise "ERROR(3)"

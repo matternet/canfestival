@@ -52,10 +52,10 @@
 //*----------------------------------------------------------------------------
 __inline unsigned int AT91F_AIC_ConfigureIt (
 	AT91PS_AIC pAic,  // \arg pointer to the AIC registers
-	unsigned int irq_id,     // \arg interrupt number to initialize
-	unsigned int priority,   // \arg priority to give to the interrupt
+	unsigned int irq_id,     // \arg cf_interrupt number to initialize
+	unsigned int priority,   // \arg priority to give to the cf_interrupt
 	unsigned int src_type,   // \arg activation and sense of activation
-	void (*newHandler) () ) // \arg address of the interrupt handler
+	void (*newHandler) () ) // \arg address of the cf_interrupt handler
 {
 	unsigned int oldHandler;
     unsigned int mask ;
@@ -63,13 +63,13 @@ __inline unsigned int AT91F_AIC_ConfigureIt (
     oldHandler = pAic->AIC_SVR[irq_id];
 
     mask = 0x1 << irq_id ;
-    //* Disable the interrupt on the interrupt controller
+    //* Disable the cf_interrupt on the cf_interrupt controller
     pAic->AIC_IDCR = mask ;
-    //* Save the interrupt handler routine pointer and the interrupt priority
+    //* Save the cf_interrupt handler routine pointer and the cf_interrupt priority
     pAic->AIC_SVR[irq_id] = (unsigned int) newHandler ;
     //* Store the Source Mode Register
     pAic->AIC_SMR[irq_id] = src_type | priority  ;
-    //* Clear the interrupt on the interrupt controller
+    //* Clear the cf_interrupt on the cf_interrupt controller
     pAic->AIC_ICCR = mask ;
 
 	return oldHandler;
@@ -81,9 +81,9 @@ __inline unsigned int AT91F_AIC_ConfigureIt (
 //*----------------------------------------------------------------------------
 __inline void AT91F_AIC_EnableIt (
 	AT91PS_AIC pAic,      // \arg pointer to the AIC registers
-	unsigned int irq_id ) // \arg interrupt number to initialize
+	unsigned int irq_id ) // \arg cf_interrupt number to initialize
 {
-    //* Enable the interrupt on the interrupt controller
+    //* Enable the cf_interrupt on the cf_interrupt controller
     pAic->AIC_IECR = 0x1 << irq_id ;
 }
 
@@ -93,12 +93,12 @@ __inline void AT91F_AIC_EnableIt (
 //*----------------------------------------------------------------------------
 __inline void AT91F_AIC_DisableIt (
 	AT91PS_AIC pAic,      // \arg pointer to the AIC registers
-	unsigned int irq_id ) // \arg interrupt number to initialize
+	unsigned int irq_id ) // \arg cf_interrupt number to initialize
 {
     unsigned int mask = 0x1 << irq_id;
-    //* Disable the interrupt on the interrupt controller
+    //* Disable the cf_interrupt on the cf_interrupt controller
     pAic->AIC_IDCR = mask ;
-    //* Clear the interrupt on the Interrupt Controller ( if one is pending )
+    //* Clear the cf_interrupt on the Interrupt Controller ( if one is pending )
     pAic->AIC_ICCR = mask ;
 }
 
@@ -108,9 +108,9 @@ __inline void AT91F_AIC_DisableIt (
 //*----------------------------------------------------------------------------
 __inline void AT91F_AIC_ClearIt (
 	AT91PS_AIC pAic,     // \arg pointer to the AIC registers
-	unsigned int irq_id) // \arg interrupt number to initialize
+	unsigned int irq_id) // \arg cf_interrupt number to initialize
 {
-    //* Clear the interrupt on the Interrupt Controller ( if one is pending )
+    //* Clear the cf_interrupt on the Interrupt Controller ( if one is pending )
     pAic->AIC_ICCR = (0x1 << irq_id);
 }
 
@@ -148,7 +148,7 @@ __inline unsigned int  AT91F_AIC_SetExceptionVector (
 //*----------------------------------------------------------------------------
 __inline void  AT91F_AIC_Trig (
 	AT91PS_AIC pAic,     // \arg pointer to the AIC registers
-	unsigned int irq_id) // \arg interrupt number
+	unsigned int irq_id) // \arg cf_interrupt number
 {
 	pAic->AIC_ISCR = (0x1 << irq_id) ;
 }
@@ -189,7 +189,7 @@ __inline void AT91F_AIC_Open(
 {
 	int i;
 
-	// Disable all interrupts and set IVR to the default handler
+	// Disable all cf_interrupts and set IVR to the default handler
 	for (i = 0; i < 32; ++i) {
 		AT91F_AIC_DisableIt(pAic, i);
 		AT91F_AIC_ConfigureIt(pAic, i, AT91C_AIC_PRIOR_LOWEST, AT91C_AIC_SRCTYPE_HIGH_LEVEL, DefaultHandler);
@@ -443,7 +443,7 @@ __inline unsigned int AT91F_PDC_ReceiveFrame (
 //*----------------------------------------------------------------------------
 __inline void AT91F_DBGU_InterruptEnable(
         AT91PS_DBGU pDbgu,   // \arg  pointer to a DBGU controller
-        unsigned int flag) // \arg  dbgu interrupt to be enabled
+        unsigned int flag) // \arg  dbgu cf_interrupt to be enabled
 {
         pDbgu->DBGU_IER = flag;
 }
@@ -454,7 +454,7 @@ __inline void AT91F_DBGU_InterruptEnable(
 //*----------------------------------------------------------------------------
 __inline void AT91F_DBGU_InterruptDisable(
         AT91PS_DBGU pDbgu,   // \arg  pointer to a DBGU controller
-        unsigned int flag) // \arg  dbgu interrupt to be disabled
+        unsigned int flag) // \arg  dbgu cf_interrupt to be disabled
 {
         pDbgu->DBGU_IDR = flag;
 }
@@ -777,7 +777,7 @@ __inline unsigned int AT91F_PIO_GetOutputDataStatus( // \return PIO Output Data 
 //*----------------------------------------------------------------------------
 __inline void AT91F_PIO_InterruptEnable(
         AT91PS_PIO pPio,   // \arg  pointer to a PIO controller
-        unsigned int flag) // \arg  pio interrupt to be enabled
+        unsigned int flag) // \arg  pio cf_interrupt to be enabled
 {
         pPio->PIO_IER = flag;
 }
@@ -788,7 +788,7 @@ __inline void AT91F_PIO_InterruptEnable(
 //*----------------------------------------------------------------------------
 __inline void AT91F_PIO_InterruptDisable(
         AT91PS_PIO pPio,   // \arg  pointer to a PIO controller
-        unsigned int flag) // \arg  pio interrupt to be disabled
+        unsigned int flag) // \arg  pio cf_interrupt to be disabled
 {
         pPio->PIO_IDR = flag;
 }
@@ -1215,7 +1215,7 @@ __inline void AT91F_PMC_DisablePCK (
 
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_PMC_EnableIt
-//* \brief Enable PMC interrupt
+//* \brief Enable PMC cf_interrupt
 //*----------------------------------------------------------------------------
 __inline void AT91F_PMC_EnableIt (
 	AT91PS_PMC pPMC,     // pointer to a PMC controller
@@ -1227,7 +1227,7 @@ __inline void AT91F_PMC_EnableIt (
 
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_PMC_DisableIt
-//* \brief Disable PMC interrupt
+//* \brief Disable PMC cf_interrupt
 //*----------------------------------------------------------------------------
 __inline void AT91F_PMC_DisableIt (
 	AT91PS_PMC pPMC, // pointer to a PMC controller
@@ -1488,7 +1488,7 @@ __inline unsigned int AT91F_RTTReadValue(
    ***************************************************************************** */
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_PITInit
-//* \brief System timer init : period in µsecond, system clock freq in MHz
+//* \brief System timer init : period in ï¿½second, system clock freq in MHz
 //*----------------------------------------------------------------------------
 __inline void AT91F_PITInit(
         AT91PS_PITC pPITC,
@@ -1512,7 +1512,7 @@ __inline void AT91F_PITSetPIV(
 
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_PITEnableInt
-//* \brief Enable PIT periodic interrupt
+//* \brief Enable PIT periodic cf_interrupt
 //*----------------------------------------------------------------------------
 __inline void AT91F_PITEnableInt(
         AT91PS_PITC pPITC)
@@ -1522,7 +1522,7 @@ __inline void AT91F_PITEnableInt(
 
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_PITDisableInt
-//* \brief Disable PIT periodic interrupt
+//* \brief Disable PIT periodic cf_interrupt
 //*----------------------------------------------------------------------------
 __inline void AT91F_PITDisableInt(
         AT91PS_PITC pPITC)
@@ -1605,7 +1605,7 @@ __inline unsigned int AT91F_WDTSGettatus(
 
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_WDTGetPeriod
-//* \brief Translate ms into Watchdog Compatible value
+//* \brief Translate ms cf_into Watchdog Compatible value
 //*----------------------------------------------------------------------------
 __inline unsigned int AT91F_WDTGetPeriod(unsigned int ms)
 {
@@ -1744,7 +1744,7 @@ __inline void AT91F_SPI_CfgCs (
 
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_SPI_EnableIt
-//* \brief Enable SPI interrupt
+//* \brief Enable SPI cf_interrupt
 //*----------------------------------------------------------------------------
 __inline void AT91F_SPI_EnableIt (
 	AT91PS_SPI pSPI,     // pointer to a SPI controller
@@ -1756,7 +1756,7 @@ __inline void AT91F_SPI_EnableIt (
 
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_SPI_DisableIt
-//* \brief Disable SPI interrupt
+//* \brief Disable SPI cf_interrupt
 //*----------------------------------------------------------------------------
 __inline void AT91F_SPI_DisableIt (
 	AT91PS_SPI pSPI, // pointer to a SPI controller
@@ -1881,7 +1881,7 @@ __inline void AT91F_SPI_Close (
     //* Reset the SPI mode
     pSPI->SPI_MR = 0  ;
 
-    //* Disable all interrupts
+    //* Disable all cf_interrupts
     pSPI->SPI_IDR = 0xFFFFFFFF ;
 
     //* Abort the Peripheral Data Transfers
@@ -2059,7 +2059,7 @@ __inline void AT91F_US_Configure (
 	unsigned int baudRate ,  // \arg baudrate to be programmed
 	unsigned int timeguard ) // \arg timeguard to be programmed
 {
-    //* Disable interrupts
+    //* Disable cf_interrupts
     pUSART->US_IDR = (unsigned int) -1;
 
     //* Reset receiver and transmitter
@@ -2165,7 +2165,7 @@ __inline void AT91F_US_Close (
     //* Reset the Timeguard Register
     pUSART->US_TTGR = 0;
 
-    //* Disable all interrupts
+    //* Disable all cf_interrupts
     pUSART->US_IDR = 0xFFFFFFFF ;
 
     //* Abort the Peripheral Data Transfers
@@ -2346,7 +2346,7 @@ __inline void AT91F_SSC_Configure (
              unsigned int clock_tx,    // \arg Transmitter Clock Parameters
              unsigned int mode_tx)     // \arg mode Register to be programmed
 {
-    //* Disable interrupts
+    //* Disable cf_interrupts
 	pSSC->SSC_IDR = (unsigned int) -1;
 
     //* Reset receiver and transmitter
@@ -2533,7 +2533,7 @@ __inline void AT91F_TWI_DisableIt (
 //*----------------------------------------------------------------------------
 __inline void AT91F_TWI_Configure ( AT91PS_TWI pTWI )          // \arg pointer to a TWI controller
 {
-    //* Disable interrupts
+    //* Disable cf_interrupts
 	pTWI->TWI_IDR = (unsigned int) -1;
 
     //* Reset peripheral
@@ -2584,7 +2584,7 @@ __inline unsigned int AT91F_PWMC_GetStatus( // \return PWM Interrupt Status
 //*----------------------------------------------------------------------------
 __inline void AT91F_PWMC_InterruptEnable(
         AT91PS_PWMC pPwm,   // \arg  pointer to a PWM controller
-        unsigned int flag) // \arg  PWM interrupt to be enabled
+        unsigned int flag) // \arg  PWM cf_interrupt to be enabled
 {
         pPwm->PWMC_IER = flag;
 }
@@ -2595,7 +2595,7 @@ __inline void AT91F_PWMC_InterruptEnable(
 //*----------------------------------------------------------------------------
 __inline void AT91F_PWMC_InterruptDisable(
         AT91PS_PWMC pPwm,   // \arg  pointer to a PWM controller
-        unsigned int flag) // \arg  PWM interrupt to be disabled
+        unsigned int flag) // \arg  PWM cf_interrupt to be disabled
 {
         pPwm->PWMC_IDR = flag;
 }
@@ -2927,7 +2927,7 @@ __inline void AT91F_UDP_DisableTransceiver(
 //*----------------------------------------------------------------------------
 __inline void AT91F_TC_InterruptEnable(
         AT91PS_TC pTc,   // \arg  pointer to a TC controller
-        unsigned int flag) // \arg  TC interrupt to be enabled
+        unsigned int flag) // \arg  TC cf_interrupt to be enabled
 {
         pTc->TC_IER = flag;
 }
@@ -2938,7 +2938,7 @@ __inline void AT91F_TC_InterruptEnable(
 //*----------------------------------------------------------------------------
 __inline void AT91F_TC_InterruptDisable(
         AT91PS_TC pTc,   // \arg  pointer to a TC controller
-        unsigned int flag) // \arg  TC interrupt to be disabled
+        unsigned int flag) // \arg  TC cf_interrupt to be disabled
 {
         pTc->TC_IDR = flag;
 }
@@ -3016,7 +3016,7 @@ __inline void AT91F_DisableCAN(
 
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_CAN_EnableIt
-//* \brief Enable CAN interrupt
+//* \brief Enable CAN cf_interrupt
 //*----------------------------------------------------------------------------
 __inline void AT91F_CAN_EnableIt (
 	AT91PS_CAN pCAN,     // pointer to a CAN controller
@@ -3028,7 +3028,7 @@ __inline void AT91F_CAN_EnableIt (
 
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_CAN_DisableIt
-//* \brief Disable CAN interrupt
+//* \brief Disable CAN cf_interrupt
 //*----------------------------------------------------------------------------
 __inline void AT91F_CAN_DisableIt (
 	AT91PS_CAN pCAN, // pointer to a CAN controller
@@ -3327,7 +3327,7 @@ __inline unsigned int AT91F_CAN_GetMessageDataHigh (
    ***************************************************************************** */
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_ADC_EnableIt
-//* \brief Enable ADC interrupt
+//* \brief Enable ADC cf_interrupt
 //*----------------------------------------------------------------------------
 __inline void AT91F_ADC_EnableIt (
 	AT91PS_ADC pADC,     // pointer to a ADC controller
@@ -3339,7 +3339,7 @@ __inline void AT91F_ADC_EnableIt (
 
 //*----------------------------------------------------------------------------
 //* \fn    AT91F_ADC_DisableIt
-//* \brief Disable ADC interrupt
+//* \brief Disable ADC cf_interrupt
 //*----------------------------------------------------------------------------
 __inline void AT91F_ADC_DisableIt (
 	AT91PS_ADC pADC, // pointer to a ADC controller

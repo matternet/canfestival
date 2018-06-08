@@ -10,13 +10,13 @@ start =
   }
 
 param = element param { attribute name { xsd:NCName }, string }
-valid = element valid { internalSubset?, string }
-invalid = element invalid { internalSubset?, string }
+valid = element valid { cf_internalSubset?, string }
+invalid = element invalid { cf_internalSubset?, string }
 equiv = element equiv { element class { value+ }+ }
 
-value = element value { internalSubset?, string }
-length = element length { attribute value { xsd:integer }, internalSubset?, string }
+value = element value { cf_internalSubset?, string }
+length = element length { attribute value { xsd:integer }, cf_internalSubset?, string }
 lessThan = element lessThan { value, value }
 incomparable = element incomparable { value, value }
 
-internalSubset = attribute internalSubset { string }
+internalSubset = attribute cf_internalSubset { string }

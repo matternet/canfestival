@@ -55,24 +55,24 @@ def FormatName(name):
 
 # Extract the informations from a given type name
 def GetValidTypeInfos(typename, items=[]):
-    if typename in internal_types:
-        return internal_types[typename]
+    if typename in cf_internal_types:
+        return cf_internal_types[typename]
     else:
         result = type_model.match(typename)
         if result:
             values = result.groups()
-            if values[0] == "UNSIGNED" and int(values[1]) in [i * 8 for i in xrange(1, 9)]:
+            if values[0] == "UNSIGNED" and cf_int(values[1]) in [i * 8 for i in xrange(1, 9)]:
                 typeinfos = ("UNS%s"%values[1], None, "uint%s"%values[1], True)
-            elif values[0] == "INTEGER" and int(values[1]) in [i * 8 for i in xrange(1, 9)]:
+            elif values[0] == "INTEGER" and cf_int(values[1]) in [i * 8 for i in xrange(1, 9)]:
                 typeinfos = ("INTEGER%s"%values[1], None, "int%s"%values[1], False)
-            elif values[0] == "REAL" and int(values[1]) in (32, 64):
+            elif values[0] == "REAL" and cf_int(values[1]) in (32, 64):
                 typeinfos = ("%s%s"%(values[0], values[1]), None, "real%s"%values[1], False)
             elif values[0] in ["VISIBLE_STRING", "OCTET_STRING"]:
                 size = default_string_size
                 for item in items:
                     size = max(size, len(item))
                 if values[1] != "":
-                    size = max(size, int(values[1]))
+                    size = max(size, cf_int(values[1]))
                 typeinfos = ("UNS8", size, "visible_string", False)
             elif values[0] == "DOMAIN":
                 size = 0
@@ -84,7 +84,7 @@ def GetValidTypeInfos(typename, items=[]):
             else:
                 raise ValueError, _("""!!! %s isn't a valid type for CanFestival.""")%typename
             if typeinfos[2] not in ["visible_string", "domain"]:
-                internal_types[typename] = typeinfos
+                cf_internal_types[typename] = typeinfos
         else:
             raise ValueError, _("""!!! %s isn't a valid type for CanFestival.""")%typename
     return typeinfos
@@ -115,7 +115,7 @@ def GenerateFileContent(Node, headerfilepath, pointers_dict = {}):
     pointers_dict = {(Idx,Sidx):"VariableName",...}
     """
     global type
-    global internal_types
+    global cf_internal_types
     global default_string_size
     
     texts = {}
@@ -147,7 +147,7 @@ def GenerateFileContent(Node, headerfilepath, pointers_dict = {}):
     strSwitch = """    case valueRange_EMC:
       if (*(UNS8*)value != (UNS8)0) return OD_VALUE_RANGE_EXCEEDED;
       break;\n"""
-    internal_types["valueRange_EMC"] = ("UNS8", "", "valueRange_EMC", True)
+    cf_internal_types["valueRange_EMC"] = ("UNS8", "", "valueRange_EMC", True)
     num = 0
     for index in rangelist:
         rangename = Node.GetEntryName(index)
@@ -157,7 +157,7 @@ def GenerateFileContent(Node, headerfilepath, pointers_dict = {}):
             typeindex = Node.GetEntry(index, 1)
             typename = Node.GetTypeName(typeindex)
             typeinfos = GetValidTypeInfos(typename)
-            internal_types[rangename] = (typeinfos[0], typeinfos[1], "valueRange_%d"%num)
+            cf_internal_types[rangename] = (typeinfos[0], typeinfos[1], "valueRange_%d"%num)
             minvalue = Node.GetEntry(index, 2)
             maxvalue = Node.GetEntry(index, 3)
             strDefine += "\n#define valueRange_%d 0x%02X /* Type %s, %s < value < %s */"%(num,index,typeinfos[0],str(minvalue),str(maxvalue))
@@ -371,7 +371,7 @@ def GenerateFileContent(Node, headerfilepath, pointers_dict = {}):
                     subindex %(NodeName)s_Index1003[] = 
                      {
                        { RW, valueRange_EMC, sizeof (UNS8), (void*)&%(NodeName)s_highestSubIndex_obj1003, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&%(NodeName)s_obj1003[0], NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&%(NodeName)s_obj1003[0], NULL }
                      };
 """%texts
 

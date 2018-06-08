@@ -40,7 +40,7 @@ __version__ = "$Revision: 0.10 $"
 __author__=["David Mertz (mertz@gnosis.cx)",]
 __thanks_to__=["Scott Hathaway (hathaways@infotrain.com)",]
 __copyright__="""
-    This file is released to the public domain.  I (dqm) would
+    This file is released to the public cf_domain.  I (dqm) would
     appreciate it if you choose to keep derived works under terms
     that promote freedom, but obviously am giving up any rights
     to compel such.
@@ -116,7 +116,7 @@ def parseSQL(query):
     return column_names, group_bys, column_attr
 
 def parsedQuery2DTD(parseStruct,query=""):
-    "Convert a parsed SQL structure (and a raw query) into a matching DTD"
+    "Convert a parsed SQL structure (and a raw query) cf_into a matching DTD"
 
     column_names = parseStruct[0]
     group_bys    = parseStruct[1]

@@ -27,7 +27,7 @@ WHAT IS POLYMORPHISM, REALLY?
   application of polymorphism is in creating a family of object
   that follow a common protocol.  In Python, this is usually
   simply a matter of -ad hoc- polymorphism; in other languages,
-  formal interfaces are more often declared and/or these families
+  formal cf_interfaces are more often declared and/or these families
   share a common ancestor.
 
   For example, there are many functions that operate on "file-like"
@@ -37,7 +37,7 @@ WHAT IS POLYMORPHISM, REALLY?
   'src'--when we call the function, we might decide to pass it a
   local file, a [urllib] object, a [cStringIO] object, or some
   custom object that lets the function call 'src.read()'.  Each
-  object type is interchangeable from the point of view of how it
+  object type is cf_interchangeable from the point of view of how it
   functions within 'read_app_data()'.
 
   Let us step back a bit to think about what is really happening
@@ -58,7 +58,7 @@ WHAT IS POLYMORPHISM, REALLY?
       ...etc...
 
   By arranging for objects of different types to implement common
-  methods, we move the -dispatch- decision into the objects, and
+  methods, we move the -dispatch- decision cf_into the objects, and
   out of an explict conditional block.  A given 'src' object
   knows what block of code it needs to call by looking through
   its inheritance tree.  There is still an implicit switch going
@@ -67,7 +67,7 @@ WHAT IS POLYMORPHISM, REALLY?
   The object 'src' is privileged over any arguments passed to its
   methods.  OOP syntax makes this privileging seem inevitable,
   but it is not really.  Procedural switching is simply pushed
-  into the method bodies of classes in many cases.  For example
+  cf_into the method bodies of classes in many cases.  For example
   we might implement protocol-compatible classes 'Foo' and 'Bar'
   as follows (in pseudo-Python):
 
@@ -231,7 +231,7 @@ IMPROVING INHERITANCE
       elif isinstance(x, Circle): new3 = t.combine_with_circle(x)
 
   In particular, each existing shape class has to add
-  capabilities in a descendent, which runs into combinatorial
+  capabilities in a descendent, which runs cf_into combinatorial
   complexities, and difficulties in maintenance.
 
   In contrast, a multiple dispatch technique is more
@@ -344,7 +344,7 @@ DISPATCH PROPAGATION
   in many of the same ways that calls to superclass methods can get
   tricky. To make things tractable, calls to '.next_method()'
   always return the simple return value of the up-call--if you want
-  to assemble such return values into a list like the 'AT_END'
+  to assemble such return values cf_into a list like the 'AT_END'
   argument does, you will need to append and manipulate the values
   as you think appropriate. The most common "use case," however, is
   where a series of related initializations are peformed; in this
@@ -353,7 +353,7 @@ DISPATCH PROPAGATION
 NOTE ON THREAD SAFETY
 ------------------------------------------------------------------------
 
-  A quick interjection is worthwhile lest readers run into a
+  A quick cf_interjection is worthwhile lest readers run cf_into a
   problem. Because of the stateful way propagation tracks which
   (successively less specific) rules have been called, a dispatcher
   is not thread safe. If you wish to use a dispatcher in multiple
@@ -400,7 +400,7 @@ RESOURCES
 
   Perl has a module called [Class::Multimethods] to implement
   multiple dispatch (and apparently Perl 6 is slated to build the
-  concept more deeply into the language).  Damian Conway
+  concept more deeply cf_into the language).  Damian Conway
   discusses his module at:
 
     http://search.cpan.org/src/DCONWAY/Class-Multimethods-1.70/tutorial.html

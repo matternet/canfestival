@@ -23,7 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 /*
-	COMEDI interface for CO-PCICAN card.
+	COMEDI cf_interface for CO-PCICAN card.
 */
 
 #include <linux/module.h>

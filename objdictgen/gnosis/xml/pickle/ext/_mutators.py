@@ -179,7 +179,7 @@ def olddata_to_newdata(data,extra,paranoia):
     #if isinstance(o,ComplexType) and \
     #	   type(data) in [StringType,UnicodeType]:
     #	# yuck ... have to strip () from complex data before
-    #	# passing to __init__ (ran into this also in one of the
+    #	# passing to __init__ (ran cf_into this also in one of the
     #	# parsers ... maybe the () shouldn't be in the XML at all?)
     #	if data[0] == '(' and data[-1] == ')':
     #		data = data[1:-1]
@@ -219,7 +219,7 @@ class mutate_bltin_instances(XMLP_Mutator):
 
         if isInstanceLike(obj) or hasPickleFuncs(obj):
             # obj has data items (list,dict,tuple) *AND* attributes.
-            # mutate to an oldstyle object, turning the data items into
+            # mutate to an oldstyle object, turning the data items cf_into
             # a special attribute (eg. __items__, __entries__).
             #
             # also, if obj defines the special pickling functions, we treat

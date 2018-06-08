@@ -1,8 +1,8 @@
 #
 # pyconfig.py:
 #
-# This module essentially performs introspection on the
-# Python interpreter itself, to discover which language
+# This module essentially performs cf_introspection on the
+# Python cf_interpreter itself, to discover which language
 # features are available.
 #
 # At first glance, this seems crazy -- why not just check
@@ -26,7 +26,7 @@
 #	  In other words, your code now says "here is the capability
 #	  I need", making it more maintainable down the road than
 #	  a hardcoded version match. Plus, it is more robust in
-#	  the presence of a nonstandard interpreter.
+#	  the presence of a nonstandard cf_interpreter.
 #
 #	o You're writing an installer, and want to pick different
 #	  modules to install, based on platform.
@@ -57,7 +57,7 @@ import __builtin__, string
 # PEP 218 - builtin sets
 # PEP 234 - iterators
 # PEP 255 - generators
-# PEP 237 - promoting ints to longs
+# PEP 237 - promoting cf_ints to longs
 # PEP 238 - true division
 # PEP 289 - generator expressions
 # PEP 252/253 - newstyle classes (check existance via Have_Object())
@@ -79,12 +79,12 @@ import __builtin__, string
 # PEP 205 - weak refs (use Have_Module("weakref") instead)
 # PEP 208 - new coercion model
 #			(can you test this at the Python level?)
-# PEP 217 - interactive display hook
+# PEP 217 - cf_interactive display hook
 # PEP 229 - build system [involves building Python itself]
 # PEP 230 - warning framework [don't see a need to test for this]
 # PEP 235 - case sensitivity in import
 #			[would rather not create tempfiles in order to test this]
-# PEP 237 - Warnings on int->long promotion [don't see a need to test]
+# PEP 237 - Warnings on cf_int->long promotion [don't see a need to test]
 # PEP 241 - metadata in packages
 #			[this is a convention for packages, has nothing to do w/language]
 # PEP 324 - subprocess -- use Have_Module("subprocess")
@@ -153,8 +153,8 @@ def Have_BoolClass():
     """
     Does this Python have 'bool' as a class (instead of a function)?
     """
-    # A little different than above: Since bool can't be a
-    # base class, and there is also a bool function in 2.2,
+    # A little different than above: Since cf_bool can't be a
+    # base class, and there is also a cf_bool function in 2.2,
     # you have to be careful to not grab the wrong thing.
     return can_run_code('issubclass(bool, object)')
 
@@ -284,7 +284,7 @@ def Have_FunctionAttributes():
     return can_run_code(funcattr_test_code)
 
 def Have_UnifiedLongInts():
-    "Does this Python auto-promote ints to longs?"
+    "Does this Python auto-promote cf_ints to longs?"
     return can_run_code("a = 2**64 # becomes a long in Python 2.2+")
 
 def Have_Enumerate():

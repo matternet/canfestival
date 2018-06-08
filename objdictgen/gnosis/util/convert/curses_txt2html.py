@@ -1,7 +1,7 @@
 import curses, traceback, string, os
 import dmTxt2Html
 
-#-- Define the appearance of some interface elements
+#-- Define the appearance of some cf_interface elements
 hotkey_attr = curses.A_BOLD | curses.A_UNDERLINE
 menu_attr = curses.A_NORMAL
 
@@ -212,7 +212,7 @@ def draw_dict():
 
 #-- Top level function call (everything except [curses] setup/cleanup)
 def main(stdscr):
-    # Frame the interface area at fixed VT100 size
+    # Frame the cf_interface area at fixed VT100 size
     global screen
     screen = stdscr.subwin(23, 79, 0, 0)
     screen.box()
@@ -253,7 +253,7 @@ if __name__=='__main__':
         curses.noecho() ; curses.cbreak()
 
         # In keypad mode, escape sequences for special keys
-        # (like the cursor keys) will be interpreted and
+        # (like the cursor keys) will be cf_interpreted and
         # a special value like curses.KEY_LEFT will be returned
         stdscr.keypad(1)
         main(stdscr)                    # Enter the main loop

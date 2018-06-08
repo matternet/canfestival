@@ -83,7 +83,7 @@ print z
 # show how mutators can be chained together for neat purposes
 # (though this example is pretty useless :-)
 #
-# mynumlist handles lists of integers and pickles them as "n,n,n,n"
+# mynumlist handles lists of cf_integers and pickles them as "n,n,n,n"
 # mycharlist does the same for single-char strings
 #
 # otherwise, the ListType builtin handles the list
@@ -91,7 +91,7 @@ print z
 class mynumlist(XMLP_Mutator):
 
     def wants_obj(self,obj):
-        # I only want lists of integers
+        # I only want lists of cf_integers
         for i in obj:
             if type(i) is not IntType:
                 return 0
@@ -163,7 +163,7 @@ mutate.remove_mutator(my2)
 # UserList-derived classes)
 # 
 
-# note: being a simple example, this doesn't take into account
+# note: being a simple example, this doesn't take cf_into account
 #		things like initargs that would be needed to make this
 #		a complete implementation
 

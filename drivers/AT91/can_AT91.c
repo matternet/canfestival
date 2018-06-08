@@ -100,7 +100,7 @@ OUTPUT
 				0x00000000);		// Mailbox Control Reg
   // Enable Reception on all receive Mailboxes
   AT91F_CAN_InitTransferRequest(AT91C_BASE_CAN, RX_INT_MSK);
-  // Enable all receive interrupts
+  // Enable all receive cf_interrupts
   AT91F_CAN_EnableIt(AT91C_BASE_CAN, RX_INT_MSK);
   return 1;
 }

@@ -55,7 +55,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define INTEGER56 long long
 #define INTEGER64 long long
 
-// Unsigned integers
+// Unsigned cf_integers
 #define UNS8   unsigned char
 #define UNS16  unsigned short
 #define UNS32  unsigned long
@@ -69,7 +69,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define REAL32 float
 #define REAL64 double
 
-// Custom integer types sizes
+// Custom cf_integer types sizes
 #define sizeof_INTEGER24 3
 #define sizeof_INTEGER40 5
 #define sizeof_INTEGER48 6
@@ -80,7 +80,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define sizeof_UNS48  6
 #define sizeof_UNS56  7
 
-// Non integral integers conversion macros
+// Non cf_integral cf_integers conversion macros
 #define INT24_2_32(a) (a <= 0x7FFFFF ? a : a|0xFF000000)
 #define INT40_2_64(a) (a <= 0x0000007FFFFFFFFF ? a : a|0xFFFFFF0000000000)
 #define INT48_2_64(a) (a <= 0x00007FFFFFFFFFFF ? a : a|0xFFFF000000000000)

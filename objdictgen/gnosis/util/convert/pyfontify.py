@@ -35,7 +35,7 @@ def replace(where, what, with):
     return string.join(string.split(where, what), with)
 
 # This list of keywords is taken from ref/node13.html of the
-# Python 1.3 HTML documentation. ("access" is intentionally omitted.)
+# Python 1.3 HTML documentation. ("access" is cf_intentionally omitted.)
 keywordsList = [
     "del", "from", "lambda", "return",
     "and", "elif", "global", "not", "try",
@@ -45,7 +45,7 @@ keywordsList = [
     "def", "for", "is", "raise"]
 
 # Build up a regular expression which will match anything
-# interesting, including multi-line triple-quoted strings.
+# cf_interesting, including multi-line triple-quoted strings.
 commentPat = "#.*"
 
 pat = "q[^\q\n]*\(\\\\[\000-\377][^\q\n]*\)*q"

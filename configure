@@ -33,7 +33,7 @@ MAX_CAN_BUS_ID=1
 SDO_MAX_LENGTH_TRANSFER=32
 
 # For block transfer, number of segments transmitted at once.
-# SDO_BLOCK_SIZE CAN frames must fit into the CAN Tx buffer
+# SDO_BLOCK_SIZE CAN frames must fit cf_into the CAN Tx buffer
 SDO_BLOCK_SIZE=16
 
 # Number of SDO from differents nodes that the node can manage concurrently.
@@ -149,7 +149,7 @@ while [ $# -ge 1 ]; do
 		echo 	" --cc=foo      Use C compiler 'foo' instead of defaults ${CC1} or ${CC2}."
 		echo 	" --cxx=foo     Use C++ compiler 'foo' instead of defaults g++."
 		echo 	" --ld=foo      Use linker 'foo' instead of ld."
-		echo 	" --python=foo  Use python interpreter 'foo' instead of defaults python."
+		echo 	" --python=foo  Use python cf_interpreter 'foo' instead of defaults python."
 		echo 	" --arch=foo    Use architecture 'foo' instead of trying to autodetect."
 		echo 	" --os=foo      Use operative system 'foo' instead of trying to autodetect."
 		echo 	" --kerneldir=foo   Use 'foo' as kernel source directory instead of default"
@@ -173,9 +173,9 @@ while [ $# -ge 1 ]; do
 		echo	"                 see http://www.ocera.org/download/components/WP7/lincan-0.3.3.html"
 		echo	"               \"can4linux\" can4linux driver"
 		echo	"                 see http://www.port.de/engl/canprod/hw_can4linux.html"
-		echo	"               \"copcican_linux\" user space driver interface for CO-PCICAN card"
+		echo	"               \"copcican_linux\" user space driver cf_interface for CO-PCICAN card"
 		echo	"                 see http://www.cosateq.com/"
-		echo	"               \"copcican_comedi\" COMEDI driver interface for CO-PCICAN card"
+		echo	"               \"copcican_comedi\" COMEDI driver cf_interface for CO-PCICAN card"
 		echo	"                 see http://www.cosateq.com/"
 		echo 	" --timers=foo  Use 'foo' as TIMERS driver (can be 'unix', 'xeno', 'rtai', 'kernel' or 'kernel_xeno')"
 		echo 	" --wx=foo      Force result of WxWidgets detection (0 or 1)"

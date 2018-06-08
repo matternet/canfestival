@@ -37,7 +37,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define INTEGER56
 #define INTEGER64
 
-// Unsigned integers
+// Unsigned cf_integers
 #define UNS8   unsigned char
 #define UNS16  unsigned short
 #define UNS32  unsigned long

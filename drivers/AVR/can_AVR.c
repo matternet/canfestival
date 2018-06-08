@@ -74,9 +74,9 @@ OUTPUT	1 if successful
       Can_config_rx_buffer();	// configure as receive buffer
   }
   // The tx MOb is still disabled, it will be set to tx mode when the first message will be sent
-  // Enable the general CAN interrupts
+  // Enable the general CAN cf_interrupts
   CANGIE = (1 << ENIT) | (1 << ENRX) | (1 << ENTX) | (0 << ENERR) | (0 << ENERG) | (0 << ENOVRT);
-  CANIE1 = 0x7F;	// Enable the interrupts of all MObs (0..14)
+  CANIE1 = 0x7F;	// Enable the cf_interrupts of all MObs (0..14)
   CANIE2 = 0xFF;   
   Can_enable();                                 // Enable the CAN bus controller
   return 1;
@@ -177,9 +177,9 @@ CAN Interrupt
   unsigned char saved_page = CANPAGE;
   unsigned char i;
 
-  if (CANGIT & (1 << CANIT))	// is a messagebox interrupt
+  if (CANGIT & (1 << CANIT))	// is a messagebox cf_interrupt
   {
-    if ((CANSIT1 & TX_INT_MSK) == 0)	// is a Rx interrupt
+    if ((CANSIT1 & TX_INT_MSK) == 0)	// is a Rx cf_interrupt
     {
       for (i = 0; (i < NB_RX_MOB) && (CANGIT & (1 << CANIT)); i++)	// Search the first MOb received
       {
@@ -197,7 +197,7 @@ CAN Interrupt
         }
       }
     }
-    else				// is a Tx interrupt	 
+    else				// is a Tx cf_interrupt	 
     {
       for (i = NB_RX_MOB; i < NB_MOB; i++)	// Search the first MOb transmitted
       {
@@ -215,12 +215,12 @@ CAN Interrupt
   CANPAGE = saved_page;
 
   // Bus Off Interrupt Flag
-  if (CANGIT & (1 << BOFFIT))    // Finaly clear the interrupt status register
+  if (CANGIT & (1 << BOFFIT))    // Finaly clear the cf_interrupt status register
   {
-    CANGIT |= (1 << BOFFIT);                    // Clear the interrupt flag
+    CANGIT |= (1 << BOFFIT);                    // Clear the cf_interrupt flag
   }
   else
-    CANGIT |= (1 << BXOK) | (1 << SERG) | (1 << CERG) | (1 << FERG) | (1 << AERG);// Finaly clear other interrupts
+    CANGIT |= (1 << BXOK) | (1 << SERG) | (1 << CERG) | (1 << FERG) | (1 << AERG);// Finaly clear other cf_interrupts
 }
 
 #ifdef  __IAR_SYSTEMS_ICC__

@@ -42,8 +42,8 @@ static char Run;
 
 void setup_dcf(void)
 {
-    uint8_t subidx;
-    uint8_t nbr_subidx = *(uint8_t *)masterdic_Index1F22[0].pObject;
+    cf_uint8_t subidx;
+    cf_uint8_t nbr_subidx = *(uint8_t *)masterdic_Index1F22[0].pObject;
     printf("setup_dcf : %u sub indexes to set\n", nbr_subidx);
     dcf_read_in_file(DEVICE_DICT_NAME, dcfdatas);
     dcf_data_display(dcfdatas);
@@ -56,7 +56,7 @@ void setup_dcf(void)
 void display_usage(char *prog)
 {
     printf("usage: %s itf\n", prog); 
-    printf("    itf is the can interface\n");
+    printf("    itf is the can cf_interface\n");
     printf("Ex: %s can0\n", prog);
 }
 
@@ -142,7 +142,7 @@ int main(int argc,char **argv)
     }
 
 	if(!canOpen(&MasterBoard0,&masterdic_Data)){
-        printf("Cannot open can interface %s\n",MasterBoard0.busname);
+        printf("Cannot open can cf_interface %s\n",MasterBoard0.busname);
         exit(1);
 	}
 

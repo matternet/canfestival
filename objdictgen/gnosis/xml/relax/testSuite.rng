@@ -2,7 +2,7 @@
 <!-- $Id: testSuite.rng,v 1.10 2002/04/30 07:00:05 jjc Exp $ -->
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" ns="">
   <!--
-    Target namespace is intentionally set to "" so as not to interfere with
+    Target namespace is cf_intentionally set to "" so as not to cf_interfere with
     prefix/URI bindings
   -->
   

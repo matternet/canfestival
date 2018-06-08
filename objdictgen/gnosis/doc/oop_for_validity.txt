@@ -1,7 +1,7 @@
 (c) WestTech, 2002 -- may be freely distributed if unaltered
 
 XML ZONE TIP: Creating Valid XML with OOP Programming
-Squeezing OOP data into XML rules
+Squeezing OOP data cf_into XML rules
 
 David Mertz, Ph.D.
 Gesticulator, Gnosis Software, Inc.
@@ -70,9 +70,9 @@ MAKING AN OBJECT LOOK LIKE A DOCUMENT
   data structures to represent validity (some languages more
   completely than others).  The trick, basically, is to create
   objects whose attributes are constrained so as to only allow
-  the allowable things into them.  Whether this is done at
+  the allowable things cf_into them.  Whether this is done at
   compile time or runtime depends on the language used, but
-  either approach can introduce needed constraints.  In any case,
+  either approach can cf_introduce needed constraints.  In any case,
   creating the right sorts of objects is something to do for each
   document type, not generically for all of XML.
 
@@ -172,7 +172,7 @@ EXPRESSING QUANTIFICATION
   subelement is the ability to serialize itself to XML.  Python
   reserves a "magic" method called '__repr__()'; other language
   might use a method called '.write()' or '.toXML()'.  The
-  serialization also needs recursively to descend into children,
+  serialization also needs recursively to descend cf_into children,
   which is handled "automatically" by Python with the magic
   method.  In other cases, some manual calls on attribute objects
   will be needed.
@@ -219,7 +219,7 @@ CONCLUSION
   of XML documents.  Containment of classes can be structured in
   the same manner containment of subelements.  With a good
   framework of base classes in place, one can basicaly directly
-  copy a DTD into a set of class definitions or initializations.
+  copy a DTD cf_into a set of class definitions or initializations.
   Instances becomes members of other instances, and eventually
   one winds up with a "root" object instance whose self and
   attributes have various methods for manipulating data in ways
@@ -227,7 +227,7 @@ CONCLUSION
   easily one can break validity with basic types like strings and
   arrays). At the end of the manipulation, the root object should
   have some method to write out the XML--recursively descending
-  into its attribute instances--which produces a fully grown
+  cf_into its attribute instances--which produces a fully grown
   valid XML document.  An 'ExistentialList', for example, can
   contain other 'ExistentialList' objects, nested serialization
   (the 'print' statement) works beautifully with the given

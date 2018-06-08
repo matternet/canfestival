@@ -157,7 +157,7 @@
          sodipodi:role="line"
          id="tspan12905"
          x="544.9906"
-         y="55.346416">CanFestival interface to target</tspan><tspan
+         y="55.346416">CanFestival cf_interface to target</tspan><tspan
          sodipodi:role="line"
          x="544.9906"
          y="103.34642"
@@ -430,7 +430,7 @@
          id="tspan6038"
          sodipodi:role="line"
          x="230.63826"
-         y="213.4771">HW interfaces (for µC)</tspan></text>
+         y="213.4771">HW cf_interfaces (for µC)</tspan></text>
     <g
        id="g6040"
        transform="matrix(1.1821592,0,0,1.1821592,18.093542,-193.74028)"

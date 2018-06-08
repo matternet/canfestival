@@ -21,7 +21,7 @@ before_build:
     cd ../..
 
 
-    write-host Downloading and unpacking drivers into ./download
+    write-host Downloading and unpacking drivers cf_into ./download
 
     mkdir download
 

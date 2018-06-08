@@ -850,7 +850,7 @@ MyFrame::OnFreqBoxClick (wxCommandEvent & event)
   *textLog << wxT ("Baudrate:") << event.GetString () << wxT ("\n");
 }
 
-static int
+static cf_int
 is_set (int i, wxListBox * inlist, wxArrayInt in)
 {
   inlist->GetSelections (in);
@@ -864,7 +864,7 @@ is_set (int i, wxListBox * inlist, wxArrayInt in)
   return (0);
 }
 
-static int
+static cf_int
 get_bit (UNS8 input, int bit)
 {
   return input & (((UNS8) 1) << bit - 1) ? 1 : 0;

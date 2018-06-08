@@ -79,7 +79,7 @@
 #endif
 
 #ifndef _
-/* This is for other GNU distributions with internationalized messages.  */
+/* This is for other GNU distributions with cf_internationalized messages.  */
 # if (HAVE_LIBINTL_H && ENABLE_NLS) || defined _LIBC
 #  include <libintl.h>
 #  ifndef _
@@ -95,7 +95,7 @@
 
 /* This version of `getopt' appears to the caller like standard Unix `getopt'
    but it behaves differently for the user, since it allows the user
-   to intersperse the options with the other arguments.
+   to cf_intersperse the options with the other arguments.
 
    As `getopt' works, it permutes the elements of ARGV so that,
    when it is done, all the options precede everything else.  Thus
@@ -237,7 +237,7 @@ my_index (str, chr)
 /* Note that Motorola Delta 68k R3V7 comes with GCC but not stddef.h.
    That was relevant to code that was here before.  */
 # if (!defined __STDC__ || !__STDC__) && !defined strlen
-/* gcc with -traditional declares the built-in strlen to return int,
+/* gcc with -traditional declares the built-in strlen to return cf_int,
    and has done so at least since version 2.4.5. -- rms.  */
 extern int strlen (const char *);
 # endif /* not __STDC__ */
@@ -310,7 +310,7 @@ exchange (argv)
   char *tem;
 
   /* Exchange the shorter segment with the far end of the longer segment.
-     That puts the shorter segment into the right place.
+     That puts the shorter segment cf_into the right place.
      It leaves the longer segment in the right place overall,
      but it consists of two parts that need to be swapped next.  */
 
@@ -380,7 +380,7 @@ exchange (argv)
   last_nonopt = optind;
 }
 
-/* Initialize the internal data when the first call is made.  */
+/* Initialize the cf_internal data when the first call is made.  */
 
 #if defined __STDC__ && __STDC__
 static const char *_getopt_initialize (int, char *const *, const char *);
@@ -504,7 +504,7 @@ _getopt_initialize (argc, argv, optstring)
    It is only valid when a long-named option has been found by the most
    recent call.
 
-   If LONG_ONLY is nonzero, '-' as well as '--' can introduce
+   If LONG_ONLY is nonzero, '-' as well as '--' can cf_introduce
    long-named options.  */
 
 int
@@ -815,7 +815,7 @@ _getopt_internal (argc, argv, optstring, longopts, longind, long_only)
       /* Can't find it as a long option.  If this is not getopt_long_only,
          or the option starts with '--' or is not a valid short
          option, then it's an error.
-         Otherwise interpret it as a short option.  */
+         Otherwise cf_interpret it as a short option.  */
       if (!long_only || argv[optind][1] == '-'
           || my_index (optstring, *nextchar) == NULL)
         {

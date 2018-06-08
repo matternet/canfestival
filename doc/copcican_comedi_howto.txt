@@ -33,7 +33,7 @@ pre-actions:
   make
   make install
 
-- build the CO-PCICAN driver interface:
+- build the CO-PCICAN driver cf_interface:
   cd drivers/can_copcican_comedi
   make
   make install

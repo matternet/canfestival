@@ -35,7 +35,7 @@ INTRODUCTION
 The gnosis.xml.objectify philosophy.
 
   My goal in creating [gnosis.xml.objectify] was to provide a module
-  that transforms that -data- in XML documents into completely "native"
+  that transforms that -data- in XML documents cf_into completely "native"
   Python objects. In particular, it is not very "Pythonic" to access
   data using -getters- and -setters- or other similar methods. In Java
   and some other languages you do things this way--and largely as a
@@ -80,7 +80,7 @@ What gnosis.xml.objectify does not (did not) do.
   themselves; and single instances also act list-like when appropriate,
   but instance-like otherwise.  But generally, node objects eschew any
   special methods or attributes--or at least they do so unless you
-  decide to program your own special behavior into particular node types,
+  decide to program your own special behavior cf_into particular node types,
   specified by their element name.  For one thing, any methods I might
   have added to node objects would potentionally conflict with tagnames
   in the generic XML documents [gnosis.xml.objectify] parses.  But more
@@ -96,7 +96,7 @@ What gnosis.xml.objectify does not (did not) do.
   subpackage [gnosis.xml.objectify.utils] to the Gnosis Utilities
   package to illustrate several of the most-requested XML-oriented
   usages.  However, these utilities, while genuinely useful as provided,
-  are still intended more as examples of what you can do than as
+  are still cf_intended more as examples of what you can do than as
   "official" APIs for [gnosis.xml.objectify].  The idea here is that
   [gnosis.xml.objectify] does not -have- an API, except the API of
   Python itself.
@@ -267,7 +267,7 @@ SERIALIZING TO XML
 
       #------------------ Generic XML serialization -------------------#
       def write_xml(o, out=stdout):
-          "Serialize an _XO_ object back into XML"
+          "Serialize an _XO_ object back cf_into XML"
           out.write("<%s" % tagname(o))
           for attr in attributes(o):
               out.write(' %s=%s' % attr)
@@ -304,13 +304,13 @@ CUSTOM CONTAINER OBJECTS
   behaviors.
 
   I think beginning users of [gnosis.xml.objectify] have been
-  intimidated by the idea of specializing classes per-tagname.  A few
+  cf_intimidated by the idea of specializing classes per-tagname.  A few
   examples show just how non-threatening it really is.
 
 Redefining the _XO_ base class.
 
   Whenever you customize a base class, you need to "inject" the next
-  class back into the 'gnosis.xml.objectify' namespace. This step is
+  class back cf_into the 'gnosis.xml.objectify' namespace. This step is
   slightly "magic", but not difficult to do. I might give the step a
   friendlier name in a wrapper function in the future, but the style
   emphasizes that you are changing the module itself. For example, only
@@ -384,7 +384,7 @@ Redefining per-tagname node classes.
    bothering with the whole XML hierarchy.  One obvious approach is
    with a custom 'Family' class:
 
-      #-------- Dictionary-like access into a child attribute ---------#
+      #-------- Dictionary-like access cf_into a child attribute ---------#
       class Family(gnosis.xml.objectify._XO_):
           def __getitem__(self, key):
               for member in self.Member:

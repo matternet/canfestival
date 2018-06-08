@@ -84,7 +84,7 @@ TIMER_HANDLE SetAlarm(CO_Data* d, UNS32 id, TimerCallback_t callback, TIMEVAL va
 			row->d = d;
 			row->id = id;
 			row->val = value + elapsed_time;
-			row->interval = period;
+			row->cf_interval = period;
 			row->state = TIMER_ARMED;
 			return row_number;
 		}
@@ -136,15 +136,15 @@ void TimeDispatch(void)
 		{
 			if (row->val <= real_total_sleep_time) /* to be trigged */
 			{
-				if (!row->interval) /* if simply outdated */
+				if (!row->cf_interval) /* if simply outdated */
 				{
 					row->state = TIMER_TRIG; /* ask for trig */
 				}
 				else /* or period have expired */
 				{
-					/* set val as interval, with 32 bit overrun correction, */
+					/* set val as cf_interval, with 32 bit overrun correction, */
 					/* modulo for 64 bit not available on all platforms     */
-					row->val = row->interval - (overrun % (UNS32)row->interval);
+					row->val = row->cf_interval - (overrun % (UNS32)row->cf_interval);
 					row->state = TIMER_TRIG_PERIOD; /* ask for trig, periodic */
 					/* Check if this new timer value is the soonest */
 					if(row->val < next_wakeup)

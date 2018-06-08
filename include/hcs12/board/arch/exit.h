@@ -35,7 +35,7 @@ compiled version of this file with other programs, and to distribute
 those programs without any restriction coming from the use of this
 file.  (The General Public License restrictions do apply in other
 respects; for example, they cover modification of the file, and
-distribution when not linked into another program.)
+distribution when not linked cf_into another program.)
 
 This file is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -55,7 +55,7 @@ extern void _exit (short status) __attribute__((noreturn));
 /* For the simulator, the wai stops everything and exits with the
    error code stored in register d.
 
-   For a real 68HC11, enable interrupts and wait forever.  */
+   For a real 68HC11, enable cf_interrupts and wait forever.  */
 extern inline void
 _exit (short status)
 {

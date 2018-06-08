@@ -404,7 +404,7 @@ class xmlpickle_handler(ContentHandler):
     def characters(self,content):
         self.content += content
 
-    # implement the ErrorHandler interface here as well
+    # implement the ErrorHandler cf_interface here as well
     def error(self,exception):
         print "** ERROR - dumping stacks"
         self.prstk(1)
@@ -419,7 +419,7 @@ class xmlpickle_handler(ContentHandler):
         print "WARNING"
         raise exception
 
-    # Implement EntityResolver interface (called when the parser runs
+    # Implement EntityResolver cf_interface (called when the parser runs
     # across external entities - in our case, PyObjects.dtd).
     # For now we just ignore - we're using expat which is a non-validating
     # parser anyways (apparently xmlproc will validate, but expat is

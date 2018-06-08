@@ -27,10 +27,10 @@ pre-actions:
   make install
 
 BUGFIX:
-  copy library into build directory back:
+  copy library cf_into build directory back:
   cp /usr/local/lib/libcanfestival_unix.a drivers/unix
 
-- build the CO-PCICAN driver interface:
+- build the CO-PCICAN driver cf_interface:
   cd drivers/can_copcican_linux
   make
   make install

@@ -75,7 +75,7 @@ def hasCoreData(o):
 
     (i.e. does it contain data other than attributes)
     We only want subclasses, not the class itself (otherwise we'd
-    catch ALL lists, integers, etc.)
+    catch ALL lists, cf_integers, etc.)
     """
     return child_datatype(o)
 

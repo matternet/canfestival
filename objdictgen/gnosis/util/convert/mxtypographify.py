@@ -134,14 +134,14 @@ leadout_eater = (ws, AllInSet+AppendMatch, leadout_set)
 tag_words = \
  ( bullet_point+(+1,),
    horiz_rule + (+1,),
-   into_mark  + (+1,),
+   cf_into_mark  + (+1,),
    stray_punct+ (+1,),
    emphs   + (+1,),
    funcs   + (+1,),
    strongs + (+1,),
    modules + (+1,),
    titles  + (+1,),
-   into_mark+(+1,),
+   cf_into_mark+(+1,),
    plain_words +(+1,),                 # Since file is mostly plain words, can
    leadout_eater+(+1,-1),              # shortcut by tight looping (with escape)
    (jump_count, Skip+CallTag, 0),      # Check for infinite loop

@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
 ScriptDirectory = os.path.split(os.path.realpath(__file__))[0]
 
-# Import module for internationalization
+# Import module for cf_internationalization
 import gettext
 import __builtin__
 
@@ -57,7 +57,7 @@ import __builtin__
 localedir = os.path.join(ScriptDirectory,"locale")
 # Get the default language
 langid = wx.LANGUAGE_DEFAULT
-# Define translation domain (name of translation files)
+# Define translation cf_domain (name of translation files)
 domain = "objdictgen"
 
 # Define locale for wx
@@ -67,7 +67,7 @@ if loc is None:
     __builtin__.__dict__['loc'] = loc
 # Define location for searching translation files
 loc.AddCatalogLookupPathPrefix(localedir)
-# Define locale domain
+# Define locale cf_domain
 loc.AddCatalog(domain)
 
 if __name__ == '__main__':

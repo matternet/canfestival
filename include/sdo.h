@@ -156,7 +156,7 @@ UNS8 lineToSDO (CO_Data* d, UNS8 line, UNS32 nbBytes, UNS8 * data);
 UNS8 SDOtoLine (CO_Data* d, UNS8 line, UNS32 nbBytes, UNS8 * data);
 
 /** 
- * @brief Called when an internal SDO abort occurs.
+ * @brief Called when an cf_internal SDO abort occurs.
  * Release the line * Only if server *
  * If client, the line must be released manually in the core application.
  * The reason of that is to permit the program to read the transfers structure before its reset,
@@ -310,7 +310,7 @@ void resetClientSDOLineFromNodeId(CO_Data* d, UNS8 nodeId);
  * @param index At index indicated
  * @param subIndex At subIndex indicated
  * @param count number of bytes to write in the dictionnary.
- * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for integers or reals or other value.
+ * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for cf_integers or reals or other value.
  * @param *data Pointer to data
  * @return 
  * - 0 is returned upon success.
@@ -330,7 +330,7 @@ UNS8 writeNetworkDict (CO_Data* d, UNS8 nodeId, UNS16 index,
  * @param index At index indicated
  * @param subIndex At subIndex indicated
  * @param count number of bytes to write in the dictionnary.
- * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for integers or reals or other value.
+ * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for cf_integers or reals or other value.
  * @param *data Pointer to data
  * @param Callback Callback function
  * @return 
@@ -352,10 +352,10 @@ UNS8 writeNetworkDictCallBack (CO_Data* d, UNS8 nodeId, UNS16 index,
  * @param index At index indicated
  * @param subIndex At subIndex indicated
  * @param count number of bytes to write in the dictionnary.
- * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for integers or reals or other value.
+ * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for cf_integers or reals or other value.
  * @param *data Pointer to data
  * @param Callback Callback function
- * @param endianize When not 0, data is endianized into network byte order
+ * @param endianize When not 0, data is endianized cf_into network byte order
  *                  when 0, data is not endianized and copied in machine native
  *                  endianness
  * @param useBlockMode true if block mode transfer is used
@@ -373,7 +373,7 @@ UNS8 writeNetworkDictCallBackAI (CO_Data* d, UNS8 nodeId, UNS16 index,
  * @param nodeId Node Id of the slave
  * @param index At index indicated
  * @param subIndex At subIndex indicated
- * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for integers or reals or other value.
+ * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for cf_integers or reals or other value.
  * @return 
  * - 0 is returned upon success.
  * - 0xFE is returned when no sdo client to communicate with node.
@@ -390,7 +390,7 @@ UNS8 readNetworkDict (CO_Data* d, UNS8 nodeId, UNS16 index, UNS8 subIndex, UNS8 
  * @param nodeId Node Id of the slave
  * @param index At index indicated
  * @param subIndex At subIndex indicated
- * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for integers or reals or other value.
+ * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for cf_integers or reals or other value.
  * @param Callback Callback function
  * @return 
  * - 0 is returned upon success.
@@ -409,7 +409,7 @@ UNS8 readNetworkDictCallback (CO_Data* d, UNS8 nodeId, UNS16 index, UNS8 subInde
  * @param nodeId Node Id of the slave
  * @param index At index indicated
  * @param subIndex At subIndex indicated
- * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for integers or reals or other value.
+ * @param dataType (defined in objdictdef.h) : put "visible_string" for strings, 0 for cf_integers or reals or other value.
  * @param Callback Callback function
  * @param useBlockMode use block mode transfer
  * @return 

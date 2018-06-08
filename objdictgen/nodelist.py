@@ -325,7 +325,7 @@ class NodeList:
         return [], []
     
     def AddToMasterDCF(self, node_id, index, subindex, size, value):
-        # Adding DCF entry into Master node
+        # Adding DCF entry cf_into Master node
         if not self.Manager.IsCurrentEntry(0x1F22):
             self.Manager.ManageEntriesOfCurrent([0x1F22], [])
         self.Manager.AddSubentriesToCurrent(0x1F22, 127)

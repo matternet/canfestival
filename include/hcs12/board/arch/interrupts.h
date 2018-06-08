@@ -34,7 +34,7 @@ compiled version of this file with other programs, and to distribute
 those programs without any restriction coming from the use of this
 file.  (The General Public License restrictions do apply in other
 respects; for example, they cover modification of the file, and
-distribution when not linked into another program.)
+distribution when not linked cf_into another program.)
 
 This file is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -49,11 +49,11 @@ Boston, MA 02111-1307, USA.  */
 #ifndef _M68HC11_ARCH_32K_INTERRUPTS_H
 #define _M68HC11_ARCH_32K_INTERRUPTS_H
 
-/* For ROM-boards, interrupts are in ROM and are not installed
+/* For ROM-boards, cf_interrupts are in ROM and are not installed
    at run time.  Implementation is empty.  */
 extern inline void
 set_interrupt_handler (interrupt_vector_id id ATTRIBUTE_UNUSED,
-                       interrupt_t handler ATTRIBUTE_UNUSED)
+                       cf_interrupt_t handler ATTRIBUTE_UNUSED)
 {
 }
 

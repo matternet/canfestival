@@ -90,12 +90,12 @@ msgstr " et %s"
 
 #: ../commondialogs.py:367
 #: ../commondialogs.py:562
-msgid " must be integer!"
+msgid " must be cf_integer!"
 msgstr " doit être un entier !"
 
 #: ../commondialogs.py:365
 #: ../commondialogs.py:560
-msgid " must be integers!"
+msgid " must be cf_integers!"
 msgstr " doivent être des entiers !"
 
 #: ../networkedit.py:626
@@ -296,7 +296,7 @@ msgstr "Terminé"
 
 #: ../subindextable.py:865
 #: ../subindextable.py:885
-msgid "An integer is required!"
+msgid "An cf_integer is required!"
 msgstr "Un entier est nécessaire !"
 
 #: ../eds_utils.py:777
@@ -783,7 +783,7 @@ msgstr "Node Guarding"
 
 #: ../commondialogs.py:760
 #: ../commondialogs.py:1036
-msgid "Node ID must be integer!"
+msgid "Node ID must be cf_integer!"
 msgstr "L'ID du noeud doit être un entier !"
 
 #: ../commondialogs.py:702

@@ -26,7 +26,7 @@ Expected input format for [SMART_ASCII]
         two spaces.
       - Block quotations are indented four spaces, rather than
         the two of original text.
-      - Code samples are indented six spaces (with internal
+      - Code samples are indented six spaces (with cf_internal
         indentation of code lines in the proper relative
         position).
       - Code samples may begin with a line indicating a title for
@@ -71,7 +71,7 @@ Expected input format for [SMART_ASCII]
         approximations are used.
 -
       #--- Miscellany: ---#
-      - URL's are automatically transformed into a hotlink.
+      - URL's are automatically transformed cf_into a hotlink.
         Basically, anything that starts with 'http://', 'ftp://',
         'file://' or 'gopher://' looks like a URL to the program.
 
@@ -86,7 +86,7 @@ __comments__="""
 """
 __author__=["David Mertz (mertz@gnosis.cx)",]
 __copyright__="""
-    This file is released to the public domain.  I (dqm) would
+    This file is released to the public cf_domain.  I (dqm) would
     appreciate it if you choose to keep derived works under terms
     that promote freedom, but obviously am giving up any rights
     to compel such.
@@ -132,7 +132,7 @@ def Make_Blocks(fhin, re_list):
     newblock = 1
     #-- Unpack the regex list
     blankln, headln, textln, quoteln, codeln = re_list
-    #-- Break the file into relevant chunks
+    #-- Break the file cf_into relevant chunks
     for line in fhin.readlines():
         line = string.rstrip(line)+'\n'  # Need to normalize line endings!
 

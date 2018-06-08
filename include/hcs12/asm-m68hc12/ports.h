@@ -102,7 +102,7 @@ cop_reset (void)
 
 
 #if 0
-/* Acknowledge the timer interrupt.  */
+/* Acknowledge the timer cf_interrupt.  */
 extern inline void
 timer_acknowledge (void)
 {

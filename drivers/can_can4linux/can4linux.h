@@ -58,7 +58,7 @@
 * $Revision$
 * $Date$
 *
-* can4linux interface definitions
+* can4linux cf_interface definitions
 *
 *
 *

@@ -56,14 +56,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 gene_SYNC_obj1000 = 0x0;	/* 0 */
                     subindex gene_SYNC_Index1000[] = 
                      {
-                       { RO, uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1000, NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1000, NULL }
                      };
 
 /* index 0x1001 :   Error Register. */
                     UNS8 gene_SYNC_obj1001 = 0x0;	/* 0 */
                     subindex gene_SYNC_Index1001[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&gene_SYNC_obj1001, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&gene_SYNC_obj1001, NULL }
                      };
 
 /* index 0x1003 :   Pre-defined Error Field */
@@ -75,21 +75,21 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     subindex gene_SYNC_Index1003[] = 
                      {
                        { RW, valueRange_EMC, sizeof (UNS8), (void*)&gene_SYNC_highestSubIndex_obj1003, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1003[0], NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1003[0], NULL }
                      };
 
 /* index 0x1005 :   SYNC COB ID. */
                     UNS32 gene_SYNC_obj1005 = 0x40000080;	/* 1073741952 */
                     subindex gene_SYNC_Index1005[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1005, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1005, NULL }
                      };
 
 /* index 0x1006 :   Communication / Cycle Period. */
                     UNS32 gene_SYNC_obj1006 = 0x2710;	/* 10000 */
                     subindex gene_SYNC_Index1006[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1006, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1006, NULL }
                      };
 
 /* index 0x1008 :   Manufacturer Device Name. */
@@ -123,11 +123,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 gene_SYNC_obj1018_Serial_Number = 0x0;	/* 0 */
                     subindex gene_SYNC_Index1018[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&gene_SYNC_highestSubIndex_obj1018, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1018_Vendor_ID, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1018_Product_Code, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1018_Revision_Number, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1018_Serial_Number, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&gene_SYNC_highestSubIndex_obj1018, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1018_Vendor_ID, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1018_Product_Code, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1018_Revision_Number, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1018_Serial_Number, NULL }
                      };
 
 /* index 0x1200 :   Server SDO Parameter. */
@@ -136,63 +136,63 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 gene_SYNC_obj1200_COB_ID_Server_to_Client_Transmit_SDO = 0x0;	/* 0 */
                     subindex gene_SYNC_Index1200[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&gene_SYNC_highestSubIndex_obj1200, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1200_COB_ID_Client_to_Server_Receive_SDO, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1200_COB_ID_Server_to_Client_Transmit_SDO, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&gene_SYNC_highestSubIndex_obj1200, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1200_COB_ID_Client_to_Server_Receive_SDO, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&gene_SYNC_obj1200_COB_ID_Server_to_Client_Transmit_SDO, NULL }
                      };
 
 /* index 0x2015 :   Mapped variable acceptanceFilter1 */
                     subindex gene_SYNC_Index2015[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&acceptanceFilter1, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&acceptanceFilter1, NULL }
                      };
 
 /* index 0x2016 :   Mapped variable acceptanceFilter2 */
                     subindex gene_SYNC_Index2016[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&acceptanceFilter2, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&acceptanceFilter2, NULL }
                      };
 
 /* index 0x2017 :   Mapped variable acceptanceFilter3 */
                     subindex gene_SYNC_Index2017[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&acceptanceFilter3, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&acceptanceFilter3, NULL }
                      };
 
 /* index 0x2018 :   Mapped variable acceptanceFilter4 */
                     subindex gene_SYNC_Index2018[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&acceptanceFilter4, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&acceptanceFilter4, NULL }
                      };
 
 /* index 0x2019 :   Mapped variable mask1 */
                     subindex gene_SYNC_Index2019[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&mask1, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&mask1, NULL }
                      };
 
 /* index 0x2020 :   Mapped variable mask2 */
                     subindex gene_SYNC_Index2020[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&mask2, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&mask2, NULL }
                      };
 
 /* index 0x2021 :   Mapped variable mask3 */
                     subindex gene_SYNC_Index2021[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&mask3, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&mask3, NULL }
                      };
 
 /* index 0x2022 :   Mapped variable mask4 */
                     subindex gene_SYNC_Index2022[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&mask4, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&mask4, NULL }
                      };
 
 /* index 0x2023 :   Mapped variable applyDownloadedFilters */
                     subindex gene_SYNC_Index2023[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&applyDownloadedFilters, NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&applyDownloadedFilters, NULL }
                      };
 
 /**************************************************************************/

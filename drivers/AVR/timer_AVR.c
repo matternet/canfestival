@@ -37,7 +37,7 @@ static TIMEVAL last_time_set = TIMEVAL_MAX;
 
 void initTimer(void)
 /******************************************************************************
-Initializes the timer, turn on the interrupt and put the interrupt time to zero
+Initializes the timer, turn on the cf_interrupt and put the cf_interrupt time to zero
 INPUT	void
 OUTPUT	void
 ******************************************************************************/
@@ -45,7 +45,7 @@ OUTPUT	void
   TimerAlarm = 0;		// Set it back to the zero
 	// Set timer 3 for CANopen operation tick 8us max, time is 524ms
   TCCR3B = 1 << CS31 | 1 << CS30;       // Timer 3 normal, mit CK/64
-  TIMSK3 = 1 << OCIE3B;                 // Enable the interrupt
+  TIMSK3 = 1 << OCIE3B;                 // Enable the cf_interrupt
 }
 
 void setTimer(TIMEVAL value)
@@ -55,7 +55,7 @@ INPUT	value TIMEVAL (unsigned long)
 OUTPUT	void
 ******************************************************************************/
 {
-  TimerAlarm += (int)value;	// Add the desired time to timer interrupt time
+  TimerAlarm += (int)value;	// Add the desired time to timer cf_interrupt time
 }
 
 TIMEVAL getElapsedTime(void)

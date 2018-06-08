@@ -14,7 +14,7 @@ from sys import maxint, stdout
 def addChild(parent, child):
     "Add a child xmlObject to a parent xmlObject"
     name = tagname(child)
-    if hasattr(parent, name):  # If exists add, make into list if needed
+    if hasattr(parent, name):  # If exists add, make cf_into list if needed
        tag = getattr(parent, name)
        if type(tag) is not list:
           setattr(parent, name, [tag])
@@ -33,7 +33,7 @@ def walk_xo(o):
             yield child
 
 def write_xml(o, out=stdout):
-    "Serialize an _XO_ object back into XML"
+    "Serialize an _XO_ object back cf_into XML"
     out.write("<%s" % tagname(o))
     for attr in attributes(o):
         out.write(' %s=%s' % attr)

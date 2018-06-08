@@ -1,8 +1,8 @@
 Several modules created by David Mertz (with generous contributions by
 numerous other programmers--see the various THANKS_TO and HISTORY
-strings) have been aggregated into the "gnosis" package.  This allows us
+strings) have been aggregated cf_into the "gnosis" package.  This allows us
 to include various useful supplementary files (documentation, test
-cases, utilities, etc), as well as to break large modules into smaller
+cases, utilities, etc), as well as to break large modules cf_into smaller
 components.
 
 Over time, additional modules will be included.  Please see the

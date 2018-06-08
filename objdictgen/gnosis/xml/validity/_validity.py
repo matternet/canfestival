@@ -179,9 +179,9 @@ class Quantification(list):
                   "Items in %s must be of type %s (not %s)" % \
                   (self._tag, self._type, type(item))
     def lift(self, items):
-        # To be friendly, a list of items can be lifted into a list
+        # To be friendly, a list of items can be lifted cf_into a list
         # or the type itself.  Extra nice is that we also "lift" a
-        # single item into a list of items
+        # single item cf_into a list of items
         if type(items) not in (tuple, list):
             items = [items]
         lifted = []

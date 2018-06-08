@@ -43,7 +43,7 @@ typedef unsigned short channel_t;
  * @sjw: synchronization jump width (0-3) prescaled clock cycles
  * @sampl_pt: sample point in % (0-100) sets (TSEG1+1)/(TSEG1+TSEG2+2) ratio
  *
- * The structure is used to configure new set of parameters into CAN controller chip.
+ * The structure is used to configure new set of parameters cf_into CAN controller chip.
  * If default value of some field should be preserved, fill field by value -1.
  */
 struct can_baudparams_t {

@@ -6,7 +6,7 @@ series saw significant improvements to gnosis.xml.objectify.  See
 HISTORY and HOWTO for details; but in short, we now maintain all the
 structural information about nested children and mixed content.
 
-However, the improvements in 1.1.x introduce some incompatibilities in
+However, the improvements in 1.1.x cf_introduce some incompatibilities in
 edge cases.
 
  1. In 1.0.x, only nodes with PCDATA content have a .PCDATA attribute.
@@ -28,7 +28,7 @@ edge cases.
     There is a subtle bit of extra semantic information in there.  If a
     node contains no content AT ALL, its .PCDATA attribute is None.  But
     if the node contains children, its .PCDATA is an empty string.  You
-    can still do a boolean test on o.PCDATA either way, but you can also
+    can still do a cf_boolean test on o.PCDATA either way, but you can also
     distinguish these cases if you wish, e.g.:
 
       >>> from gnosis.xml.objectify import make_instance

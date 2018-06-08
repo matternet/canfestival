@@ -38,7 +38,7 @@ maintests = """
     ref
     selfref
     unicode
-    bools_ro
+    cf_bools_ro
     misc
 """
 
@@ -136,7 +136,7 @@ except:
 
 # sanity check the test harness before starting
 def check_harness():
-    # try to redirect stderr to a file so that the intentional
+    # try to redirect stderr to a file so that the cf_intentional
     # exceptions in the "fail" tests below won't freak out the user
     if os.name == 'posix':
         outstr = '2>&1 > harness_check.out'

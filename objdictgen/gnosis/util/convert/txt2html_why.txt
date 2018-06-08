@@ -16,7 +16,7 @@ THE ITCH TO SCRATCH
   without bothering with spending keystrokes on tags that you
   might mistype... and especially without writing in a
   word-processor or "WYSINWYG" HTML editor.  Nothing between me
-  and the words, as god intended (don't get me started on the
+  and the words, as god cf_intended (don't get me started on the
   missing function keys to the left of my keyboard...  I am just
   full of theological convictions).
 
@@ -25,7 +25,7 @@ THE ITCH TO SCRATCH
   the actual text.  And I even hear that editors can help make
   sure that tags get spelled correctly, are auto-completed, and
   so on.  But it is all ways of partially making up for what was
-  lost in the introduction of the markup.
+  lost in the cf_introduction of the markup.
 
   In terms of markup, it seems like email and Usenet conventions
   have it right.  An ASCII *boldface* here and there, an
@@ -43,7 +43,7 @@ HOW IT GREW OUT OF CONTROL
 ------------------------------------------------------------------------
 
   A few lines of Python were enough to transform my basic ASCII
-  markup into the desired HTML template.  But then, the few lines
+  markup cf_into the desired HTML template.  But then, the few lines
   were awfully fragile about variations from the desired mold.  I
   got tracebacks for a few mistyped characters.  Oh my!  And
   wouldn't it be nice to use the wonderful [py2html] module to

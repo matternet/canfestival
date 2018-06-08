@@ -25,12 +25,12 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
  
 /**
-Disable interrupts
+Disable cf_interrupts
 */
 void lock (void);
 
 /**
-Enable interrupts
+Enable cf_interrupts
 */
 void unlock (void);
 

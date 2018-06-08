@@ -24,21 +24,21 @@ typedef void* LIB_HANDLE;
 
 /**
  * @ingroup can
- * @brief Unload CAN driver interface
+ * @brief Unload CAN driver cf_interface
  * @param handle The library handle
  * @return
  *       -  0 is returned upon success.
- *       - -1 is returned if the CAN driver interface can't be unloaded.
+ *       - -1 is returned if the CAN driver cf_interface can't be unloaded.
  */
 UNS8 UnLoadCanDriver(LIB_HANDLE handle);
 
 /**
  * @ingroup can
- * @brief Load CAN driver interface.
+ * @brief Load CAN driver cf_interface.
  * @param *driver_name The location of the library to load
  * @return
- *       - handle of the CAN driver interface is returned upon success.
- *       - NULL is returned if the CAN driver interface can't be loaded.
+ *       - handle of the CAN driver cf_interface is returned upon success.
+ *       - NULL is returned if the CAN driver cf_interface can't be loaded.
  */
 LIB_HANDLE LoadCanDriver(const char* driver_name);
 

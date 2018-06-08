@@ -21,7 +21,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 /** @defgroup synco Synchronisation Object
- *  SYNC object is a CANopen message forcing the receiving nodes to sample the inputs mapped into synchronous TPDOS.
+ *  SYNC object is a CANopen message forcing the receiving nodes to sample the inputs mapped cf_into synchronous TPDOS.
  *  Receiving this message cause the node to set the outputs to values received in the previous synchronous RPDO.
  *  @ingroup comobj
  */

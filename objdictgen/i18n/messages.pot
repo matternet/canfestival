@@ -67,11 +67,11 @@ msgid " and %s"
 msgstr ""
 
 #: ../commondialogs.py:367 ../commondialogs.py:562
-msgid " must be integer!"
+msgid " must be cf_integer!"
 msgstr ""
 
 #: ../commondialogs.py:365 ../commondialogs.py:560
-msgid " must be integers!"
+msgid " must be cf_integers!"
 msgstr ""
 
 #: ../networkedit.py:626 ../objdictedit.py:535
@@ -248,7 +248,7 @@ msgid "All done"
 msgstr ""
 
 #: ../subindextable.py:865 ../subindextable.py:885
-msgid "An integer is required!"
+msgid "An cf_integer is required!"
 msgstr ""
 
 #: ../eds_utils.py:777
@@ -655,7 +655,7 @@ msgid "Node Guarding"
 msgstr ""
 
 #: ../commondialogs.py:760 ../commondialogs.py:1036
-msgid "Node ID must be integer!"
+msgid "Node ID must be cf_integer!"
 msgstr ""
 
 #: ../commondialogs.py:702 ../commondialogs.py:905

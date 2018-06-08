@@ -88,12 +88,12 @@ msgstr "和 %s"
 
 #: commondialogs.py:367
 #: commondialogs.py:562
-msgid " must be integer!"
+msgid " must be cf_integer!"
 msgstr "必须为整数！"
 
 #: commondialogs.py:365
 #: commondialogs.py:560
-msgid " must be integers!"
+msgid " must be cf_integers!"
 msgstr "必须为整数！"
 
 #: networkedit.py:640
@@ -294,7 +294,7 @@ msgstr "全部完成"
 
 #: subindextable.py:861
 #: subindextable.py:882
-msgid "An integer is required!"
+msgid "An cf_integer is required!"
 msgstr "要求一个整数！"
 
 #: eds_utils.py:776
@@ -771,7 +771,7 @@ msgstr "节点护卫"
 
 #: commondialogs.py:760
 #: commondialogs.py:1036
-msgid "Node ID must be integer!"
+msgid "Node ID must be cf_integer!"
 msgstr "节点ID必须是整数！"
 
 #: commondialogs.py:702

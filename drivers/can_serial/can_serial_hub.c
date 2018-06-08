@@ -255,7 +255,7 @@ void help(void)
 	printf("\n");
 	printf("You can alter the pty base with -p /dev/ptyx .\n");
 	printf("\n");
-	printf("If you want to interface with some other CAN driver, supply\n");
+	printf("If you want to cf_interface with some other CAN driver, supply\n");
 	printf("the option -l /path/to/libcanfestival_can_foo.so .\n");
 	printf("The default bus name and baud are /dev/ttyS0 and 125k.\n");
 	printf("These can be overridden with -b /dev/{bus name} and -s {baud}.\n");

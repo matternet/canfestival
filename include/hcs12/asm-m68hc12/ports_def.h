@@ -706,9 +706,9 @@ Constants for MSCAN
 #define CANBTR0   0X02    /* Bus timing register 0                       */
 #define CANBTR1   0X03    /* Bus timing register 1                       */
 #define CANRFLG   0X04    /* Receiver flag register                      */
-#define CANRIER   0X05		/* Enable interruptions when reception    		 */	 
+#define CANRIER   0X05		/* Enable cf_interruptions when reception    		 */	 
 #define CANTFLG   0X06    /* Transmit flag register                      */
-#define CANTIER   0X07		/* Enable interruptions when transmission 		 */	 
+#define CANTIER   0X07		/* Enable cf_interruptions when transmission 		 */	 
 #define CANTBSEL  0X0A    /* Select foreground buffer for transmit       */
 #define CANIDAC   0x0B    /* Identifier acceptance control register      */
 #define CANIDAR0  0x10    

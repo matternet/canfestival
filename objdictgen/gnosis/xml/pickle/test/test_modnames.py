@@ -32,7 +32,7 @@ if re.search(s,'module'):
     raise "ERROR(2)"
 
 #print "From (old) xml_pickle namespace -- SHOULD *NOT* SEE MODULE NAME IN XML"
-# put Foo into xml_pickle namespace
+# put Foo cf_into xml_pickle namespace
 xml_pickle.Foo = myfoo
 p = xml_pickle.loads(ud_xml)
 # print it so we can see the modname

@@ -1,4 +1,4 @@
-""" using getstate() to rename attributes into a more verbose
+""" using getstate() to rename attributes cf_into a more verbose
 form for XML output (also tests setstate)  --fpm"""
 
 class contact:

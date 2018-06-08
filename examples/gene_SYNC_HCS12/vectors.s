@@ -13,7 +13,7 @@
 ;;those programs without any restriction coming from the use of this
 ;;file.  (The General Public License restrictions do apply in other
 ;;respects; for example, they cover modification of the file, and
-;;distribution when not linked into another program.)
+;;distribution when not linked cf_into another program.)
 ;;
 ;;This file is distributed in the hope that it will be useful, but
 ;;WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -57,7 +57,7 @@
 	.globl timer1IC
 	.globl timer0IC
 	  
-;; Default interrupt handler.
+;; Default cf_interrupt handler.
 	.sect .text
 def:
 	rti

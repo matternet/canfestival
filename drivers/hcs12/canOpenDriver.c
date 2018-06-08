@@ -78,18 +78,18 @@ void resetTimer(void)
 /******************************************************************************/
 void initTimer(void)
 {
-  lock();   // Inhibition of interruptions
+  lock();   // Inhibition of cf_interruptions
  
   // Configure the timer channel 4
   IO_PORTS_8(TIOS) |= 0x10; // Canal 4 in output
   IO_PORTS_8(TCTL1) &= ~(0x01 + 0x02); // Canal 4 unconnected to pin output
-  IO_PORTS_8(TIE) |= 0x10; // allow interruption channel 4
+  IO_PORTS_8(TIE) |= 0x10; // allow cf_interruption channel 4
   IO_PORTS_8(TSCR2) |= 0X05; // Pre-scaler = 32 
                              // If this value is changed, change must be done also
                              // in void __attribute__((interrupt)) timer4Hdl (void)
 
   IO_PORTS_8(TSCR1) |= 0x80; // Start timer
-  unlock(); // Allow interruptions
+  unlock(); // Allow cf_interruptions
 }
 
 /******************************************************************************/
@@ -97,10 +97,10 @@ void __attribute__((interrupt)) timer4Hdl (void)
 {
   lock();
   last_time_set = IO_PORTS_16(TC4H);
-  IO_PORTS_8(TFLG1) = 0x10; // RAZ flag interruption timer channel 4
-  // Compute the next event : When the timer reach the value of TC4, an interrupt is
+  IO_PORTS_8(TFLG1) = 0x10; // RAZ flag cf_interruption timer channel 4
+  // Compute the next event : When the timer reach the value of TC4, an cf_interrupt is
   // started 
-  //IO_PORTS_16(TC4H) += 250; // To have an interruption every 1 ms
+  //IO_PORTS_16(TC4H) += 250; // To have an cf_interruption every 1 ms
   //timerInterrupt(0);
   //MSG_WAR(0xFFFF, "timer4 IT", 0);
   {
@@ -444,8 +444,8 @@ char canMsgTransmit(UNS16 adrCAN, Message msg)
 /***************************************************************************/
 char canSetInterrupt(UNS16 adrCAN) 
 {
-  IO_PORTS_8(adrCAN + CANRIER) = 0X01; /* Allow interruptions on receive */
-  IO_PORTS_8(adrCAN + CANTIER) = 0X00; /* disallow  interruptions on transmit */
+  IO_PORTS_8(adrCAN + CANRIER) = 0X01; /* Allow cf_interruptions on receive */
+  IO_PORTS_8(adrCAN + CANTIER) = 0X00; /* disallow  cf_interruptions on transmit */
   return 0;  
 }
 /***************************************************************************/
@@ -559,7 +559,7 @@ void __attribute__((interrupt)) can0HdlRcv (void)
   lock();
   IO_PORTS_8(PORTB) &= ~ 0x40; // led 6 port B : ON
   UNS8 NewPtrW; 
-  /* We are obliged to save the message while the interruption is pending */
+  /* We are obliged to save the message while the cf_interruption is pending */
   /* Increment the writing stack pointer before writing the msg */
   if (ptrMsgRcv[0].w == (MAX_STACK_MSG_RCV - 1)) 
     NewPtrW = 0;
@@ -583,7 +583,7 @@ void __attribute__((interrupt)) can0HdlRcv (void)
   
   // The message is stored , so
   // we can now release the receive foreground buffer
-  // and acknowledge the interruption
+  // and acknowledge the cf_interruption
   IO_PORTS_8(CAN0 + CANRFLG) |= 0x01;
   // Not very usefull
   IO_PORTS_8(CAN0 + CANCTL0) |= 0x80;
@@ -611,7 +611,7 @@ void __attribute__((interrupt)) can1HdlRcv (void)
   UNS8 i;
   lock();
   UNS8 NewPtrW; 
-  /* We are obliged to save the message while the interruption is pending */
+  /* We are obliged to save the message while the cf_interruption is pending */
   /* Increment the writing stack pointer before writing the msg */
   if (ptrMsgRcv[1].w == (MAX_STACK_MSG_RCV - 1)) 
     NewPtrW = 0;
@@ -634,7 +634,7 @@ void __attribute__((interrupt)) can1HdlRcv (void)
   
   // The message is stored , so
   // we can now release the receive foreground buffer
-  // and acknowledge the interruption
+  // and acknowledge the cf_interruption
   IO_PORTS_8(CAN1 + CANRFLG) |= 0x01;
   // Not very usefull
   IO_PORTS_8(CAN1 + CANCTL0) |= 0x80;

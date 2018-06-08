@@ -32,8 +32,8 @@
 # as that used in John Aycock's Spark framework, but the implementation works
 # at the module level rather than requiring the use of classes.
 #
-# This module tries to provide an interface that is closely modeled after
-# the traditional lex interface in Unix.  It also differs from Spark
+# This module tries to provide an cf_interface that is closely modeled after
+# the traditional lex cf_interface in Unix.  It also differs from Spark
 # in that:
 #
 #   -  It provides more extensive error checking and reporting if
@@ -41,21 +41,21 @@
 #      be compiled or if there is any other kind of a problem in
 #      the specification.
 #
-#   -  The interface is geared towards LALR(1) and LR(1) parser
+#   -  The cf_interface is geared towards LALR(1) and LR(1) parser
 #      generators.  That is tokens are generated one at a time
 #      rather than being generated in advanced all in one step.
 #
 # There are a few limitations of this module
 #
-#   -  The module interface makes it somewhat awkward to support more
+#   -  The module cf_interface makes it somewhat awkward to support more
 #      than one lexer at a time.  Although somewhat inelegant from a
 #      design perspective, this is rarely a practical concern for
 #      most compiler projects.
 #
-#   -  The lexer requires that the entire input text be read into
+#   -  The lexer requires that the entire input text be read cf_into
 #      a string before scanning.  I suppose that most machines have
 #      enough memory to make this a minor issues, but it makes
-#      the lexer somewhat difficult to use in interactive sessions
+#      the lexer somewhat difficult to use in cf_interactive sessions
 #      or with streaming data.
 #
 #-----------------------------------------------------------------------------
@@ -249,7 +249,7 @@ class Lexer:
         c.token = c.realtoken
 
     # ------------------------------------------------------------
-    # input() - Push a new string into the lexer
+    # input() - Push a new string cf_into the lexer
     # ------------------------------------------------------------
     def input(self,s):
         if not isinstance(s,types.StringType):
@@ -390,7 +390,7 @@ def validate_file(filename):
 # -----------------------------------------------------------------------------
 # _read_lextab(module)
 #
-# Reads lexer table from a lextab file instead of using introspection.
+# Reads lexer table from a lextab file instead of using cf_introspection.
 # -----------------------------------------------------------------------------
 
 def _read_lextab(lexer, fdict, module):

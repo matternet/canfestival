@@ -1146,12 +1146,12 @@ def BE_to_LE(value):
     
     data = [char for char in value]
     data.reverse()
-    return int("".join(["%2.2X"%ord(char) for char in data]), 16)
+    return cf_int("".join(["%2.2X"%ord(char) for char in data]), 16)
 
 def LE_to_BE(value, size):
     """
     Convert Little Endian to Big Endian
-    @param value: value expressed in integer
+    @param value: value expressed in cf_integer
     @param size: number of bytes generated
     @return: a string containing the value converted
     """

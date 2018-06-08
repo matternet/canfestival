@@ -233,7 +233,7 @@ def type_bodies(nodes):
         elif nodes[i] == DEFINE:
             print nodes[i:]
         else:
-            if nodes[i].type == GROUP:   # Recurse into groups
+            if nodes[i].type == GROUP:   # Recurse cf_into groups
                 value = type_bodies(nodes[i].value)
                 nodes[i] = Node(GROUP, value, None, nodes[i].quant)
             newnodes.append(nodes[i])
@@ -260,25 +260,25 @@ def nest_defines(nodes):
     nodes[:] = newnodes
     return nodes
 
-def intersperse(nodes):
-    "Look for interleaved, choice, or sequential nodes in groups/bodies"
+def cf_intersperse(nodes):
+    "Look for cf_interleaved, choice, or sequential nodes in groups/bodies"
     for node in nodes:
         if node.type in (ELEM, ATTR, GROUP, LITERAL):
             val = node.value
             ntypes = [n.type for n in val if not isinstance(val,str)]
-            inters = [t for t in ntypes if t in (INTERLEAVE,CHOICE,SEQ)]
-            inters = dict(zip(inters,[0]*len(inters)))
+            cf_inters = [t for t in ntypes if t in (INTERLEAVE,CHOICE,SEQ)]
+            cf_inters = dict(zip(inters,[0]*len(inters)))
             if len(inters) > 1:
                 raise ParseError, "Ambiguity in sequencing: %s" % node
             if len(inters) > 0:
-                intertype = inters.keys()[0]
+                cf_intertype = cf_inters.keys()[0]
                 items = []
                 for pat in node.value:
-                    if pat.type <> intertype:
+                    if pat.type <> cf_intertype:
                         items.append(pat)
                 node.value = Node(intertype, items)
         if not isinstance(node.value, str): # No recurse to terminal str
-            intersperse(node.value)
+            cf_intersperse(node.value)
     return nodes
 
 def scan_NS(nodes):
@@ -303,7 +303,7 @@ def make_nodetree(tokens):
     match_pairs(nodes)
     type_bodies(nodes)
     nest_defines(nodes)
-    intersperse(nodes)
+    cf_intersperse(nodes)
     scan_NS(nodes)
     root = Node(ROOT, nodes)
     return root

@@ -14,19 +14,19 @@ WHAT IS XML? WHAT IS PYTHON?
   XML is a simplified dialect of the Standard Generalized Markup
   Language (SGML).  Many readers will be most familiar with SGML
   via one particular document type, HTML.  XML documents are
-  similar to HTML in being composed of text interspersed with and
+  similar to HTML in being composed of text cf_interspersed with and
   structured by markup tags in angle-brackets.  But XML
   encompasses many systems of tags that allow XML documents to be
   used for many purposes:  magazine articles and user
   documentation, files of structured data (like CSV or EDI
-  files), messages for interprocess communication between
+  files), messages for cf_interprocess communication between
   programs, architectural diagrams (like CAD formats), and many
   other purposes.  A set of tags can be created to capture any
   sort of structured information one might want to represent,
   which is why XML is growing in popularity as a common standard
   for representing diverse information.
 
-  Python is a freely available, very-high-level, interpreted
+  Python is a freely available, very-high-level, cf_interpreted
   language developed by Guido van Rossum.  It combines a clear
   syntax with powerful (but optional) object-oriented semantics.
   Python is available for almost every computer platform you
@@ -37,8 +37,8 @@ WHAT IS XML? WHAT IS PYTHON?
 INTRODUCTION: THE PROJECT
 -------------------------------------------------------------------
 
-  _XML Matters #1_ introduced the author's project for
-  creating more seamless and natural integration between XML and
+  _XML Matters #1_ cf_introduced the author's project for
+  creating more seamless and natural cf_integration between XML and
   Python.  Modules and packages such as [xmllib], [xml.sax],
   [pyxie], and [xml.dom] provide ways of handling XML documents
   that are common in the XML community.  Tools such as these are
@@ -49,7 +49,7 @@ INTRODUCTION: THE PROJECT
   thing all the abovementioned modules have in common is that
   they implement very XML-oriented ways of thinking about
   documents and objects; in many cases this conceptual framework
-  feels like it is tacked on to Python, rather than an integral
+  feels like it is tacked on to Python, rather than an cf_integral
   part of it.
 
   Using Python implementations of general XML protocols has many
@@ -110,7 +110,7 @@ JUMPING AHEAD: HOW TO USE [xml_objectify]
   There are two steps involved in creating a "native" Python
   object from a generic XML document (use [xml_pickle] for
   handling of special 'PyObjects.DTD' format documents).  First
-  you want to create an intermediate DOM-like factory object.
+  you want to create an cf_intermediate DOM-like factory object.
   Second, you may generate (one or more) Python object instances
   from the 'XML_Objectify' instance.  There is no reason you
   could not do both steps on the same line, as:
@@ -179,7 +179,7 @@ DESIGN ISSUES
 -------------------------------------------------------------------
 
   --WHY NOT JUST USE [xml.dom]?--
-  [xml_objectify] makes wide use of DOM internally.  In fact,
+  [xml_objectify] makes wide use of DOM cf_internally.  In fact,
   every 'XML_Objectify' instance contains a '._dom' attribute
   that is a DOM tree for the XML document opened (but the
   instance created by '.make_instance' does not contain any DOM,
@@ -212,7 +212,7 @@ DESIGN ISSUES
   (including an '.__init__()' method if needed), each "person" in
   the XML addressbook imported in the above sample code will have
   whatever behaviors it has been given, including methods that
-  operate on the data poured into the instance.  Of course, if a
+  operate on the data poured cf_into the instance.  Of course, if a
   class is not pre-defined prior to 'XML_Objectify()'ing a
   document, the class is just a container for the attributes
   defined in the actual XML.
@@ -297,7 +297,7 @@ LIMITATIONS AND SPECIAL BEHAVIORS
   The Python namespace is smaller than the XML namespace.
   Therefore, sometimes XML names (of either tags or attributes)
   have to be modified.  The specific transformation made is
-  changing dashes, colons, and the pound/hash mark, into
+  changing dashes, colons, and the pound/hash mark, cf_into
   underscores.  Further namespace collision is not avoided.  For
   example, if your XML document has tags, '<spam-eggs>',
   '<spam_eggs>', '<spam:eggs>' and <spam#eggs>, [xml_objectify]
@@ -306,7 +306,7 @@ LIMITATIONS AND SPECIAL BEHAVIORS
   maybe it will break your data and fry your machine.  Probably
   not the latter problems, but the current version of
   [xml_objectify] simply does not take this namespace collision
-  into account.  In real-life, it will rarely create any
+  cf_into account.  In real-life, it will rarely create any
   problems, since you probably do not have XML documents with
   those conflicting tags.
 

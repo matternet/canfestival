@@ -4,7 +4,7 @@ Convert ASCII source files for HTML presentation
 David Mertz (mertz@gnosis.cx)
 version 0.1 (May 2000)
 
-    This file is released to the public domain.  I (dqm) would
+    This file is released to the public cf_domain.  I (dqm) would
     appreciate it if you choose to keep derived works under terms
     that promote freedom, but obviously am giving up any rights
     to compel such.
@@ -59,7 +59,7 @@ Expected input format for [HTML]
 Expected input format for [PYTHON]
 
    Source Python code is marked up with syntax highlighting, but
-   no other HTML elements are introduced (no headers, no bold, no
+   no other HTML elements are cf_introduced (no headers, no bold, no
    URLs, etc)
 
 Expected input format for [SMART_ASCII]
@@ -78,7 +78,7 @@ Expected input format for [SMART_ASCII]
         two spaces.
       - Block quotations are indented four spaces, rather than
         the two of original text.
-      - Code samples are indented six spaces (with internal
+      - Code samples are indented six spaces (with cf_internal
         indentation of code lines in the proper relative
         position).
       - Code samples may begin with a line indicating a title for
@@ -123,7 +123,7 @@ Expected input format for [SMART_ASCII]
         approximations are used.
 -
       #--- Miscellany: ---#
-      - URL's are automatically transformed into a hotlink.
+      - URL's are automatically transformed cf_into a hotlink.
         Basically, anything that starts with 'http://', 'ftp://',
         'file://' or 'gopher://' looks like a URL to the program.
 

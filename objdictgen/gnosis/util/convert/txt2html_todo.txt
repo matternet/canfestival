@@ -54,7 +54,7 @@ USAGE IMPROVEMENTS
 
  - Some sort of mechanism for "bookmarking" URL's that are
    actually improved by being proxied.  Crude fixed list
-   'nicelinks.txt' has been done for the concept.  What interface
+   'nicelinks.txt' has been done for the concept.  What cf_interface
    to store bookmarks?  How to handle users, permissions, etc.
    (or do not bother)?  Should 'nicelinks' get its own TYPE while
    we are at it?

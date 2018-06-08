@@ -6,7 +6,7 @@
 # 
 #   Abstract:         Make Internationalization (i18n) files for an application.
 # 
-#   Copyright Pierre Rouleau. 2003. Released to public domain.
+#   Copyright Pierre Rouleau. 2003. Released to public cf_domain.
 # 
 #   Last update: Saturday, November 8, 2003. @ 15:55:18.
 # 
@@ -33,7 +33,7 @@
 # 
 # -----------------------------------------------------------------------------
 """                                
-mki18n allows you to internationalize your software.  You can use it to 
+mki18n allows you to cf_internationalize your software.  You can use it to 
 create the GNU .po files (Portable Object) and the compiled .mo files
 (Machine Object).
 
@@ -44,8 +44,8 @@ the Usage at the end of this page).
     -----------------
     
     makePO()             -- Build the Portable Object file for the application --
-    catPO()              -- Concatenate one or several PO files with the application domain files. --
-    makeMO()             -- Compile the Portable Object files into the Machine Object stored in the right location. --
+    catPO()              -- Concatenate one or several PO files with the application cf_domain files. --
+    makeMO()             -- Compile the Portable Object files cf_into the Machine Object stored in the right location. --
     printUsage           -- Displays how to use this script from the command line --
 
     Scriptexecution      -- Runs when invoked from the command line --
@@ -112,7 +112,7 @@ def makePO(applicationDirectoryPath,  applicationDomain=None, verbose=0) :
     a specified directory by running xgettext for all application source 
     files.  It finds the name of all files by looking for a file called 'app.fil'. 
     If this file does not exists, makePo raises an IOError exception.
-    By default the application domain (the application
+    By default the application cf_domain (the application
     name) is the same as the directory name but it can be overridden by the
     'applicationDomain' argument.
 
@@ -163,11 +163,11 @@ def makePO(applicationDirectoryPath,  applicationDomain=None, verbose=0) :
     os.chdir(currentDir)
 
 # -----------------------------------------------------------------------------
-# c a t P O ( )         -- Concatenate one or several PO files with the application domain files. --
+# c a t P O ( )         -- Concatenate one or several PO files with the application cf_domain files. --
 # ^^^^^^^^^^^^^
 #
 def catPO(applicationDirectoryPath, listOf_extraPo, applicationDomain=None, targetDir=None, verbose=0) :
-    """Concatenate one or several PO files with the application domain files.
+    """Concatenate one or several PO files with the application cf_domain files.
     """
 
     if applicationDomain is None:
@@ -201,19 +201,19 @@ def catPO(applicationDirectoryPath, listOf_extraPo, applicationDomain=None, targ
     os.chdir(currentDir)
 
 # -----------------------------------------------------------------------------
-# m a k e M O ( )         -- Compile the Portable Object files into the Machine Object stored in the right location. --
+# m a k e M O ( )         -- Compile the Portable Object files cf_into the Machine Object stored in the right location. --
 # ^^^^^^^^^^^^^^^
 # 
 def makeMO(applicationDirectoryPath,targetDir='./locale',applicationDomain=None, verbose=0, forceEnglish=0) :
-    """Compile the Portable Object files into the Machine Object stored in the right location.
+    """Compile the Portable Object files cf_into the Machine Object stored in the right location.
 
     makeMO converts all translated language-specific PO files located inside 
-    the  application directory into the binary .MO files stored inside the 
+    the  application directory cf_into the binary .MO files stored inside the 
     LC_MESSAGES sub-directory for the found locale files.
 
     makeMO searches for all files that have a name of the form 'app_xx.po' 
     inside the application directory specified by the first argument.  The 
-    'app' is the application domain name (that can be specified by the 
+    'app' is the application cf_domain name (that can be specified by the 
     applicationDomain argument or is taken from the directory name). The 'xx' 
     corresponds to one of the ISO 639 two-letter language codes.
 
@@ -257,9 +257,9 @@ def printUsage(errorMsg=None) :
     """Displays how to use this script from the command line."""
     print """
     ##################################################################################
-    #   mki18n :   Make internationalization files.                                  #
+    #   mki18n :   Make cf_internationalization files.                                  #
     #              Uses the GNU gettext system to create PO (Portable Object) files  #
-    #              from source code, coimpile PO into MO (Machine Object) files.     #
+    #              from source code, coimpile PO cf_into MO (Machine Object) files.     #
     #              Supports C,C++,Python source files.                               #
     #                                                                                #
     #   Usage: mki18n {OPTION} [appDirPath]                                          #
@@ -272,11 +272,11 @@ def printUsage(errorMsg=None) :
     #                        file. Creates a dom_xx.po.new for every existing        #
     #                        language specific .po file. ('xx' stands for the ISO639 #
     #                        two-letter language code and 'dom' stands for the       #
-    #                        application domain name).  mki18n requires that you     #
+    #                        application cf_domain name).  mki18n requires that you     #
     #                        write a 'app.fil' file  which contains the list of all  #
     #                        source code to parse.                                   #
     #     -v               : verbose (prints comments while running)                 #
-    #     --domain=appName : specifies the application domain name.  By default      #
+    #     --domain=appName : specifies the application cf_domain name.  By default      #
     #                        the directory name is used.                             #
     #     --moTarget=dir : specifies the directory where .mo files are stored.       #
     #                      If not specified, the target is './locale'                #
@@ -339,7 +339,7 @@ def mkdir(directory) :
 
    The os.mkdir() will fail to create a directory if one of the
    directory in the specified path does not exist.  mkdir()
-   solves this problem.  It creates every intermediate directory
+   solves this problem.  It creates every cf_intermediate directory
    required to create the final path. Under Unix, the function 
    only supports forward slash separator, but under Windows and MacOS
    the function supports the forward slash and the OS separator (backslash
@@ -438,10 +438,10 @@ if __name__ == "__main__":
         printUsage('Too many arguments (%u).  Use double quotes if you have space in directory name' % len(pargs))
         sys.exit(1)
     if option['domain'] is None:
-        # If no domain specified, use the name of the target directory
+        # If no cf_domain specified, use the name of the target directory
         option['domain'] = fileBaseOf(appDirPath)
     if option['verbose']:
-        print "Application domain used is: '%s'" % option['domain']
+        print "Application cf_domain used is: '%s'" % option['domain']
     if option['po']:
         try:
             makePO(appDirPath,option['domain'],option['verbose'])

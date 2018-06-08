@@ -14,7 +14,7 @@
 
   The licenses for most software are designed to take away your
 freedom to share and change it.  By contrast, the GNU General Public
-Licenses are intended to guarantee your freedom to share and change
+Licenses are cf_intended to guarantee your freedom to share and change
 free software--to make sure the software is free for all its users.
 
   This license, the Lesser General Public License, applies to some
@@ -68,7 +68,7 @@ ordinary GNU General Public License.  This license, the GNU Lesser
 General Public License, applies to certain designated libraries, and
 is quite different from the ordinary General Public License.  We use
 this license for certain libraries in order to permit linking those
-libraries into non-free programs.
+libraries cf_into non-free programs.
 
   When a program is linked with a library, whether statically or using
 a shared library, the combination of the two is legally speaking a
@@ -130,7 +130,7 @@ which has been distributed under these terms.  A "work based on the
 Library" means either the Library or any derivative work under
 copyright law: that is to say, a work containing the Library or a
 portion of it, either verbatim or with modifications and/or translated
-straightforwardly into another language.  (Hereinafter, translation is
+straightforwardly cf_into another language.  (Hereinafter, translation is
 included without limitation in the term "modification".)
 
   "Source code" for a work means the preferred form of the work for
@@ -150,7 +150,7 @@ and what the program that uses the Library does.
   1. You may copy and distribute verbatim copies of the Library's
 complete source code as you receive it, in any medium, provided that
 you conspicuously and appropriately publish on each copy an
-appropriate copyright notice and disclaimer of warranty; keep intact
+appropriate copyright notice and disclaimer of warranty; keep cf_intact
 all the notices that refer to this License and to the absence of any
 warranty; and distribute a copy of this License along with the
 Library.
@@ -198,8 +198,8 @@ this License, whose permissions for other licensees extend to the
 entire whole, and thus to each and every part regardless of who wrote
 it.
 
-Thus, it is not the intent of this section to claim rights or contest
-your rights to work written entirely by you; rather, the intent is to
+Thus, it is not the cf_intent of this section to claim rights or contest
+your rights to work written entirely by you; rather, the cf_intent is to
 exercise the right to control the distribution of derivative or
 collective works based on the Library.
 
@@ -222,14 +222,14 @@ that copy, so the ordinary GNU General Public License applies to all
 subsequent copies and derivative works made from that copy.
 
   This option is useful when you wish to copy part of the code of
-the Library into a program that is not a library.
+the Library cf_into a program that is not a library.
 
   4. You may copy and distribute the Library (or a portion or
 derivative of it, under Section 2) in object code or executable form
 under the terms of Sections 1 and 2 above provided that you accompany
 it with the complete corresponding machine-readable source code, which
 must be distributed under the terms of Sections 1 and 2 above on a
-medium customarily used for software interchange.
+medium customarily used for software cf_interchange.
 
   If distribution of object code is made by offering access to copy
 from a designated place, then offering equivalent access to copy the
@@ -298,10 +298,10 @@ of these things:
     b) Use a suitable shared library mechanism for linking with the
     Library.  A suitable mechanism is one that (1) uses at run time a
     copy of the library already present on the user's computer system,
-    rather than copying library functions into the executable, and (2)
+    rather than copying library functions cf_into the executable, and (2)
     will operate properly with a modified version of the library, if
     the user installs one, as long as the modified version is
-    interface-compatible with the version that the work was made with.
+    cf_interface-compatible with the version that the work was made with.
 
     c) Accompany the work with a written offer, valid for at
     least three years, to give the same user the materials
@@ -385,8 +385,8 @@ the only way you could satisfy both it and this License would be to
 refrain entirely from distribution of the Library.
 
 If any portion of this section is held invalid or unenforceable under any
-particular circumstance, the balance of the section is intended to apply,
-and the section as a whole is intended to apply in other circumstances.
+particular circumstance, the balance of the section is cf_intended to apply,
+and the section as a whole is cf_intended to apply in other circumstances.
 
 It is not the purpose of this section to induce you to infringe any
 patents or other property right claims or to contest validity of any
@@ -399,11 +399,11 @@ system; it is up to the author/donor to decide if he or she is willing
 to distribute software through any other system and a licensee cannot
 impose that choice.
 
-This section is intended to make thoroughly clear what is believed to
+This section is cf_intended to make thoroughly clear what is believed to
 be a consequence of the rest of this License.
 
   12. If the distribution and/or use of the Library is restricted in
-certain countries either by patents or by copyrighted interfaces, the
+certain countries either by patents or by copyrighted cf_interfaces, the
 original copyright holder who places the Library under this License may add
 an explicit geographical distribution limitation excluding those countries,
 so that distribution is permitted only in or among countries not thus
@@ -423,7 +423,7 @@ the Free Software Foundation.  If the Library does not specify a
 license version number, you may choose any version ever published by
 the Free Software Foundation.
 
-  14. If you wish to incorporate parts of the Library into other free
+  14. If you wish to incorporate parts of the Library cf_into other free
 programs whose distribution conditions are incompatible with these,
 write to the author to ask for permission.  For software which is
 copyrighted by the Free Software Foundation, write to the Free

@@ -238,7 +238,7 @@
            sodipodi:role="line"
            x="128.57401"
            y="376.4429"
-           id="tspan7043">CAN driver interface</tspan><tspan
+           id="tspan7043">CAN driver cf_interface</tspan><tspan
            sodipodi:role="line"
            x="128.57401"
            y="392.4429"
@@ -1264,7 +1264,7 @@
          id="tspan9772"
          y="497.85828"
          x="851.27936"
-         sodipodi:role="line">Load the CAN interface</tspan><tspan
+         sodipodi:role="line">Load the CAN cf_interface</tspan><tspan
          y="509.28142"
          x="851.27936"
          sodipodi:role="line"

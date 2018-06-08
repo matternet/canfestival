@@ -47,14 +47,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 win32test_obj1000 = 0x12D;	/* 301 */
                     subindex win32test_Index1000[] = 
                      {
-                       { RO, uint32, sizeof (UNS32), (void*)&win32test_obj1000, NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&win32test_obj1000, NULL }
                      };
 
 /* index 0x1001 :   Error Register. */
                     UNS8 win32test_obj1001 = 0x0;	/* 0 */
                     subindex win32test_Index1001[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&win32test_obj1001, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&win32test_obj1001, NULL }
                      };
 
 /* index 0x1003 :   Pre-defined Error Field */
@@ -66,14 +66,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     subindex win32test_Index1003[] = 
                      {
                        { RW, valueRange_EMC, sizeof (UNS8), (void*)&win32test_highestSubIndex_obj1003, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&win32test_obj1003[0], NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&win32test_obj1003[0], NULL }
                      };
 
 /* index 0x1005 :   SYNC COB ID. */
                     UNS32 win32test_obj1005 = 0x0;	/* 0 */
                     subindex win32test_Index1005[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&win32test_obj1005, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&win32test_obj1005, NULL }
                      };
 
 /* index 0x1006 :   Communication / Cycle Period */
@@ -103,11 +103,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 win32test_obj1018_Serial_Number = 0x0;	/* 0 */
                     subindex win32test_Index1018[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&win32test_highestSubIndex_obj1018, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&win32test_obj1018_Vendor_ID, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&win32test_obj1018_Product_Code, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&win32test_obj1018_Revision_Number, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&win32test_obj1018_Serial_Number, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&win32test_highestSubIndex_obj1018, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&win32test_obj1018_Vendor_ID, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&win32test_obj1018_Product_Code, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&win32test_obj1018_Revision_Number, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&win32test_obj1018_Serial_Number, NULL }
                      };
 
 /* index 0x1280 :   Client SDO 1 Parameter. */
@@ -117,10 +117,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 win32test_obj1280_Node_ID_of_the_SDO_Server = 0x0;	/* 0 */
                     subindex win32test_Index1280[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&win32test_highestSubIndex_obj1280, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&win32test_obj1280_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&win32test_obj1280_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&win32test_obj1280_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&win32test_highestSubIndex_obj1280, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&win32test_obj1280_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&win32test_obj1280_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&win32test_obj1280_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /**************************************************************************/

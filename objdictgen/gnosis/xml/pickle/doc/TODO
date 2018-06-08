@@ -8,7 +8,7 @@ to check if these apply to us also:
    classes with a custom metaclass.
 
  - In pickle and cPickle, instead of masking errors in load() by
-   transforming them into SystemError, we let the original
+   transforming them cf_into SystemError, we let the original
    exception propagate out.  Also, implement support for
    __safe_for_unpickling__ in pickle, as it already was supported
    in cPickle.

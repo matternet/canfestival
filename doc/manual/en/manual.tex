@@ -68,7 +68,7 @@ Standard 301, version 4.02. You can now download the specification
 from the CAN in Automation website at no cost.
 
 To continue reading this document, let us assume that you have read
-some papers introducing \canopen .
+some papers cf_introducing \canopen .
 
 
 \section{CanFestival Features}
@@ -94,7 +94,7 @@ keeping micro-controller target in mind.
 \item Library source code is C-ANSI. 
 \item Driver and examples coding conventions merely depend on target specific
 contributor/compiler. 
-\item Unix compatible interfaces and examples should compile and run on
+\item Unix compatible cf_interfaces and examples should compile and run on
 any Unix system (tested on GNU/Linux and GNU/FreeBSD). 
 \end{enumerate}
 
@@ -169,20 +169,20 @@ Simplified directory structure.
 ./src ANSI-C source of \canopen stack
 ./include Exportables Header files
 ./drivers Interfaces to specific platforms/HW
-./drivers/unix Linux and Cygwin OS interface
-./drivers/win32 Native Win32 OS interface
+./drivers/unix Linux and Cygwin OS cf_interface
+./drivers/win32 Native Win32 OS cf_interface
 ./drivers/timers_xeno Xenomai timers/threads (Linux only)
 ./drivers/timers_rtai Rtai timers/threads (Linux only)
 ./drivers/timers_kernel Linux kernel timer/threads
 ./drivers/timers_unix Posix timers/threads (Linux, Cygwin)
 ./drivers/can_virtual_kernel Fake CAN network (kernel space)
 ./drivers/can_serial Serial point to point and PTY hub (*nix only)
-./drivers/can_peak_linux PeakSystem CAN library interface
-./drivers/can_peak_win32 PeakSystem PCAN-Light interface
-./drivers/can_uvccm_win32 Acacetus's RS232 CAN-uVCCM interface
+./drivers/can_peak_linux PeakSystem CAN library cf_interface
+./drivers/can_peak_win32 PeakSystem PCAN-Light cf_interface
+./drivers/can_uvccm_win32 Acacetus's RS232 CAN-uVCCM cf_interface
 ./drivers/can_virtual Fake CAN network (Linux, Cygwin)
-./drivers/can_vcom VScom VSCAN interface
-./drivers/hcs12 HCS12 full target interface
+./drivers/can_vcom VScom VSCAN cf_interface
+./drivers/hcs12 HCS12 full target cf_interface
 ./examples Examples
 ./examples/TestMasterSlave 2 nodes, NMT SYNC SDO PDO, win32+unix
 ./examples/TestMasterSlaveLSS 3 nodes, NMT SYNC SDO PDO LSS, win32+unix
@@ -207,7 +207,7 @@ Simplified directory structure.
 
 
 
-\subsection{CanFestival CAN interfaces}
+\subsection{CanFestival CAN cf_interfaces}
 
 Because most CAN controllers and drivers implement FIFOs, CanFestival
 consider sending message as a non blocking operation.
@@ -216,7 +216,7 @@ In order to prevent reentrant calls to the stack, messages reception
 is implemented differently on {\textmu}C and OS.:
 
 \begin{enumerate}
-\item {\textmu}C must provide interruption masking, mutually excluding timer and CAN receive interrupts.\\
+\item {\textmu}C must provide cf_interruption masking, mutually excluding timer and CAN receive cf_interrupts.\\
 
 
 
@@ -243,7 +243,7 @@ For instance, periodic sync emission, heartbeat production or SDO timeout
 need to set some alarms that will be called later and do the job.
 
 {\textmu}C generally do not have enough free timers to handle all
-the \canopen needs directly. Moreover, CanFestival internal data
+the \canopen needs directly. Moreover, CanFestival cf_internal data
 may be corrupt by reentrant calls.
 
 CanFestival implement a micro -scheduler (timer.c). It uses only one
@@ -262,7 +262,7 @@ must be segmented.
 Chronogram illustrate a long alarm (A) and a short periodic alarm
 (B), with a A value {\textgreater} clock range {\textgreater}
 B value. Values t0...t8 are successive setTimer call parameter values.
-t1 illustrates an intermediate call to TimeDispatch, caused by a delay
+t1 illustrates an cf_intermediate call to TimeDispatch, caused by a delay
 longer than clock range. Because of long alarm segmentation, at the
 end of t1, TimeDispatch call will not trig any alarm callback.
 
@@ -306,7 +306,7 @@ To do a \canopen node running on PC -Linux, you need :
 
 \begin{enumerate}
 \item A working linux distribution 
-\item One or more Peak system PC CAN interface and the last Peak Linux driver
+\item One or more Peak system PC CAN cf_interface and the last Peak Linux driver
 installed. 
 \end{enumerate}
 
@@ -325,7 +325,7 @@ To do a \canopen node running on PC -Linux, you need :
 
 \begin{enumerate}
 \item A working Linux distribution patched with XENOMAI (2.1 or greater) or RTAI (3.6). 
-\item One or more Peak system PC CAN interface and the last Peak Real Time
+\item One or more Peak system PC CAN cf_interface and the last Peak Real Time
 Linux driver installed. 
 \end{enumerate}
 
@@ -347,7 +347,7 @@ Currently supported CAN devices and corresponding configure switch:
 \begin{verbatim}
 	./configure --can=peak_linux
 \end{verbatim}
-PeakSystems CAN interface is automatically chosen as default CAN interface
+PeakSystems CAN cf_interface is automatically chosen as default CAN cf_interface
 if libpcan is present in the system.
 
 Please download driver at \href{http://www.peak-system.com/linux}{http://www.peak
@@ -376,13 +376,13 @@ Note that only the serial driver is supported at this time.  The hub uses ptys
 	./configure --can=lincan
 \end{verbatim}
 
-\paragraph{Virtual CAN interfaces (for test/debug)}
+\paragraph{Virtual CAN cf_interfaces (for test/debug)}
 \begin{verbatim}
 	./configure --can=virtual
 		or, for kernel space:
 	./configure --can=kernel_virtual
 \end{verbatim}
-Virtual CAN interface use Unix pipes to emulate a virtual CAN network.
+Virtual CAN cf_interface use Unix pipes to emulate a virtual CAN network.
 Each message issued from a node is repeat to all other nodes. Currently
 only works with nodes running in the same process, and does not support
 work with Xenomai or RTAI.
@@ -408,7 +408,7 @@ Additionally, the FastScan LSS service can also be enabled.
 
 \subsubsection{User space}
 
-Sample provided in /example/TestMasterSlave is installed into your
+Sample provided in /example/TestMasterSlave is installed cf_into your
 system during installation.
 
 
@@ -421,7 +421,7 @@ Default CAN driver library is libcanfestival\_can\_virtual.so., which
 will simply pass CAN messages through Unix pipes between Master and
 Slave.
 
-You may also want to specify different can interface and define some
+You may also want to specify different can cf_interface and define some
 CAN ports. Another example using Peak{\textquotesingle}s dual PCMCIA
 (configure and install with --can=peak) :
 
@@ -495,7 +495,7 @@ page ):
 \end{verbatim}
 
 
-Extract its content into your cygwin home (it will create a {}``Disk''
+Extract its content cf_into your cygwin home (it will create a {}``Disk''
 directory):
 
 
@@ -550,7 +550,7 @@ page ):
 \end{verbatim}
 
 
-Extract its content into your cygwin home (it will create a {}``Disk''
+Extract its content cf_into your cygwin home (it will create a {}``Disk''
 directory):
 
 
@@ -625,7 +625,7 @@ to can\_peak\_win32 \ \ project before build of the DLL.
 
 \subsubsection{Testing}
 
-Copy eventually needed dlls (ie : Pcan\_Nxxx.lib) into Release or
+Copy eventually needed dlls (ie : Pcan\_Nxxx.lib) cf_into Release or
 Debug directory, and run the test program:
 
 
@@ -674,7 +674,7 @@ Download the PCAN-Light Zip file for your HW ( URL from download page
 	wget http://www.peak-system.com/files/usb.zip
 \end{verbatim}
 
-Extract its content into your MSYS's home (it will create a \char`\"{}
+Extract its content cf_into your MSYS's home (it will create a \char`\"{}
 Disk\char`\"{} directory):
 
 
@@ -721,7 +721,7 @@ Download the PCAN-Light Zip file for your HW ( URL from download page
 \begin{verbatim}
 	wget http://www.peak-system.com/files/pccard.zip
 \end{verbatim}
-Extract its content into your MSYS's home (it will create a \char`\"{}
+Extract its content cf_into your MSYS's home (it will create a \char`\"{}
 Disk\char`\"{} directory):
 
 \begin{verbatim}
@@ -1158,7 +1158,7 @@ Others will have to download and install Gnosis XML by hand :
 \end{verbatim}
 
 Download CanFestival archive and uncompress it. Use windows file explorer
-to go into CanFestival3\textbackslash{}objdicgten, and double -click
+to go cf_into CanFestival3\textbackslash{}objdicgten, and double -click
 on objdictedit.py.
 
 \subsubsection{About}
@@ -1315,13 +1315,13 @@ about that.
 First, be sure that you have at least 40K bytes of program memory,
 and about 2k of RAM.
 
-You have to create target specific interface to HW resources. Take
-model on bundled interfaces provided in drivers/ and create your own
+You have to create target specific cf_interface to HW resources. Take
+model on bundled cf_interfaces provided in drivers/ and create your own
 interface. You also have to update Makefile.in files for target specific
 cflags and options. Choose {--}target= configure switch to compile
-your specific interface.
+your specific cf_interface.
 
-You are welcome to contribute -back your own interfaces! Other Canfestival
+You are welcome to contribute -back your own cf_interfaces! Other Canfestival
 users will use it and provide feedback, tests and enhancements.
 
 
@@ -1369,14 +1369,14 @@ critical projects.
 Additional Features:
 
 \begin{enumerate}
-\item Non -integral integers support implementation UNS24, UNS40, UNS48
+\item Non -integral cf_integers support implementation UNS24, UNS40, UNS48
 etc. 
 \item When enable debug output with DEBUG\_WAR\_CONSOLE\_ON or DEBUG\_ERR\_CONSOLE\_ON,
 you can navigate in CanFestival source code by double clicking at
 diagnostic lines in VisualStudio.NET 200X Debug Output Window. 
 \end{enumerate}
-Custom size integral types such as INTEGER24, UNS40, INTEGER56 etc.
-have been defined as 64 bits integers. You will need to replace sizeof(TYPE)
+Custom size cf_integral types such as INTEGER24, UNS40, INTEGER56 etc.
+have been defined as 64 bits cf_integers. You will need to replace sizeof(TYPE)
 operators to sizeof\_TYPE definitions in generated code, i.e. replace
 sizeof(UNS40) with sizeof\_UNS40.
 
@@ -1416,10 +1416,10 @@ from Philippe Foureys. :
 
 \begin{verbatim}
 	// protoype
-	void interrupt timer3Hdl(void);
+	void cf_interrupt timer3Hdl(void);
 	// function
 	pragma CODE_SEG__NEAR_SEG_NON_BANKED
-	void interrupt timer3Hdl(void)
+	void cf_interrupt timer3Hdl(void)
 	{...}
 	pragma CODE_SEG_DEFAULT\end{verbatim}
 
@@ -1653,7 +1653,7 @@ Send your feedback and bug reports to \href{mailto:canfestival-devel@lists.sourc
 
 \subsection{Contributing}
 
-You are free to contribute your specific interfaces back to the project.
+You are free to contribute your specific cf_interfaces back to the project.
 This way, you can hope to get support from CanFestival users community.
 
 Please send your patch to \href{mailto:canfestival-devel@lists.sourceforge.net}{canfestival

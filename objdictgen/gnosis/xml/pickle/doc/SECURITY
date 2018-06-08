@@ -40,7 +40,7 @@ These map in a straightforward way to PARANOIA levels:
 
     In addition to the above, XML_Pickler may also instantiate
     classes that the caller has imported or that have been globally
-    imported. (The intention is have the same behavior as the standard
+    imported. (The cf_intention is have the same behavior as the standard
     pickle module.)
 
   PARANOIA = -1: "free-for-all"

@@ -730,7 +730,7 @@
            width="1052.3622"
            height="744.09448" /></flowRegion><flowPara
          id="flowPara18809">Mandatory:</flowPara><flowPara
-         id="flowPara18813">- Open CAN interfaces</flowPara><flowPara
+         id="flowPara18813">- Open CAN cf_interfaces</flowPara><flowPara
          id="flowPara18815">- Initiate TImers</flowPara><flowPara
          id="flowPara2375" /><flowPara
          id="flowPara2377">Optional:</flowPara><flowPara
@@ -738,7 +738,7 @@
          id="flowPara18817" /><flowPara
          id="flowPara18819">Each call to the CanFestival API provide a pointer to the related node's CO_Data struct.</flowPara><flowPara
          id="flowPara18821" /><flowPara
-         id="flowPara18823">In order to respect data integrity in the stack, all calls to the API should be made from mandatory nodes callback.</flowPara><flowPara
+         id="flowPara18823">In order to respect data cf_integrity in the stack, all calls to the API should be made from mandatory nodes callback.</flowPara><flowPara
          id="flowPara18825" /><flowPara
          id="flowPara18827" /></flowRoot>    <g
        transform="translate(251.9861,177.8507)"
@@ -1037,7 +1037,7 @@
          id="tspan2456"
          y="331.32974"
          x="116.96068"
-         sodipodi:role="line">OS interface</tspan><tspan
+         sodipodi:role="line">OS cf_interface</tspan><tspan
          y="347.32974"
          x="116.96068"
          sodipodi:role="line"

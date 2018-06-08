@@ -29,7 +29,7 @@ __version__ = "Mon 02-24-2003"
 __author__=["David Mertz (mertz@gnosis.cx)",]
 __thanks_to__=[]
 __copyright__="""
-    This file is released to the public domain.  I (dqm) would
+    This file is released to the public cf_domain.  I (dqm) would
     appreciate it if you choose to keep derived works under terms
     that promote freedom, but obviously am giving up any rights
     to compel such.
@@ -39,7 +39,7 @@ __history__="""
 
   0.10  Initial version.
 
-  0.20  Module refactored into gnosis.xml package.  This is a
+  0.20  Module refactored cf_into gnosis.xml package.  This is a
         first pass, and various documentation and test cases
         should be added later.
 

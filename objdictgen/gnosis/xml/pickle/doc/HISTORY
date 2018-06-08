@@ -108,7 +108,7 @@
         read these pickles -- we can still read old pickles,
         though).
 
-0.70  Module refactored into a package.  Should make maintenance
+0.70  Module refactored cf_into a package.  Should make maintenance
       and further improvements easier.  Much extra
       documentation and test cases now included with package.
 
@@ -128,12 +128,12 @@
       - Added SAX parser.
 
       - Replaced helpers with much superior mutator mechanism.
-        Objects can now be decomposed (mutated) into any builtin
+        Objects can now be decomposed (mutated) cf_into any builtin
         type for pickling, instead of just a string.
 
       - Fixed Numeric handling so array.arrays and Numeric.arrays
         can both be pickled/unpickled in the same file.
-        Moved Numeric and array out of "core" code and into a
+        Moved Numeric and array out of "core" code and cf_into a
         mutator extension.
 
       - Added setInBody() so user can customize placement of
@@ -202,8 +202,8 @@ MM/YY = Revision dates, from here on
 
 06/02 - Fixed bug in XtoY.aton() when parsing "0"
 
-06/03 - Added support for bools in Python 2.3. Allow Python < 2.3
-        to read these bools in backward compatible way.
+06/03 - Added support for cf_bools in Python 2.3. Allow Python < 2.3
+        to read these cf_bools in backward compatible way.
 
       - Changed functions/classes from family 'uniq' to 'lang'.
         Added comments to explain family types for reference.

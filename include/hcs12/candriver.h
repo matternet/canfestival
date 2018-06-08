@@ -97,7 +97,7 @@ CAN_BUS_TIME clk = {
   };
 */
 typedef struct {
-  UNS8  clksrc;     /* use of internal clock  or clock bus        */
+  UNS8  clksrc;     /* use of cf_internal clock  or clock bus        */
   UNS8  brp;        /* define the bus speed                       */
   UNS8  sjw;        /* Number of time quantum for synchro - 1     */
   UNS8  samp;       /* Number of sample per bit (1 or 3)          */
@@ -293,14 +293,14 @@ char canMsgTransmit (
 		     );
 
 /*
- Set the interruptions. Must be call just after having left the init mode.
+ Set the cf_interruptions. Must be call just after having left the init mode.
  */	     
 char canSetInterrupt (UNS16 adrCAN);		     
 
 /*
 Put one of the 5 mscan in sleep mode
 Beware! If some messages are to be sent,
-or if it is receiving, going into sleep mode
+or if it is receiving, going cf_into sleep mode
 may take time.
 Wake up is disabled : stay in sleep mode even if
 bus traffic detected.
@@ -327,7 +327,7 @@ Put one of the 5 mscan in sleep mode
 MSCAN must not be in init mode.
 wake up is enabled : wake up if traffic on CAN is detected
 Beware! If some messages are to be sent,
-or if it is receiving, going into sleep mode
+or if it is receiving, going cf_into sleep mode
 may take time.
 Loop until sleep mode reached.
 return 0 if 0K, other if error

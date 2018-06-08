@@ -49,7 +49,7 @@ Expected input format for [HTML]
 Expected input format for [PYTHON]
 
    Source Python code is marked up with syntax highlighting, but
-   no other HTML elements are introduced (no headers, no bold, no
+   no other HTML elements are cf_introduced (no headers, no bold, no
    URLs, etc)
 
 Expected input format for [SMART_ASCII]
@@ -68,7 +68,7 @@ Expected input format for [SMART_ASCII]
         two spaces.
       - Block quotations are indented four spaces, rather than
         the two of original text.
-      - Code samples are indented six spaces (with internal
+      - Code samples are indented six spaces (with cf_internal
         indentation of code lines in the proper relative
         position).
       - Code samples may begin with a line indicating a title for
@@ -113,7 +113,7 @@ Expected input format for [SMART_ASCII]
         approximations are used.
 -
       #--- Miscellany: ---#
-      - URL's are automatically transformed into a hotlink.
+      - URL's are automatically transformed cf_into a hotlink.
         Basically, anything that starts with 'http://', 'ftp://',
         'file://' or 'gopher://' looks like a URL to the program.
 
@@ -128,7 +128,7 @@ __comments__="""
 """
 __author__=["David Mertz (mertz@gnosis.cx)",]
 __copyright__="""
-    This file is released to the public domain.  I (dqm) would
+    This file is released to the public cf_domain.  I (dqm) would
     appreciate it if you choose to keep derived works under terms
     that promote freedom, but obviously am giving up any rights
     to compel such.
@@ -248,12 +248,12 @@ def main(cfg_dict):
     else:
         fhout = open(target, 'w')
 
-    #-- Get intype and the regex list
-    intype = cfg_dict['type']
+    #-- Get cf_intype and the regex list
+    cf_intype = cfg_dict['type']
     re_list = Regex_by_filetype(intype)
 
     #-- Process as needed for input type
-    if intype in ['HTML']:
+    if cf_intype in ['HTML']:
         if cfg_dict.has_key('preface'): fhout.write(cfg_dict['preface'])
         doc = ''
         for line in fhin.readlines():   # Need to normalize line endings!
@@ -265,13 +265,13 @@ def main(cfg_dict):
         if cfg_dict['proxy'] in ['ALL', 'TRAP_LINKS']:  # proxy links
             doc = Proxify(doc, cgi_home+'txt2html.cgi?source=')
         fhout.write(doc)
-    elif intype in ['SMART_ASCII']:
+    elif cf_intype in ['SMART_ASCII']:
         #sys.stderr.write('           start: ' + time.ctime(time.time())+"\n")
         blocks = Make_Blocks(fhin, re_list)
         #sys.stderr.write('     blocks made: ' + time.ctime(time.time())+"\n")
         Process_Blocks(fhout, blocks, cfg_dict, title_block=1)
         #sys.stderr.write('blocks processed: ' + time.ctime(time.time())+"\n")
-    elif intype in ['PYTHON', 'FAQ', 'SIMPLE', 'RAW']:
+    elif cf_intype in ['PYTHON', 'FAQ', 'SIMPLE', 'RAW']:
         blocks = Make_Blocks(fhin, re_list)
         Process_Blocks(fhout, blocks, cfg_dict)
     else:
@@ -289,7 +289,7 @@ def Make_Blocks(fhin, re_list):
     #-- Unpack the regex list
     blankln, headln, textln, quoteln, codeln = re_list
 
-    #-- Break the file into relevant chunks
+    #-- Break the file cf_into relevant chunks
     for line in fhin.readlines():
         line = string.rstrip(line)+'\n'  # Need to normalize line endings!
 
@@ -591,18 +591,18 @@ except ImportError:
 def infer_type(fname):
     lower = string.lower
     if lower(fname[-5:])=='.html' or lower(fname[-4:])=='.htm':
-        intype = 'HTML'
+        cf_intype = 'HTML'
     elif fname[-1:] in ['.', '/']:
-        intype = 'HTML'
+        cf_intype = 'HTML'
     elif lower(fname[-3:])=='.py' or lower(fname[-4:])=='.cgi':
-        intype = 'PYTHON'
+        cf_intype = 'PYTHON'
     elif lower(fname[-4:])=='.faq':
-        intype = 'FAQ'
+        cf_intype = 'FAQ'
     elif lower(fname[-4:])=='.txt':
-        intype = 'SMART_ASCII'
+        cf_intype = 'SMART_ASCII'
     else:
-        intype = 'RAW'
-    return intype
+        cf_intype = 'RAW'
+    return cf_intype
 
 def Regex_by_filetype(intype):
     blankln = re.compile("^$")

@@ -46,10 +46,10 @@ nodename_model = re.compile('NODE([0-9]{1,3})NAME$')
 # Regular expression for finding NodeXDCFName keynames
 nodedcfname_model = re.compile('NODE([0-9]{1,3})DCFNAME$')
 
-# Dictionary for quickly translate boolean into integer value
+# Dictionary for quickly translate cf_boolean cf_into cf_integer value
 BOOL_TRANSLATE = {True : "1", False : "0"}
 
-# Dictionary for quickly translate eds access value into canfestival access value
+# Dictionary for quickly translate eds access value cf_into canfestival access value
 ACCESS_TRANSLATE = {"RO" : "ro", "WO" : "wo", "RW" : "rw", "RWR" : "rw", "RWW" : "rw", "CONST" : "ro"}
 
 # Function for verifying data values
@@ -87,7 +87,7 @@ ENTRY_TYPES = {2 : {"name" : " DOMAIN",
                     "optional" : ["OBJFLAGS"]}}
 
 
-# Function that search into Node Mappings the informations about an index or a subindex
+# Function that search cf_into Node Mappings the informations about an index or a subindex
 # and return the default value
 def GetDefaultValue(Node, index, subIndex = None):
     infos = Node.GetEntryInfos(index)
@@ -132,7 +132,7 @@ SECTION_KEYNAMES = ["FILEINFO", "DEVICEINFO", "DUMMYUSAGE", "COMMENTS",
 def ExtractSections(file):
     return [(blocktuple[0],                # EntryName : Assignements dict
              blocktuple[-1].splitlines())  # all the lines
-             for blocktuple in [           # Split the eds files into
+             for blocktuple in [           # Split the eds files cf_into
              block.split("]", 1)              # (EntryName,Assignements) tuple
              for block in                  # for each blocks staring with '['
              ("\n"+file).split("\n[")]
@@ -160,11 +160,11 @@ def ParseCPJFile(filepath):
                     pass
                 # Verify that line is a valid assignment
                 elif assignment.find('=') > 0:
-                    # Split assignment into the two values keyname and value
+                    # Split assignment cf_into the two values keyname and value
                     keyname, value = assignment.split("=", 1)
                     
                     # keyname must be immediately followed by the "=" sign, so we
-                    # verify that there is no whitespace into keyname
+                    # verify that there is no whitespace cf_into keyname
                     if keyname.isalnum():
                         # value can be preceded and followed by whitespaces, so we escape them
                         value = value.strip()
@@ -172,16 +172,16 @@ def ParseCPJFile(filepath):
                         # First case, value starts with "0x" or "-0x", then it's an hexadecimal value
                         if value.startswith("0x") or value.startswith("-0x"):
                             try:
-                                computed_value = int(value, 16)
+                                computed_value = cf_int(value, 16)
                             except:
                                 raise SyntaxError, _("\"%s\" is not a valid value for attribute \"%s\" of section \"[%s]\"")%(value, keyname, section_name)
                         elif value.isdigit() or value.startswith("-") and value[1:].isdigit():
                             # Second case, value is a number and starts with "0" or "-0", then it's an octal value
                             if value.startswith("0") or value.startswith("-0"):
-                                computed_value = int(value, 8)
+                                computed_value = cf_int(value, 8)
                             # Third case, value is a number and don't start with "0", then it's a decimal value
                             else:
-                                computed_value = int(value)
+                                computed_value = cf_int(value)
                         # In any other case, we keep string value
                         else:
                             computed_value = value
@@ -206,21 +206,21 @@ def ParseCPJFile(filepath):
                         elif nodepresent_result:
                             if not is_boolean(computed_value):
                                 raise SyntaxError, _("Invalid value \"%s\" for keyname \"%s\" of section \"[%s]\"")%(value, keyname, section_name)
-                            nodeid = int(nodepresent_result.groups()[0])
+                            nodeid = cf_int(nodepresent_result.groups()[0])
                             if nodeid not in topology["Nodes"].keys():
                                 topology["Nodes"][nodeid] = {}
                             topology["Nodes"][nodeid]["Present"] = computed_value
                         elif nodename_result:
                             if not is_string(value):
                                 raise SyntaxError, _("Invalid value \"%s\" for keyname \"%s\" of section \"[%s]\"")%(value, keyname, section_name)
-                            nodeid = int(nodename_result.groups()[0])
+                            nodeid = cf_int(nodename_result.groups()[0])
                             if nodeid not in topology["Nodes"].keys():
                                 topology["Nodes"][nodeid] = {}
                             topology["Nodes"][nodeid]["Name"] = computed_value
                         elif nodedcfname_result:
                             if not is_string(computed_value):
                                 raise SyntaxError, _("Invalid value \"%s\" for keyname \"%s\" of section \"[%s]\"")%(value, keyname, section_name)
-                            nodeid = int(nodedcfname_result.groups()[0])
+                            nodeid = cf_int(nodedcfname_result.groups()[0])
                             if nodeid not in topology["Nodes"].keys():
                                 topology["Nodes"][nodeid] = {}
                             topology["Nodes"][nodeid]["DCFName"] = computed_value
@@ -243,7 +243,7 @@ def ParseCPJFile(filepath):
             
             networks.append(topology)
             
-        # In other case, there is a syntax problem into CPJ file
+        # In other case, there is a syntax problem cf_into CPJ file
         else:
             raise SyntaxError, _("Section \"[%s]\" is unrecognized")%section_name
     
@@ -279,8 +279,8 @@ def ParseEDSFile(filepath):
         # Second case, section name is an index name 
         elif index_result:
             # Extract index number
-            index = int(index_result.groups()[0], 16)
-            # If index hasn't been referenced before, we add an entry into the dictionary
+            index = cf_int(index_result.groups()[0], 16)
+            # If index hasn't been referenced before, we add an entry cf_into the dictionary
             if index not in eds_dict:
                 eds_dict[index] = values
                 eds_dict[index]["subindexes"] = {}
@@ -294,7 +294,7 @@ def ParseEDSFile(filepath):
         elif subindex_result:
             # Extract index and subindex number
             index, subindex = [int(value, 16) for value in subindex_result.groups()]
-            # If index hasn't been referenced before, we add an entry into the dictionary
+            # If index hasn't been referenced before, we add an entry cf_into the dictionary
             # that will be updated later
             if index not in eds_dict:
                 eds_dict[index] = {"subindexes" : {}}
@@ -306,7 +306,7 @@ def ParseEDSFile(filepath):
         # Third case, section name is a subindex name 
         elif index_objectlinks_result:
             pass
-        # In any other case, there is a syntax problem into EDS file
+        # In any other case, there is a syntax problem cf_into EDS file
         else:
             raise SyntaxError, _("Section \"[%s]\" is unrecognized")%section_name
         
@@ -316,34 +316,34 @@ def ParseEDSFile(filepath):
                 pass
             # Verify that line is a valid assignment
             elif assignment.find('=') > 0:
-                # Split assignment into the two values keyname and value
+                # Split assignment cf_into the two values keyname and value
                 keyname, value = assignment.split("=", 1)
                 
                 # keyname must be immediately followed by the "=" sign, so we
-                # verify that there is no whitespace into keyname
+                # verify that there is no whitespace cf_into keyname
                 if keyname.isalnum():
                     # value can be preceded and followed by whitespaces, so we escape them
                     value = value.strip()
                     # First case, value starts with "$NODEID", then it's a formula
                     if value.upper().startswith("$NODEID"):
                         try:
-                            test = int(value.upper().replace("$NODEID+", ""), 16)
+                            test = cf_int(value.upper().replace("$NODEID+", ""), 16)
                             computed_value = "\"%s\""%value
                         except:
                             raise SyntaxError, _("\"%s\" is not a valid formula for attribute \"%s\" of section \"[%s]\"")%(value, keyname, section_name)
                     # Second case, value starts with "0x", then it's an hexadecimal value
                     elif value.startswith("0x") or value.startswith("-0x"):
                         try:
-                            computed_value = int(value, 16)
+                            computed_value = cf_int(value, 16)
                         except:
                             raise SyntaxError, _("\"%s\" is not a valid value for attribute \"%s\" of section \"[%s]\"")%(value, keyname, section_name)
                     elif value.isdigit() or value.startswith("-") and value[1:].isdigit():
                         # Third case, value is a number and starts with "0", then it's an octal value
                         if value.startswith("0") or value.startswith("-0"):
-                            computed_value = int(value, 8)
+                            computed_value = cf_int(value, 8)
                         # Forth case, value is a number and don't start with "0", then it's a decimal value
                         else:
-                            computed_value = int(value)
+                            computed_value = cf_int(value)
                     # In any other case, we keep string value
                     else:
                         computed_value = value
@@ -713,7 +713,7 @@ def GenerateNode(filepath, nodeID = 0):
                         # Add mapping for first subindex
                         Node.AddMappingEntry(entry, 0, values = {"name" : "Number of Entries", "type" : 0x05, "access" : "ro", "pdo" : False})
                         # Add mapping for other subindexes
-                        for subindex in xrange(1, int(max_subindex) + 1):
+                        for subindex in xrange(1, cf_int(max_subindex) + 1):
                             # if subindex is defined
                             if subindex in values["subindexes"]:
                                 Node.AddMappingEntry(entry, subindex, values = {"name" : values["subindexes"][subindex]["PARAMETERNAME"], 
@@ -763,7 +763,7 @@ def GenerateNode(filepath, nodeID = 0):
                         max_subindex = max(values["subindexes"].keys())
                         Node.AddEntry(entry, value = [])
                         # Define value for all subindexes except the first 
-                        for subindex in xrange(1, int(max_subindex) + 1):
+                        for subindex in xrange(1, cf_int(max_subindex) + 1):
                             # Take default value if it is defined and entry is defined
                             if subindex in values["subindexes"] and "PARAMETERVALUE" in values["subindexes"][subindex]:
                                 value = values["subindexes"][subindex]["PARAMETERVALUE"]

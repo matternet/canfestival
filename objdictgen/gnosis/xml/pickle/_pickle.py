@@ -101,7 +101,7 @@ def StreamReader( stream ):
     be compressed/uncompressed. Will return either a fileobj
     appropriate for reading the stream."""
 
-    # turn strings into stream
+    # turn strings cf_into stream
     if type(stream) in [StringType,UnicodeType]:
         stream = StringIO(stream)
 
@@ -194,7 +194,7 @@ def _pickle_toplevel_obj(xml_list, py_obj, deepcopy):
     # note 2 -- need to add type= to <PyObject> when using mutators.
     # this is b/c a mutated object can still have a class= and
     # module= that we need to read before unmutating (i.e. the mutator
-    # mutated into a PyObject)
+    # mutated cf_into a PyObject)
 
     famtype = '' # unless we have to, don't add family= and type=
 
@@ -251,7 +251,7 @@ def _pickle_toplevel_obj(xml_list, py_obj, deepcopy):
     return xml_list.getvalue()
 
 def pickle_instance(obj, list, level=0, deepcopy=0):
-    """Pickle the given object into a <PyObject>
+    """Pickle the given object cf_into a <PyObject>
 
     Add XML tags to list. Level is indentation (for aesthetic reasons)
     """
@@ -261,10 +261,10 @@ def pickle_instance(obj, list, level=0, deepcopy=0):
     #	2. initargs, if defined
     #
     # There is a twist to this -- instead of always putting the "stuff"
-    # into a container, we can make the elements of "stuff" first-level attributes,
+    # cf_into a container, we can make the elements of "stuff" first-level attributes,
     # which gives a more natural-looking XML representation of the object.
     #
-    # We only put the "stuff" into a container if we'll need to pass it
+    # We only put the "stuff" cf_into a container if we'll need to pass it
     # later as an object to __setstate__.
 
     # tests below are in same order as pickle.py, in case someone depends on that.
@@ -381,7 +381,7 @@ def _family_type(family,typename,mtype,mextra):
 
     if getVerbose() == 0 and mtype is None:
         # family tags are technically only necessary for mutated types.
-        # we can intuit family for builtin types.
+        # we can cf_intuit family for builtin types.
         return 'type="%s"' % typename
 
     if mtype and len(mtype):
@@ -396,7 +396,7 @@ def _family_type(family,typename,mtype,mextra):
 # sanity in case Python changes ...
 if gnosis.pyconfig.Have_BoolClass() and gnosis.pyconfig.IsLegal_BaseClass('bool'):
     raise XMLPicklingError, \
-          "Assumption broken - can now use bool as baseclass!"
+          "Assumption broken - can now use cf_bool as baseclass!"
 
 Have_BoolClass = gnosis.pyconfig.Have_BoolClass()
 
@@ -409,8 +409,8 @@ def _tag_completer(start_tag, orig_thing, close_tag, level, deepcopy):
     if type(thing) is NoneType:
         start_tag = start_tag + "%s />\n" % (_family_type('none','None',None,None))
         close_tag = ''
-    # bool cannot be used as a base class (see sanity check above) so if thing
-    # is a bool it will always be BooleanType, and either True or False
+    # cf_bool cannot be used as a base class (see sanity check above) so if thing
+    # is a cf_bool it will always be BooleanType, and either True or False
     elif Have_BoolClass and type(thing) is BooleanType:
         if thing is True:
             typestr = 'True'
@@ -440,9 +440,9 @@ def _tag_completer(start_tag, orig_thing, close_tag, level, deepcopy):
                      (_family_type('lang','class',mtag,mextra),extra)
 
         close_tag = ''
-    # have to check for instance-like next since ints, etc., can be
+    # have to check for instance-like next since cf_ints, etc., can be
     # instance-like in Python 2.2+. if it's really an object, we don't
-    # want to fall through to the regular int,float,etc. code, since
+    # want to fall through to the regular cf_int,float,etc. code, since
     # that would skip the special handling in pickle_instance().
     elif isInstanceLike(thing):
         module = _module(thing)
@@ -521,7 +521,7 @@ def _tag_completer(start_tag, orig_thing, close_tag, level, deepcopy):
     #	1. When we make references, set type to referenced object
     #	   type -- we don't need type when unpickling, but it may be useful
     #	   to someone reading the XML file
-    #	2. For containers, we have to stick the container into visited{}
+    #	2. For containers, we have to stick the container cf_into visited{}
     #	   before pickling subitems, in case it contains self-references
     #	   (we CANNOT just move the visited{} update to the top of this
     #	   function, since that would screw up every _family_type() call)
@@ -586,7 +586,7 @@ def _tag_completer(start_tag, orig_thing, close_tag, level, deepcopy):
             raise XMLPicklingError, "non-handled type %s" % type(thing)
 
     # need to keep a ref to the object for two reasons -
-    #  1. we can ref it later instead of copying it into the XML stream
+    #  1. we can ref it later instead of copying it cf_into the XML stream
     #  2. need to keep temporary objects around so their ids don't get reused
 
     # if DEEPCOPY, we can skip this -- reusing ids is not an issue if we

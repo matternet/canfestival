@@ -34,7 +34,7 @@ OPT_CFLAGS = -Os
 PROGDEFINES = -mnoshort -Wall -Wmissing-prototypes -fno-strict-aliasing
 PROGDEFINES_ASM = -mnoshort -Wall -Wmissing-prototypes 
 
-OBJS = canOpenDriver.o interrupt.o ports.o 
+OBJS = canOpenDriver.o cf_interrupt.o ports.o 
 
 all: driver
 

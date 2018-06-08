@@ -31,7 +31,7 @@ def read_trigrams(fname):
         trigrams = {}
         for line in open(fname):
             trigram = line[:3]
-            spam,good = map(lambda s: int(s,16), line[3:].split(':'))
+            spam,good = map(lambda s: cf_int(s,16), line[3:].split(':'))
             trigrams[trigram] = [spam,good]
         return trigrams
     except IOError:
@@ -43,21 +43,21 @@ def write_trigrams(trigrams, fname):
         print >> fh, '%s%x:%x' %(trigram,spam,good)
     fh.close()
 
-def interesting(rebuild=0):
-    "Identify the interesting trigrams"
+def cf_interesting(rebuild=0):
+    "Identify the cf_interesting trigrams"
     if not rebuild:
         try:
             return cPickle.load(open('interesting-trigrams','rb'))
         except IOError:
             pass
     trigrams = read_trigrams('trigrams')
-    interesting = {}
+    cf_interesting = {}
     for trigram,(spam,good) in trigrams.items():
         ratio = float(spam)/(spam+good)
         if spam+good >= 10:
             if ratio < 0.05 or ratio > 0.95:
-                interesting[trigram] = ratio
+                cf_interesting[trigram] = ratio
     cPickle.dump(interesting, open('interesting-trigrams','wb'), 1)
-    return interesting
+    return cf_interesting
 
 

@@ -36,7 +36,7 @@ except:
 
 def usplit( uval ):
     """
-    Split Unicode string into a sequence of characters.
+    Split Unicode string cf_into a sequence of characters.
     \U sequences are considered to be a single character.
 
     You should assume you will get a sequence, and not assume

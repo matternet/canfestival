@@ -1,6 +1,6 @@
 (c) WestTech, 2002 -- may be freely distributed if unaltered
 
-XML MATTERS #20: Squeezing OOP data into XML rules
+XML MATTERS #20: Squeezing OOP data cf_into XML rules
 The gnosis.xml.validity Library
 
 David Mertz, Ph.D.
@@ -12,7 +12,7 @@ May, 2002
     guarantee validity.  This is a serious weakness in the whole
     field of XML processing. This installment discusses its
     author's [gnosis.xml.validity] library for enforcing validity
-    in Python objects intended for XML serialization.
+    in Python objects cf_intended for XML serialization.
 
 
 IMPLEMENTING CONSTRAINTS?
@@ -38,12 +38,12 @@ IMPLEMENTING CONSTRAINTS?
   quantification and existential types, and so on, but OOP
   languages typically lack these things.  In statically typed OOP
   languages, one would have to build just as much custom
-  validation into a library as does the currently discussed
+  validation cf_into a library as does the currently discussed
   Python library.
 
   The module [gnosis.xml.validity] can helpfully be contrasted
   with several other XML-related.  Two other libraries that have
-  been incorporated into the author's [gnosis.xml] package,
+  been incorporated cf_into the author's [gnosis.xml] package,
   were discussed in earlier articles.  [gnosis.xml.pickle] is
   able to produce a specialized XML serialization of any Python
   object whatsoever.  As with Python's standard [pickle] and
@@ -61,14 +61,14 @@ IMPLEMENTING CONSTRAINTS?
   across DOM implementation in many programming languages.  SAX
   treats an XML document as a series of parsing events, and
   basically allows a procedural programming style.  XSLT declares
-  a set of rules for transforming an XML document into something
+  a set of rules for transforming an XML document cf_into something
   else (such as a different XML document).
 
   All of these libraries are useful, but none of them prevent an
   application from modifying aN XML-representation object in ways
   that break the validity of the underlying XML.  For example,
   deleting, adding, or moving a DOM node can easily create a DOM
-  hierarchy that cannot be dumped into valid XML document.
+  hierarchy that cannot be dumped cf_into valid XML document.
 
 WHAT MAKES UP VALIDITY?
 ------------------------------------------------------------------------
@@ -104,7 +104,7 @@ WHAT MAKES UP VALIDITY?
 
   What the [gnosis.xml.validity] module does is let you create,
   e.g., a 'disseration' Python object that can -only- represent a
-  valid disseration.  Moreover, when transformed into XML--using
+  valid disseration.  Moreover, when transformed cf_into XML--using
   the 'print' command or 'str()' function--the XML automatically
   matches the desired DTD.
 
@@ -116,10 +116,10 @@ VALIDITY IN ACTION
   is to see it used.  In attitude, [gnosis.xml.validity] owes a
   heritage to the [Spark] parser.  That is, "validity classes"
   are defined using Python reflection rather than traditional
-  sequential programming.  The symmetry is interesting inasmuch
+  sequential programming.  The symmetry is cf_interesting inasmuch
   as [Spark] and [gnosis.xml.validity] in a sense do exactly
   opposite things--the former assumes rule-based structure in
-  external texts, the latter enforces it in internal objects.
+  external texts, the latter enforces it in cf_internal objects.
 
   A validity class is based very closely on a corresponding DTD
   or XML Schema.  A class simply inherits from a relevant
@@ -129,7 +129,7 @@ VALIDITY IN ACTION
   have a corresponding tag.  For example, a <paragraph> element
   in a disseration can contain a collection of PCDATA and <figure>
   and <table> elements.  The disjunction type that is assembled
-  into a <paragraph> collection does not itself have an XML tag.
+  cf_into a <paragraph> collection does not itself have an XML tag.
   Therefore, this disjuction type is named '_mixedpara' in the
   below example:
 
@@ -177,10 +177,10 @@ VALIDITY IN ACTION
   cumbersome to bother with.  Therefore [gnosis.xml.validity]
   allows a -much- friendlier style for initialization.  Whenever
   a particular type is required, the initializer for that type is
-  transparently *lifted* into the type itself.  Moreover, when a
+  transparently *lifted* cf_into the type itself.  Moreover, when a
   "quantification" type would normally be initialized by a list
   of things of the right type, specifying just one thing *lifts*
-  the thing into a length one list of the thing.  "Lifting" is
+  the thing cf_into a length one list of the thing.  "Lifting" is
   recursive.  One note is that 'Seq' types that use
   lifting must use the factory function 'LiftSeq()', but other
   types can lift their own initialization arguments (the details
@@ -268,7 +268,7 @@ SOME WORDS ON THE IMPLEMENTATION
   even work in properties and slots.
 
   The design of [gnosis.xml.validity] relies heavily on Python's
-  introspection/reflection capabilities.  Several abstract
+  cf_introspection/reflection capabilities.  Several abstract
   classes comprise the main functionality.  Each of these classes
   must have concrete children to actually -do- anything, although
   all the children need to implement is (at most) one class
@@ -337,7 +337,7 @@ SOME WORDS ON THE IMPLEMENTATION
   A concrete descendent of 'Quantification' must add a '_type'
   class attribute, which points simply to another validity class.
   In principle, a concrete child could add its own 'min_length',
-  'max_length' and 'length_message'--but using an intermediary
+  'max_length' and 'length_message'--but using an cf_intermediary
   feels like better design.
 
 
@@ -369,13 +369,13 @@ WHAT REMAINS TO BE DONE
   possible to deserialize an XML document to corresponding
   validity classes.
 
-  Finally, some sort of higher level interface to the presented
+  Finally, some sort of higher level cf_interface to the presented
   validity classes might ease work with them.  The strategy used
   in the library now is to raise exceptions for every disallowed
   action; but there may be ways of wrapping this in more
   convenient API's.  Perhaps silent failure or flag return values
   would be useful, or maybe some other sort of fallback
-  operations for error cases.  Deciding the right interfaces
+  operations for error cases.  Deciding the right cf_interfaces
   probably will require more experimentation by users (including
   myself).
 
@@ -383,14 +383,14 @@ WHAT REMAINS TO BE DONE
   of [gnosis.xml.validity] should take.  I believe the initial
   functionality will already aid a variety of XML programming
   tasks, but given how little similar library development has
-  been done elsewhere, my intuitions about what is most useful
+  been done elsewhere, my cf_intuitions about what is most useful
   are still vague.
 
 
 RESOURCES
 ------------------------------------------------------------------------
 
-  The general goals that went into the development of the
+  The general goals that went cf_into the development of the
   [gnosis.xml.validity] library were outlined in the XML Zone
   tipe at:
 

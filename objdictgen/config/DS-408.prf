@@ -23,19 +23,19 @@ Mapping = {
                  {"name" : "SI unit", "type" : 0x05, "access" : 'ro', "pdo" : False},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'ro', "pdo" : False}]},
 
-    0x0083 : {"name" : "Value parameter record integer8", "struct" : array, "need" : True, "values" :
+    0x0083 : {"name" : "Value parameter record cf_integer8", "struct" : array, "need" : True, "values" :
                 [{"name" : "Number of Entries", "type" : 0x05, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x02, "access" : 'ro', "pdo" : False},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'ro', "pdo" : False},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'ro', "pdo" : False}]},
 
-    0x0084 : {"name" : "Value parameter record integer16", "struct" : array, "need" : True, "values" :
+    0x0084 : {"name" : "Value parameter record cf_integer16", "struct" : array, "need" : True, "values" :
                 [{"name" : "Number of Entries", "type" : 0x05, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x03, "access" : 'ro', "pdo" : False},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'ro', "pdo" : False},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'ro', "pdo" : False}]},
 
-    0x0085 : {"name" : "Value parameter record integer32", "struct" : array, "need" : True, "values" :
+    0x0085 : {"name" : "Value parameter record cf_integer32", "struct" : array, "need" : True, "values" :
                 [{"name" : "Number of Entries", "type" : 0x05, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x04, "access" : 'ro', "pdo" : False},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'ro', "pdo" : False},
@@ -102,10 +102,10 @@ Mapping = {
     0x605F : {"name" : "Device capability", "struct" : var, "need" : True, "values" :
                 [{"name" : "Device capability", "type" : 0x07, "access" : 'ro', "pdo" : True}]},
 
-    0x6100 : {"name" : "viv actual value conditioning max interface number", "struct" : var, "need" : False, "values" :
+    0x6100 : {"name" : "viv actual value conditioning max cf_interface number", "struct" : var, "need" : False, "values" :
                 [{"name" : "viv actual value conditioning", "type" : 0x05, "access" : 'ro', "pdo" : True}]},
 
-    0x6101 : {"name" : "viv actual value conditioning interface number", "struct" : var, "need" : False, "values" :
+    0x6101 : {"name" : "viv actual value conditioning cf_interface number", "struct" : var, "need" : False, "values" :
                 [{"name" : "viv actual value conditioning", "type" : 0x05, "access" : 'rw', "pdo" : True}]},
 
     0x6102 : {"name" : "viv actual value conditioning type", "struct" : var, "need" : False, "values" :
@@ -222,13 +222,13 @@ Mapping = {
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6133 : {"name" : "viv actual value conditioning min interface", "struct" : array, "need" : False, "values" :
+    0x6133 : {"name" : "viv actual value conditioning min cf_interface", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x02, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x03, "access" : 'ro', "pdo" : True},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6134 : {"name" : "viv actual value conditioning max interface", "struct" : array, "need" : False, "values" :
+    0x6134 : {"name" : "viv actual value conditioning max cf_interface", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x02, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x03, "access" : 'ro', "pdo" : True},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
@@ -267,11 +267,11 @@ Mapping = {
     0x6145 : {"name" : "viv actual value conditioning start stop type", "struct" : var, "need" : False, "values" :
                 [{"name" : "viv actual value conditioning start stop type", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6200 : {"name" : "drv actual value conditioning max interface", "struct" : var, "need" : False, "values" :
-                [{"name" : "drv actual value conditioning max interface", "type" : 0x05, "access" : 'ro', "pdo" : True}]},
+    0x6200 : {"name" : "drv actual value conditioning max cf_interface", "struct" : var, "need" : False, "values" :
+                [{"name" : "drv actual value conditioning max cf_interface", "type" : 0x05, "access" : 'ro', "pdo" : True}]},
 
-    0x6201 : {"name" : "drv actual value conditioning interface number", "struct" : var, "need" : False, "values" :
-                [{"name" : "drv actual value conditioning interface number", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
+    0x6201 : {"name" : "drv actual value conditioning cf_interface number", "struct" : var, "need" : False, "values" :
+                [{"name" : "drv actual value conditioning cf_interface number", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
     0x6202 : {"name" : "drv actual value conditioning type", "struct" : var, "need" : False, "values" :
                 [{"name" : "drv actual value conditioning type", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
@@ -387,13 +387,13 @@ Mapping = {
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6233 : {"name" : "drv actual value conditioning min interface", "struct" : array, "need" : False, "values" :
+    0x6233 : {"name" : "drv actual value conditioning min cf_interface", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x02, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x04, "access" : 'ro', "pdo" : True},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6234 : {"name" : "drv actual value conditioning max interface", "struct" : array, "need" : False, "values" :
+    0x6234 : {"name" : "drv actual value conditioning max cf_interface", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x02, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x04, "access" : 'ro', "pdo" : True},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
@@ -435,13 +435,13 @@ Mapping = {
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6281 : {"name" : "drv controller output interface min", "struct" : array, "need" : False, "values" :
+    0x6281 : {"name" : "drv controller output cf_interface min", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x02, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x04, "access" : 'rw', "pdo" : True},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6282 : {"name" : "drv controller output interface max", "struct" : array, "need" : False, "values" :
+    0x6282 : {"name" : "drv controller output cf_interface max", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x02, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x04, "access" : 'rw', "pdo" : True},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
@@ -540,7 +540,7 @@ Mapping = {
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6302 : {"name" : "vpoc interface referance", "struct" : array, "need" : False, "values" :
+    0x6302 : {"name" : "vpoc cf_interface referance", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x02, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x03, "access" : 'ro', "pdo" : True},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
@@ -759,8 +759,8 @@ Mapping = {
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6382 : {"name" : "vprc interface referance", "struct" : var, "need" : False, "values" :
-                [{"name" : "vprc interface referance", "type" : 0x05, "access" : 'rw', "pdo" : True}]},
+    0x6382 : {"name" : "vprc cf_interface referance", "struct" : var, "need" : False, "values" :
+                [{"name" : "vprc cf_interface referance", "type" : 0x05, "access" : 'rw', "pdo" : True}]},
 
     0x6390 : {"name" : "vprc demand value generator demand value", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x02, "access" : 'ro', "pdo" : False},
@@ -1104,8 +1104,8 @@ Mapping = {
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6502 : {"name" : "dsc interface referance", "struct" : var, "need" : False, "values" :
-                [{"name" : "dsc interface referance", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
+    0x6502 : {"name" : "dsc cf_interface referance", "struct" : var, "need" : False, "values" :
+                [{"name" : "dsc cf_interface referance", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
     0x6503 : {"name" : "dsc Kp", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x02, "access" : 'ro', "pdo" : False},
@@ -1290,8 +1290,8 @@ Mapping = {
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6582 : {"name" : "dfpc interface referance", "struct" : var, "need" : False, "values" :
-                [{"name" : "dfpc interface referance", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
+    0x6582 : {"name" : "dfpc cf_interface referance", "struct" : var, "need" : False, "values" :
+                [{"name" : "dfpc cf_interface referance", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
     0x6583 : {"name" : "dfpc Kp", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x02, "access" : 'ro', "pdo" : False},
@@ -1494,7 +1494,7 @@ Mapping = {
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6602 : {"name" : "dpc interface referance", "struct" : array, "need" : False, "values" :
+    0x6602 : {"name" : "dpc cf_interface referance", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x07, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x04, "access" : 'ro', "pdo" : True},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
@@ -1518,16 +1518,16 @@ Mapping = {
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6608 : {"name" : "dpc switched integrator type", "struct" : var, "need" : False, "values" :
-                [{"name" : "dpc switched integrator type", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
+    0x6608 : {"name" : "dpc switched cf_integrator type", "struct" : var, "need" : False, "values" :
+                [{"name" : "dpc switched cf_integrator type", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x6609 : {"name" : "dpc switched integrator Ti", "struct" : array, "need" : False, "values" :
+    0x6609 : {"name" : "dpc switched cf_integrator Ti", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x07, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x07, "access" : 'rw', "pdo" : True},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},
                  {"name" : "Prefix", "type" : 0x02, "access" : 'rw', "pdo" : True}]},
 
-    0x660A : {"name" : "dpc switched integrator dX", "struct" : array, "need" : False, "values" :
+    0x660A : {"name" : "dpc switched cf_integrator dX", "struct" : array, "need" : False, "values" :
                 [{"name" : "Number of entries", "type" : 0x07, "access" : 'ro', "pdo" : False},
                  {"name" : "Value", "type" : 0x07, "access" : 'rw', "pdo" : True},
                  {"name" : "SI unit", "type" : 0x05, "access" : 'rw', "pdo" : True},

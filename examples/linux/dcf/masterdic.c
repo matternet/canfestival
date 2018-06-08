@@ -53,14 +53,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 masterdic_obj1000 = 0x0;	/* 0 */
                     subindex masterdic_Index1000[] = 
                      {
-                       { RO, uint32, sizeof (UNS32), (void*)&masterdic_obj1000, NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1000, NULL }
                      };
 
 /* index 0x1001 :   Error Register. */
                     UNS8 masterdic_obj1001 = 0x0;	/* 0 */
                     subindex masterdic_Index1001[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_obj1001, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1001, NULL }
                      };
 
 /* index 0x1003 :   Pre-defined Error Field */
@@ -72,7 +72,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     subindex masterdic_Index1003[] = 
                      {
                        { RW, valueRange_EMC, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1003, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&masterdic_obj1003[0], NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1003[0], NULL }
                      };
 
 /* index 0x1005 :   SYNC COB ID */
@@ -100,17 +100,17 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex masterdic_Index1016[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1016, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1016[0], NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1016[1], NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1016[2], NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1016, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1016[0], NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1016[1], NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1016[2], NULL }
                      };
 
 /* index 0x1017 :   Producer Heartbeat Time. */
                     UNS16 masterdic_obj1017 = 0x0;	/* 0 */
                     subindex masterdic_Index1017[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1017, NULL }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1017, NULL }
                      };
 
 /* index 0x1018 :   Identity. */
@@ -121,11 +121,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 masterdic_obj1018_Serial_Number = 0x0;	/* 0 */
                     subindex masterdic_Index1018[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1018, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&masterdic_obj1018_Vendor_ID, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&masterdic_obj1018_Product_Code, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&masterdic_obj1018_Revision_Number, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&masterdic_obj1018_Serial_Number, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1018, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1018_Vendor_ID, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1018_Product_Code, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1018_Revision_Number, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1018_Serial_Number, NULL }
                      };
 
 /* index 0x1280 :   Client SDO 1 Parameter. */
@@ -135,10 +135,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 masterdic_obj1280_Node_ID_of_the_SDO_Server = 0x0;	/* 0 */
                     subindex masterdic_Index1280[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1280, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1280_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1280_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1280_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1280, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1280_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1280_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1280_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1400 :   Receive PDO 1 Parameter. */
@@ -151,13 +151,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 masterdic_obj1400_SYNC_start_value = 0x0;	/* 0 */
                     subindex masterdic_Index1400[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1400, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1400_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1400_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1400_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1400_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1400_Event_Timer, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1400_SYNC_start_value, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1400, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1400_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1400_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1400_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1400_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1400_Event_Timer, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1400_SYNC_start_value, NULL }
                      };
 
 /* index 0x1401 :   Receive PDO 2 Parameter. */
@@ -170,13 +170,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 masterdic_obj1401_SYNC_start_value = 0x0;	/* 0 */
                     subindex masterdic_Index1401[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1401, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1401_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1401_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1401_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1401_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1401_Event_Timer, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1401_SYNC_start_value, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1401, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1401_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1401_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1401_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1401_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1401_Event_Timer, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1401_SYNC_start_value, NULL }
                      };
 
 /* index 0x1402 :   Receive PDO 3 Parameter. */
@@ -189,13 +189,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 masterdic_obj1402_SYNC_start_value = 0x0;	/* 0 */
                     subindex masterdic_Index1402[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1402, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1402_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1402_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1402_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1402_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1402_Event_Timer, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1402_SYNC_start_value, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1402, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1402_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1402_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1402_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1402_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1402_Event_Timer, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1402_SYNC_start_value, NULL }
                      };
 
 /* index 0x1600 :   Receive PDO 1 Mapping. */
@@ -206,8 +206,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex masterdic_Index1600[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1600, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1600[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1600, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1600[0], NULL }
                      };
 
 /* index 0x1601 :   Receive PDO 2 Mapping. */
@@ -218,8 +218,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex masterdic_Index1601[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1601, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1601[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1601, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1601[0], NULL }
                      };
 
 /* index 0x1602 :   Receive PDO 3 Mapping. */
@@ -230,8 +230,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex masterdic_Index1602[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1602, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1602[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1602, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1602[0], NULL }
                      };
 
 /* index 0x1800 :   Transmit PDO 1 Parameter. */
@@ -244,13 +244,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 masterdic_obj1800_SYNC_start_value = 0x0;	/* 0 */
                     subindex masterdic_Index1800[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1800, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1800_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1800_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1800_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1800_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1800_Event_Timer, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1800_SYNC_start_value, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1800, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1800_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1800_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1800_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1800_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1800_Event_Timer, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1800_SYNC_start_value, NULL }
                      };
 
 /* index 0x1801 :   Transmit PDO 2 Parameter. */
@@ -263,13 +263,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 masterdic_obj1801_SYNC_start_value = 0x0;	/* 0 */
                     subindex masterdic_Index1801[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1801, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1801_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1801_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1801_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1801_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1801_Event_Timer, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1801_SYNC_start_value, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1801, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1801_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1801_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1801_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1801_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1801_Event_Timer, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1801_SYNC_start_value, NULL }
                      };
 
 /* index 0x1802 :   Transmit PDO 3 Parameter. */
@@ -282,13 +282,13 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 masterdic_obj1802_SYNC_start_value = 0x0;	/* 0 */
                     subindex masterdic_Index1802[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1802, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1802_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1802_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1802_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1802_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&masterdic_obj1802_Event_Timer, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_obj1802_SYNC_start_value, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1802, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1802_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1802_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1802_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1802_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&masterdic_obj1802_Event_Timer, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_obj1802_SYNC_start_value, NULL }
                      };
 
 /* index 0x1A00 :   Transmit PDO 1 Mapping. */
@@ -299,8 +299,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex masterdic_Index1A00[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1A00, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1A00[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1A00, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1A00[0], NULL }
                      };
 
 /* index 0x1A01 :   Transmit PDO 2 Mapping. */
@@ -311,8 +311,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex masterdic_Index1A01[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1A01, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1A01[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1A01, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1A01[0], NULL }
                      };
 
 /* index 0x1A02 :   Transmit PDO 3 Mapping. */
@@ -323,8 +323,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex masterdic_Index1A02[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1A02, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&masterdic_obj1A02[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1A02, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&masterdic_obj1A02[0], NULL }
                      };
 
 /* index 0x1F22 :   Concise DCF. */
@@ -337,46 +337,46 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex masterdic_Index1F22[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1F22, NULL },
-                       { RW, domain, 0, (void*)&masterdic_obj1F22[0], NULL },
-                       { RW, domain, 0, (void*)&masterdic_obj1F22[1], NULL },
-                       { RW, domain, 0, (void*)&masterdic_obj1F22[2], NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&masterdic_highestSubIndex_obj1F22, NULL },
+                       { RW, cf_domain, 0, (void*)&masterdic_obj1F22[0], NULL },
+                       { RW, cf_domain, 0, (void*)&masterdic_obj1F22[1], NULL },
+                       { RW, cf_domain, 0, (void*)&masterdic_obj1F22[2], NULL }
                      };
 
 /* index 0x2000 :   Mapped variable position_1 */
                     subindex masterdic_Index2000[] = 
                      {
-                       { RW, int16, sizeof (INTEGER16), (void*)&position_1, NULL }
+                       { RW, cf_int16, sizeof (INTEGER16), (void*)&position_1, NULL }
                      };
 
 /* index 0x2001 :   Mapped variable position_2 */
                     subindex masterdic_Index2001[] = 
                      {
-                       { RW, int16, sizeof (INTEGER16), (void*)&position_2, NULL }
+                       { RW, cf_int16, sizeof (INTEGER16), (void*)&position_2, NULL }
                      };
 
 /* index 0x2002 :   Mapped variable position_3 */
                     subindex masterdic_Index2002[] = 
                      {
-                       { RW, int16, sizeof (INTEGER16), (void*)&position_3, NULL }
+                       { RW, cf_int16, sizeof (INTEGER16), (void*)&position_3, NULL }
                      };
 
 /* index 0x3000 :   Mapped variable counter_1 */
                     subindex masterdic_Index3000[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&counter_1, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&counter_1, NULL }
                      };
 
 /* index 0x3001 :   Mapped variable counter_2 */
                     subindex masterdic_Index3001[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&counter_2, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&counter_2, NULL }
                      };
 
 /* index 0x3003 :   Mapped variable counter_3 */
                     subindex masterdic_Index3003[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&counter_3, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&counter_3, NULL }
                      };
 
 /**************************************************************************/

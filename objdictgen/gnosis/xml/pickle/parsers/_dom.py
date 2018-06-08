@@ -29,7 +29,7 @@ if pyconfig.Have_TrueFalse():
 else:
     # Below 2.2 has no True/False, so define them as they
     # are in 2.2 (this allows Python < 2.2 to read pickles
-    # with bools created by Python 2.2+. Of course, if those
+    # with cf_bools created by Python 2.2+. Of course, if those
     # pickles are then rewritten, they'll lose their true/false
     # meaning, but hey, there's only so much we can do! :-)
     TRUE_VALUE = 1
@@ -55,7 +55,7 @@ def unpickle_instance(node, paranoia):
     pyobj = obj_from_node(node, paranoia)
     _save_obj_with_id(node, pyobj)
 
-    # slurp raw thing into a an empty object
+    # slurp raw thing cf_into a an empty object
     raw = _thing_from_dom(node, _EmptyClass(), paranoia)
 
     # code below has same ordering as pickle.py
@@ -68,13 +68,13 @@ def unpickle_instance(node, paranoia):
     except:
         pass
 
-    # next, decide what "stuff" is supposed to go into pyobj
+    # next, decide what "stuff" is supposed to go cf_into pyobj
     if hasattr(raw,'__getstate__'):
         stuff = raw.__getstate__
     else:
         stuff = raw.__dict__
 
-    # finally, decide how to get the stuff into pyobj
+    # finally, decide how to get the stuff cf_into pyobj
     if hasattr(pyobj,'__setstate__'):
         pyobj.__setstate__(stuff)
     else:
@@ -289,7 +289,7 @@ def _thing_from_dom(dom_node, container=None, paranoia=1):
                 node_val = node_val
             elif node_type == 'tuple':
                 # subtlety - if tuples could self-reference, this would be wrong
-                # since the self ref points to a list, yet we're making it into
+                # since the self ref points to a list, yet we're making it cf_into
                 # a tuple. it appears however that self-referencing tuples aren't
                 # really all that legal (regular pickle can't handle them), so
                 # this shouldn't be a practical problem.

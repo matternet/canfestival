@@ -56,14 +56,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 TestMaster_obj1000 = 0x191;	/* 401 */
                     subindex TestMaster_Index1000[] = 
                      {
-                       { RO, uint32, sizeof (UNS32), (void*)&TestMaster_obj1000, NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1000, NULL }
                      };
 
 /* index 0x1001 :   Error Register. */
                     UNS8 TestMaster_obj1001 = 0x0;	/* 0 */
                     subindex TestMaster_Index1001[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestMaster_obj1001, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestMaster_obj1001, NULL }
                      };
 
 /* index 0x1003 :   Pre-defined Error Field */
@@ -75,21 +75,21 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     subindex TestMaster_Index1003[] = 
                      {
                        { RW, valueRange_EMC, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1003, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestMaster_obj1003[0], NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1003[0], NULL }
                      };
 
 /* index 0x1005 :   SYNC COB ID. */
                     UNS32 TestMaster_obj1005 = 0x40000080;	/* 1073741952 */
                     subindex TestMaster_Index1005[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1005, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1005, NULL }
                      };
 
 /* index 0x1006 :   Communication / Cycle Period. */
                     UNS32 TestMaster_obj1006 = 0xC350;	/* 50000 */
                     subindex TestMaster_Index1006[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1006, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1006, NULL }
                      };
 
 /* index 0x100C :   Guard Time */ 
@@ -109,8 +109,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex TestMaster_Index1016[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1016, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1016[0], NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1016, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1016[0], NULL }
                      };
 
 /* index 0x1017 :   Producer Heartbeat Time */ 
@@ -124,11 +124,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 TestMaster_obj1018_Serial_Number = 0x0;	/* 0 */
                     subindex TestMaster_Index1018[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1018, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestMaster_obj1018_Vendor_ID, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestMaster_obj1018_Product_Code, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestMaster_obj1018_Revision_Number, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestMaster_obj1018_Serial_Number, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1018, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1018_Vendor_ID, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1018_Product_Code, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1018_Revision_Number, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1018_Serial_Number, NULL }
                      };
 
 /* index 0x1280 :   Client SDO 1 Parameter. */
@@ -138,10 +138,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 TestMaster_obj1280_Node_ID_of_the_SDO_Server = 0x40;	/* 64 */
                     subindex TestMaster_Index1280[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1280, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1280_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1280_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestMaster_obj1280_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1280, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1280_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1280_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestMaster_obj1280_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1400 :   Receive PDO 1 Parameter. */
@@ -153,12 +153,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS16 TestMaster_obj1400_Event_Timer = 0x0;	/* 0 */
                     subindex TestMaster_Index1400[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1400, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1400_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestMaster_obj1400_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestMaster_obj1400_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestMaster_obj1400_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestMaster_obj1400_Event_Timer, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1400, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1400_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestMaster_obj1400_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestMaster_obj1400_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestMaster_obj1400_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestMaster_obj1400_Event_Timer, NULL }
                      };
 
 /* index 0x1600 :   Receive PDO 1 Mapping. */
@@ -176,15 +176,15 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex TestMaster_Index1600[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1600, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[0], NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[1], NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[2], NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[3], NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[4], NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[5], NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[6], NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[7], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1600, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[0], NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[1], NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[2], NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[3], NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[4], NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[5], NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[6], NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1600[7], NULL }
                      };
 
 /* index 0x1800 :   Transmit PDO 1 Parameter. */
@@ -196,12 +196,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS16 TestMaster_obj1800_Event_Timer = 0x0;	/* 0 */
                     subindex TestMaster_Index1800[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1800, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1800_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestMaster_obj1800_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestMaster_obj1800_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestMaster_obj1800_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestMaster_obj1800_Event_Timer, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1800, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1800_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestMaster_obj1800_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestMaster_obj1800_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestMaster_obj1800_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestMaster_obj1800_Event_Timer, NULL }
                      };
 
 /* index 0x1A00 :   Transmit PDO 1 Mapping. */
@@ -212,62 +212,62 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex TestMaster_Index1A00[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1A00, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestMaster_obj1A00[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestMaster_highestSubIndex_obj1A00, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestMaster_obj1A00[0], NULL }
                      };
 
 /* index 0x2000 :   Mapped variable DO */
                     subindex TestMaster_Index2000[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&DO, NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&DO, NULL }
                      };
 
 /* index 0x200F :   Mapped variable DI1 */
                     subindex TestMaster_Index200F[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&DI1, NULL }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&DI1, NULL }
                      };
 
 /* index 0x2010 :   Mapped variable DI2 */
                     subindex TestMaster_Index2010[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&DI2, NULL }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&DI2, NULL }
                      };
 
 /* index 0x2011 :   Mapped variable DI3 */
                     subindex TestMaster_Index2011[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&DI3, NULL }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&DI3, NULL }
                      };
 
 /* index 0x2012 :   Mapped variable DI4 */
                     subindex TestMaster_Index2012[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&DI4, NULL }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&DI4, NULL }
                      };
 
 /* index 0x2013 :   Mapped variable DI5 */
                     subindex TestMaster_Index2013[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&DI5, NULL }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&DI5, NULL }
                      };
 
 /* index 0x2014 :   Mapped variable DI6 */
                     subindex TestMaster_Index2014[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&DI6, NULL }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&DI6, NULL }
                      };
 
 /* index 0x2015 :   Mapped variable DI7 */
                     subindex TestMaster_Index2015[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&DI7, NULL }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&DI7, NULL }
                      };
 
 /* index 0x2016 :   Mapped variable DI8 */
                     subindex TestMaster_Index2016[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&DI8, NULL }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&DI8, NULL }
                      };
 
 /**************************************************************************/

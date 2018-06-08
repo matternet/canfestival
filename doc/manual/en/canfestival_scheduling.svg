@@ -469,13 +469,13 @@
          id="flowPara11041" /><flowPara
          id="flowPara11043"> As exemples, periodic sync emission, heartbeat production or SDO timeout need to set some alarms that will be called later and do the job.</flowPara><flowPara
          id="flowPara11045" /><flowPara
-         id="flowPara11047">µC generaly do not have many anough free timers to handle all the CanOpen needs directly. Moreover, CanFestival internal data may be corrupt by reentrant calls. </flowPara><flowPara
+         id="flowPara11047">µC generaly do not have many anough free timers to handle all the CanOpen needs directly. Moreover, CanFestival cf_internal data may be corrupt by reentrant calls. </flowPara><flowPara
          id="flowPara11049" /><flowPara
          id="flowPara11051">CanFestival implement a mini-scheduler (timer.c). It uses only one timer to mimic many timers. It manage an alarm table, and call alarms at time.</flowPara><flowPara
          id="flowPara11053" /><flowPara
          id="flowPara11055">Scheduler can handle short clock value ranges limitation found on some µC. As an example, value range for a 16bit clock counter with 4µs tick is crossed within 0.26 seconds... Long alarms must be segmented.</flowPara><flowPara
          id="flowPara11057" /><flowPara
-         id="flowPara11059">Chronogram illustrate a long alarm (A) and a short periodic alarm (B), with a A value &gt; clock range &gt; B value. Values t0...t8 are successive setTimer values. t1 illustrates an intermediate call to TimeDispatch, caused by a delay longer than clock range. At the end of t1, TimeDispatch call will not trig any alarm callback.</flowPara></flowRoot>    <g
+         id="flowPara11059">Chronogram illustrate a long alarm (A) and a short periodic alarm (B), with a A value &gt; clock range &gt; B value. Values t0...t8 are successive setTimer values. t1 illustrates an cf_intermediate call to TimeDispatch, caused by a delay longer than clock range. At the end of t1, TimeDispatch call will not trig any alarm callback.</flowPara></flowRoot>    <g
        id="g12976"
        transform="translate(-42.01567,-16)">
       <rect
@@ -506,7 +506,7 @@
            id="tspan12931"
            sodipodi:role="line"
            x="225.72682"
-           y="508.69693">HW interfaces</tspan></text>
+           y="508.69693">HW cf_interfaces</tspan></text>
       <rect
          rx="5.9955626"
          ry="7.3854532"

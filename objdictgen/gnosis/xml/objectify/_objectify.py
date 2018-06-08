@@ -106,7 +106,7 @@ def _makeAttrDict(attr):
     else:
         return attr
 
-#-- Class interface to module functionality
+#-- Class cf_interface to module functionality
 class XML_Objectify:
     "Factory object class for 'objectify XML document'"
     expat_args, expat_kwargs = [], {}
@@ -209,7 +209,7 @@ class ExpatFactory:
 
         # Does our current object have a child of this type already?
         if hasattr(self._current, pyname):
-            # Convert a single child object into a list of children
+            # Convert a single child object cf_into a list of children
             if type(getattr(self._current, pyname)) is not ListType:
                 setattr(self._current, pyname, [getattr(self._current, pyname)])
             # Add the new subtag to the list of children
@@ -235,7 +235,7 @@ class ExpatFactory:
 
     def CharacterDataHandler(self, data):
         # Add the PCDATA to the parent's sequence
-        # (XXX: more efficient mechanism is desirable.  intern()? slices?)
+        # (XXX: more efficient mechanism is desirable.  cf_intern()? slices?)
         if getattr(self._current, '_seq', None):
             if isinstance(self._current._seq[-1], unicode):
                 self._current._seq[-1] += data
@@ -264,7 +264,7 @@ def pyobj_from_dom(dom_node):
 
     # for nodes with character markup, might want the literal XML
     dom_node_xml = ''
-    intro_PCDATA, subtag, exit_PCDATA = (0, 0, 0)
+    cf_intro_PCDATA, subtag, exit_PCDATA = (0, 0, 0)
 
     # now look at the actual tag contents (subtags and PCDATA)
     for node in _makeNodeList(dom_node.childNodes):
@@ -284,12 +284,12 @@ def pyobj_from_dom(dom_node):
                 py_obj.PCDATA += node.nodeValue
             elif node.nodeValue.strip():  # only use "real" node contents
                 py_obj.PCDATA = node.nodeValue  # (not bare whitespace)
-                if not subtag: intro_PCDATA = 1
+                if not subtag: cf_intro_PCDATA = 1
                 else: exit_PCDATA = 1
 
         # does a py_obj attribute corresponding to the subtag already exist?
         elif hasattr(py_obj, node_name):
-            # convert a single child object into a list of children
+            # convert a single child object cf_into a list of children
             if type(getattr(py_obj, node_name)) is not ListType:
                 setattr(py_obj, node_name, [getattr(py_obj, node_name)])
             # add the new subtag to the list of children

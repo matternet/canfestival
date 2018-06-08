@@ -75,7 +75,7 @@ int initialisedQ = 0;
 QueueRecord Q_DATA[10];
 
 
-/** Store message into a queue. */
+/** Store message cf_into a queue. */
 static void PushMsgToQueue(QueueRecord *QR, Message *m)
 {
   if(QR==NULL || m==NULL) return;
@@ -83,7 +83,7 @@ static void PushMsgToQueue(QueueRecord *QR, Message *m)
   memcpy(&QR->MQueue[QR->QStart], m, sizeof(Message));
   QR->QStart = (QR->QStart + 1) % QueueSize;
   if(QR->QEnd==QR->QStart) QR->QEnd = (QR->QEnd+1) % QueueSize;
-  if(QR->hEventx) SetEvent(QR->hEventx);					// Signalise internal flag
+  if(QR->hEventx) SetEvent(QR->hEventx);					// Signalise cf_internal flag
 }
 
 
@@ -183,7 +183,7 @@ int i;
   do
   {
 CONTINUE:
-     if(PopMsgFromQueue(&Q_DATA[i],m)) return 0;	//message is waiting in the internal queue
+     if(PopMsgFromQueue(&Q_DATA[i],m)) return 0;	//message is waiting in the cf_internal queue
 
         // We read the queue looking for messages.
 #ifdef VERSION_2

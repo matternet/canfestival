@@ -100,11 +100,11 @@ UNS8 accessDictionaryError(UNS16 index, UNS8 subIndex,
  * @param *pDestData Pointer to the pointer which points to the variable where
  *                   the value of this object dictionary entry should be copied
  * @param pExpectedSize This function writes the size of the copied value (in Byte)
- *                      into this variable.
+ *                      cf_into this variable.
  * @param *pDataType Pointer to the type of the data. See objdictdef.h
  * @param CheckAccess if other than 0, do not read if the data is Write Only
  *                    [Not used today. Put always 0].
- * @param Endianize  When not 0, data is endianized into network byte order
+ * @param Endianize  When not 0, data is endianized cf_into network byte order
  *                   when 0, data is not endianized and copied in machine native
  *                   endianness 
  * @return 
@@ -133,7 +133,7 @@ UNS32 _getODentry( CO_Data* d,
  * @param *pDestData Pointer to the pointer which points to the variable where
  *                   the value of this object dictionary entry should be copied
  * @param pExpectedSize This function writes the size of the copied value (in Byte)
- *                      into this variable.
+ *                      cf_into this variable.
  * @param *pDataType Pointer to the type of the data. See objdictdef.h
  * @param checkAccess Flag that indicate if a check rights must be perfomed (0 : no , other than 0 : yes)
  * @return 
@@ -160,7 +160,7 @@ UNS32 _getODentry( CO_Data* d,
  * @param *pDestData Pointer to the pointer which points to the variable where
  *                   the value of this object dictionary entry should be copied
  * @param pExpectedSize This function writes the size of the copied value (in Byte)
- *                      into this variable.
+ *                      cf_into this variable.
  * @param *pDataType Pointer to the type of the data. See objdictdef.h
  * @param checkAccess if other than 0, do not read if the data is Write Only
  *                    [Not used today. Put always 0].
@@ -173,7 +173,7 @@ UNS32 _getODentry( CO_Data* d,
        _getODentry( OD, wIndex, bSubindex, pDestData, pExpectedSize, \
 		          pDataType,  checkAccess, 0)
 
-/* By this function you can write an entry into the object dictionary
+/* By this function you can write an entry cf_into the object dictionary
  * @param *d Pointer to a CAN object data structure
  * @param wIndex The index in the object dictionary where you want to write
  *               an entry
@@ -182,7 +182,7 @@ UNS32 _getODentry( CO_Data* d,
  *                  in this index. Look at the canopen standard for further
  *                  information
  * @param *pSourceData Pointer to the variable that holds the value that should
- *                     be copied into the object dictionary
+ *                     be copied cf_into the object dictionary
  * @param *pExpectedSize The size of the value (in Byte).
  * @param checkAccess Flag that indicate if a check rights must be perfomed (0 : no , other than 0 : yes)
  * @return 
@@ -216,7 +216,7 @@ UNS32 _setODentry( CO_Data* d,
  *                  in this index. Look at the canopen standard for further
  *                  information
  * @param *pSourceData Pointer to the variable that holds the value that should
- *                     be copied into the object dictionary
+ *                     be copied cf_into the object dictionary
  * @param *pExpectedSize The size of the value (in Byte).
  * @param checkAccess Flag that indicate if a check rights must be perfomed (0 : no , other than 0 : yes)
  * @return 
@@ -240,7 +240,7 @@ UNS32 _setODentry( CO_Data* d,
  *                  in this index. Look at the canopen standard for further
  *                  information
  * @param *pSourceData Pointer to the variable that holds the value that should
- *                     be copied into the object dictionary
+ *                     be copied cf_into the object dictionary
  * @param *pExpectedSize The size of the value (in Byte).
  * @param checkAccess Flag that indicate if a check rights must be perfomed (0 : no , other than 0 : yes)
  * @return 

@@ -34,7 +34,7 @@ try:    py_obj.Eggs.hello()
 except: print "Eggs don't say hello"
 
 print "\n================================================================"
-print "OK, get our _XO_Eggs class into the xml_objectify namespace!"
+print "OK, get our _XO_Eggs class cf_into the xml_objectify namespace!"
 print "================================================================"
 gnosis.xml.objectify._XO_Eggs = _XO_Eggs
 xml_object = XML_Objectify('test.xml', PARSER)

@@ -686,7 +686,7 @@ class NodeManager:
                     node.SetEntry(index, subIndex, value)
                 elif editor == "number":
                     try:
-                        node.SetEntry(index, subIndex, int(value))
+                        node.SetEntry(index, subIndex, cf_int(value))
                     except:
                         pass
                 elif editor == "float":
@@ -717,9 +717,9 @@ class NodeManager:
                             if value.startswith("$NODEID"):
                                 value = "\"%s\""%value
                             elif value.startswith("0x"):
-                                value = int(value, 16)
+                                value = cf_int(value, 16)
                             else:
-                                value = int(value)
+                                value = cf_int(value)
                             node.SetEntry(index, subIndex, value)
                         except:
                             pass

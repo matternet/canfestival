@@ -60,14 +60,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 TestSlave_obj1000 = 0x12D;	/* 301 */
                     subindex TestSlave_Index1000[] = 
                      {
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1000 }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1000 }
                      };
 
 /* index 0x1001 :   Error Register. */
                     UNS8 TestSlave_obj1001 = 0x0;	/* 0 */
                     subindex TestSlave_Index1001[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestSlave_obj1001 }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1001 }
                      };
 
 /* index 0x1003 :   Pre-defined Error Field. */
@@ -98,14 +98,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     subindex TestSlave_Index1003[] = 
                      {
                        { RW, valueRange_EMC, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1003 },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[0] },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[1] },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[2] },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[3] },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[4] },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[5] },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[6] },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[7] }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[0] },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[1] },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[2] },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[3] },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[4] },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[5] },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[6] },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1003[7] }
                      };
 
 /* index 0x1005 :   SYNC COB ID. */
@@ -116,7 +116,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                      };
                     subindex TestSlave_Index1005[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1005 }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1005 }
                      };
 
 /* index 0x1006 :   Communication / Cycle Period. */
@@ -127,7 +127,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                      };
                     subindex TestSlave_Index1006[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1006 }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1006 }
                      };
 
 /* index 0x100C :   Guard Time */ 
@@ -152,11 +152,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                      };
                     subindex TestSlave_Index1010[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1010 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1010_Save_All_Parameters },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1010_Save_Communication_Parameters },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1010_Save_Application_Parameters },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1010_Save_Manufacturer_Parameters_1 }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1010 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1010_Save_All_Parameters },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1010_Save_Communication_Parameters },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1010_Save_Application_Parameters },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1010_Save_Manufacturer_Parameters_1 }
                      };
 
 /* index 0x1011 :   Restore Default Parameters. */
@@ -175,18 +175,18 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                      };
                     subindex TestSlave_Index1011[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1011 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1011_Restore_All_Default_Parameters },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1011_Restore_Communication_Default_Parameters },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1011_Restore_Application_Default_Parameters },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1011_Restore_Manufacturer_Defined_Default_Parameters_1 }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1011 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1011_Restore_All_Default_Parameters },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1011_Restore_Communication_Default_Parameters },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1011_Restore_Application_Default_Parameters },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1011_Restore_Manufacturer_Defined_Default_Parameters_1 }
                      };
 
 /* index 0x1014 :   Emergency COB ID. */
                     UNS32 TestSlave_obj1014 = 0x80;	/* 128 */
                     subindex TestSlave_Index1014[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1014 }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1014 }
                      };
 
 /* index 0x1016 :   Consumer Heartbeat Time */
@@ -201,7 +201,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                      };
                     subindex TestSlave_Index1017[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&TestSlave_obj1017 }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1017 }
                      };
 
 /* index 0x1018 :   Identity. */
@@ -212,11 +212,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 TestSlave_obj1018_Serial_Number = 0x56789012;	/* 1450741778 */
                     subindex TestSlave_Index1018[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1018 },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1018_Vendor_ID },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1018_Product_Code },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1018_Revision_Number },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1018_Serial_Number }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1018 },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1018_Vendor_ID },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1018_Product_Code },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1018_Revision_Number },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1018_Serial_Number }
                      };
 
 /* index 0x1200 :   Server SDO Parameter. */
@@ -225,9 +225,9 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 TestSlave_obj1200_COB_ID_Server_to_Client_Transmit_SDO = 0x580;	/* 1408 */
                     subindex TestSlave_Index1200[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1200 },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1200_COB_ID_Client_to_Server_Receive_SDO },
-                       { RO, uint32, sizeof (UNS32), (void*)&TestSlave_obj1200_COB_ID_Server_to_Client_Transmit_SDO }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1200 },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1200_COB_ID_Client_to_Server_Receive_SDO },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1200_COB_ID_Server_to_Client_Transmit_SDO }
                      };
 
 /* index 0x1800 :   Transmit PDO 1 Parameter. */
@@ -248,12 +248,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                      };
                     subindex TestSlave_Index1800[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1800 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1800_COB_ID_used_by_PDO },
-                       { RW|TO_BE_SAVE, uint8, sizeof (UNS8), (void*)&TestSlave_obj1800_Transmission_Type },
-                       { RW|TO_BE_SAVE, uint16, sizeof (UNS16), (void*)&TestSlave_obj1800_Inhibit_Time },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_obj1800_Compatibility_Entry },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestSlave_obj1800_Event_Timer }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1800 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1800_COB_ID_used_by_PDO },
+                       { RW|TO_BE_SAVE, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1800_Transmission_Type },
+                       { RW|TO_BE_SAVE, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1800_Inhibit_Time },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1800_Compatibility_Entry },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1800_Event_Timer }
                      };
 
 /* index 0x1801 :   Transmit PDO 2 Parameter. */
@@ -274,12 +274,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                      };
                     subindex TestSlave_Index1801[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1801 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1801_COB_ID_used_by_PDO },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_obj1801_Transmission_Type },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestSlave_obj1801_Inhibit_Time },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_obj1801_Compatibility_Entry },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestSlave_obj1801_Event_Timer }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1801 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1801_COB_ID_used_by_PDO },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1801_Transmission_Type },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1801_Inhibit_Time },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1801_Compatibility_Entry },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1801_Event_Timer }
                      };
 
 /* index 0x1802 :   Transmit PDO 3 Parameter. */
@@ -300,12 +300,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                      };
                     subindex TestSlave_Index1802[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1802 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1802_COB_ID_used_by_PDO },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_obj1802_Transmission_Type },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestSlave_obj1802_Inhibit_Time },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_obj1802_Compatibility_Entry },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestSlave_obj1802_Event_Timer }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1802 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1802_COB_ID_used_by_PDO },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1802_Transmission_Type },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1802_Inhibit_Time },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1802_Compatibility_Entry },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1802_Event_Timer }
                      };
 
 /* index 0x1803 :   Transmit PDO 4 Parameter. */
@@ -326,12 +326,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                      };
                     subindex TestSlave_Index1803[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1803 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1803_COB_ID_used_by_PDO },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_obj1803_Transmission_Type },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestSlave_obj1803_Inhibit_Time },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_obj1803_Compatibility_Entry },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestSlave_obj1803_Event_Timer }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1803 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1803_COB_ID_used_by_PDO },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1803_Transmission_Type },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1803_Inhibit_Time },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1803_Compatibility_Entry },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1803_Event_Timer }
                      };
 
 /* index 0x1804 :   Transmit PDO 5 Parameter. */
@@ -352,12 +352,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                      };
                     subindex TestSlave_Index1804[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1804 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1804_COB_ID_used_by_PDO },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_obj1804_Transmission_Type },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestSlave_obj1804_Inhibit_Time },
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_obj1804_Compatibility_Entry },
-                       { RW, uint16, sizeof (UNS16), (void*)&TestSlave_obj1804_Event_Timer }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1804 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1804_COB_ID_used_by_PDO },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1804_Transmission_Type },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1804_Inhibit_Time },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_obj1804_Compatibility_Entry },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&TestSlave_obj1804_Event_Timer }
                      };
 
 /* index 0x1A00 :   Transmit PDO 1 Mapping. */
@@ -377,17 +377,17 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex TestSlave_Index1A00[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1A00 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[0] },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[1] },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[2] },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[3] },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[4] },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[5] },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[6] },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[7] },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[8] },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[9] }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1A00 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[0] },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[1] },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[2] },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[3] },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[4] },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[5] },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[6] },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[7] },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[8] },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A00[9] }
                      };
 
 /* index 0x1A01 :   Transmit PDO 2 Mapping. */
@@ -398,8 +398,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex TestSlave_Index1A01[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1A01 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A01[0] }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1A01 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A01[0] }
                      };
 
 /* index 0x1A02 :   Transmit PDO 3 Mapping. */
@@ -410,8 +410,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex TestSlave_Index1A02[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1A02 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A02[0] }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1A02 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A02[0] }
                      };
 
 /* index 0x1A03 :   Transmit PDO 4 Mapping. */
@@ -422,8 +422,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex TestSlave_Index1A03[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1A03 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A03[0] }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1A03 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A03[0] }
                      };
 
 /* index 0x1A04 :   Transmit PDO 5 Mapping. */
@@ -434,86 +434,86 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex TestSlave_Index1A04[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1A04 },
-                       { RW, uint32, sizeof (UNS32), (void*)&TestSlave_obj1A04[0] }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&TestSlave_highestSubIndex_obj1A04 },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&TestSlave_obj1A04[0] }
                      };
 
 /* index 0x2000 :   Mapped variable SlaveMap1 */
                     subindex TestSlave_Index2000[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&SlaveMap1 }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&SlaveMap1 }
                      };
 
 /* index 0x2001 :   Mapped variable SlaveMap2 */
                     subindex TestSlave_Index2001[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&SlaveMap2 }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&SlaveMap2 }
                      };
 
 /* index 0x2002 :   Mapped variable SlaveMap3 */
                     subindex TestSlave_Index2002[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&SlaveMap3 }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&SlaveMap3 }
                      };
 
 /* index 0x2003 :   Mapped variable SlaveMap4 */
                     subindex TestSlave_Index2003[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&SlaveMap4 }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&SlaveMap4 }
                      };
 
 /* index 0x2004 :   Mapped variable SlaveMap5 */
                     subindex TestSlave_Index2004[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&SlaveMap5 }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&SlaveMap5 }
                      };
 
 /* index 0x2005 :   Mapped variable SlaveMap6 */
                     subindex TestSlave_Index2005[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&SlaveMap6 }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&SlaveMap6 }
                      };
 
 /* index 0x2006 :   Mapped variable SlaveMap7 */
                     subindex TestSlave_Index2006[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&SlaveMap7 }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&SlaveMap7 }
                      };
 
 /* index 0x2007 :   Mapped variable SlaveMap8 */
                     subindex TestSlave_Index2007[] = 
                      {
-                       { RW, boolean, sizeof (UNS8), (void*)&SlaveMap8 }
+                       { RW, cf_boolean, sizeof (UNS8), (void*)&SlaveMap8 }
                      };
 
 /* index 0x2008 :   Mapped variable SlaveMap9 */
                     subindex TestSlave_Index2008[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&SlaveMap9 }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&SlaveMap9 }
                      };
 
 /* index 0x2009 :   Mapped variable SlaveMap10 */
                     subindex TestSlave_Index2009[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&SlaveMap10 }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&SlaveMap10 }
                      };
 
 /* index 0x200A :   Mapped variable SlaveMap11 */
                     subindex TestSlave_Index200A[] = 
                      {
-                       { RW, uint16, sizeof (UNS16), (void*)&SlaveMap11 }
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&SlaveMap11 }
                      };
 
 /* index 0x200B :   Mapped variable SlaveMap12 */
                     subindex TestSlave_Index200B[] = 
                      {
-                       { RW, int16, sizeof (INTEGER16), (void*)&SlaveMap12 }
+                       { RW, cf_int16, sizeof (INTEGER16), (void*)&SlaveMap12 }
                      };
 
 /* index 0x200C :   Mapped variable SlaveMap13 */
                     subindex TestSlave_Index200C[] = 
                      {
-                       { RW, int16, sizeof (INTEGER16), (void*)&SlaveMap13 }
+                       { RW, cf_int16, sizeof (INTEGER16), (void*)&SlaveMap13 }
                      };
 
 /**************************************************************************/

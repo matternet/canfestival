@@ -191,7 +191,7 @@ int main(int argc,char **argv)
 	signal(SIGINT, catch_signal);
 #endif
 	// Also Windows needs to initialize the Timer!
-	// Moving this line into the ifndef leads to a lethal crash!
+	// Moving this line cf_into the ifndef leads to a lethal crash!
 	TimerInit();
 
 #ifndef NOT_USE_DYNAMIC_LOADING

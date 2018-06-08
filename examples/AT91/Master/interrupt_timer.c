@@ -12,9 +12,9 @@
 // NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
 // EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // ----------------------------------------------------------------------------
-// File Name           : interrupt_timer.c
-// Object              : Timer interrupt management
-//                     : Use AT91B_LED7 & AT91B_LED8 for status interrupt
+// File Name           : cf_interrupt_timer.c
+// Object              : Timer cf_interrupt management
+//                     : Use AT91B_LED7 & AT91B_LED8 for status cf_interrupt
 // Creation            : JPP   08-Sep-2005
 // ----------------------------------------------------------------------------
 
@@ -52,7 +52,7 @@ void AT91F_TC_Open ( AT91PS_TC TC_pt, unsigned int Mode, unsigned int TimerId)
   //* First, enable the clock of the TIMER
   AT91F_PMC_EnablePeriphClock ( AT91C_BASE_PMC, 1<< TimerId ) ;
 
-  //* Disable the clock and the interrupts
+  //* Disable the clock and the cf_interrupts
   TC_pt->TC_CCR = AT91C_TC_CLKDIS ;
   TC_pt->TC_IDR = 0xFFFFFFFF ;
 
@@ -70,7 +70,7 @@ void AT91F_TC_Open ( AT91PS_TC TC_pt, unsigned int Mode, unsigned int TimerId)
 
 //*----------------------------------------------------------------------------
 //* Function Name       : timer0_c_irq_handler
-//* Object              : C handler interrupt function calAT91B_LED by the interrupts
+//* Object              : C handler cf_interrupt function calAT91B_LED by the cf_interrupts
 //*                       assembling routine
 //* Output Parameters   : increment count_timer0_interrupt
 //*----------------------------------------------------------------------------
@@ -78,7 +78,7 @@ void timer0_c_irq_handler(void)
 {
   AT91PS_TC TC_pt = AT91C_BASE_TC0;
   unsigned int dummy;
-  //* AcknowAT91B_LEDge interrupt status
+  //* AcknowAT91B_LEDge cf_interrupt status
   dummy = TC_pt->TC_SR;
   //* Suppress warning variable "dummy" was set but never used
   dummy = dummy;
@@ -98,7 +98,7 @@ void timer_init (unsigned int time)
   //* Open timer0
   AT91F_TC_Open(AT91C_BASE_TC0,TC_CLKS_MCK8 | AT91C_TC_WAVESEL_UP_AUTO,AT91C_ID_TC0);
 
-  //* Open Timer 0 interrupt
+  //* Open Timer 0 cf_interrupt
   AT91F_AIC_ConfigureIt ( AT91C_BASE_AIC, AT91C_ID_TC0, TIMER0_INTERRUPT_LEVEL,AT91C_AIC_SRCTYPE_INT_HIGH_LEVEL, timer0_c_irq_handler);
   AT91C_BASE_TC0->TC_IER = AT91C_TC_CPCS;  //  IRQ enable CPC
   AT91F_AIC_EnableIt (AT91C_BASE_AIC, AT91C_ID_TC0);

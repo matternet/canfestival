@@ -67,13 +67,13 @@ class IXXAT
         };
       IXXAT(s_BOARD *board);
       ~IXXAT();
-      bool send(const Message *m);
-      bool receive(Message *m);
+      cf_bool send(const Message *m);
+      cf_bool receive(Message *m);
 
-	  static bool isDriverClosed() {return m_driverClosed;}
+	  static cf_bool isDriverClosed() {return m_driverClosed;}
    private:
-      bool open(int board_number, const char* baud_rate);
-      bool close();
+      cf_bool open(int board_number, const char* baud_rate);
+      cf_bool close();
       void receive_queuedata(UINT16 que_hdl, UINT16 count, VCI_CAN_OBJ* p_obj);
       // VCI2 handler      
       static void VCI_CALLBACKATTR message_handler(char *msg_str);
@@ -89,7 +89,7 @@ class IXXAT
       async_access_que<VCI_CAN_OBJ> m_RX_Que;
       static IXXAT* m_callbackPtr;
 
-	  static bool m_driverClosed;
+	  static cf_bool m_driverClosed;
       static UINT_PTR m_watchdogTimerId;
       static const unsigned int CAN_BUS_WATCHDOG_INTERVAL_MSEC = 10000;
 

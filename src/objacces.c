@@ -115,7 +115,7 @@ UNS32 _getODentry( CO_Data* d,
   }
 
   if (ptrTable->pSubindex[bSubindex].size > *pExpectedSize) {
-    /* Requested variable is too large to fit into a transfer line, inform    *
+    /* Requested variable is too large to fit cf_into a transfer line, inform    *
      * the caller about the real size of the requested variable.              */
     *pExpectedSize = ptrTable->pSubindex[bSubindex].size;
     return SDOABT_OUT_OF_MEMORY;
@@ -125,9 +125,9 @@ UNS32 _getODentry( CO_Data* d,
   szData = ptrTable->pSubindex[bSubindex].size;
 
 #  ifdef CANOPEN_BIG_ENDIAN
-  if(endianize && *pDataType > boolean && !(
+  if(endianize && *pDataType > cf_boolean && !(
          *pDataType >= visible_string &&
-         *pDataType <= domain)) {
+         *pDataType <= cf_domain)) {
     /* data must be transmited with low byte first */
     UNS8 i, j = 0;
     MSG_WAR(boolean, "data type ", *pDataType);
@@ -196,16 +196,16 @@ UNS32 _setODentry( CO_Data* d,
   szData = ptrTable->pSubindex[bSubindex].size;
   Callback = ptrTable->pSubindex[bSubindex].callback;
 
-  /* check the size, we must allow to store less bytes than data size, even for intergers
-	 (e.g. UNS40 : objdictedit will store it in a uint64_t, setting the size to 8 but PDO comes
+  /* check the size, we must allow to store less bytes than data size, even for cf_intergers
+	 (e.g. UNS40 : objdictedit will store it in a cf_uint64_t, setting the size to 8 but PDO comes
 	 with 5 bytes so ExpectedSize is 5 */
   if( *pExpectedSize == 0 || *pExpectedSize <= szData )
     {
 #ifdef CANOPEN_BIG_ENDIAN
-      /* re-endianize do not occur for bool, strings time and domains */
-      if(endianize && dataType > boolean && !(
+      /* re-endianize do not occur for cf_bool, strings time and cf_domains */
+      if(endianize && dataType > cf_boolean && !(
             dataType >= visible_string && 
-            dataType <= domain))
+            dataType <= cf_domain))
         {
           /* we invert the data source directly. This let us do range
             testing without */

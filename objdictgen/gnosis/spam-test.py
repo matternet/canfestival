@@ -1,12 +1,12 @@
 #!/usr/bin/python
 
 import sys, glob, gzip
-from trigramlib import generate_trigrams, interesting
+from trigramlib import generate_trigrams, cf_interesting
 
 MAX_PROBS = 100
 
-# Open dictionary of interesting trigrams
-interesting = interesting()
+# Open dictionary of cf_interesting trigrams
+interesting = cf_interesting()
 
 def combine_probs(problist):
     product, inverse = 1.0, 1.0
@@ -22,7 +22,7 @@ def combine_probs(problist):
 def is_spam(text):
     trigram_probs = []
     for trigram in generate_trigrams(text):
-        if interesting.has_key(trigram):
+        if cf_interesting.has_key(trigram):
             trigram_probs.append(interesting[trigram])
             #print trigram, trigrams[trigram]
         if len(trigram_probs) > MAX_PROBS: break

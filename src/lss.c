@@ -63,7 +63,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 /* Returns the LSS FastScan LSSNext field from a Message struct */
 #define getLSSNext(msg) msg->data[7]
 
-/* Prototypes for internals functions */
+/* Prototypes for cf_internals functions */
 UNS8 sendMasterLSSMessage(CO_Data* d, UNS8 command,void *dat1,void *dat2);
 void LssAlarmMSG(CO_Data* d, UNS32 id);
 void LssAlarmSDELAY(CO_Data* d, UNS32 id);
@@ -87,7 +87,7 @@ void LssAlarmSDELAY(CO_Data* d, UNS32 id);
 
 
 #ifdef CO_ENABLE_LSS_FS
-/* Prototypes for internals functions */
+/* Prototypes for cf_internals functions */
 void LssAlarmFS(CO_Data* d, UNS32 id);
 
 #define StopLSS_FS_TIMER(){\

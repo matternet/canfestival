@@ -21,12 +21,12 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 /*
-Functions called by interrupts vectors.
+Functions called by cf_interrupts vectors.
 */
 /*
 This is a part of the driver, of course !
 But you have to put your code in this functions,
-if you plan to use interruptions.
+if you plan to use cf_interruptions.
 */
 
 #include "../include/data.h"
@@ -44,7 +44,7 @@ extern volatile Message canMsgRcv;
 
 
 
-/* Inhibe les interruptions */
+/* Inhibe les cf_interruptions */
 
 void lock (void)
 {
@@ -53,7 +53,7 @@ void lock (void)
 
 }
 
-/* Autorise les interruptions */
+/* Autorise les cf_interruptions */
 void unlock (void)
 { 
    __asm__ __volatile__ ("cli");

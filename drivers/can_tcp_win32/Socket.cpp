@@ -1,7 +1,7 @@
 /* 
    Socket.cpp
 
-   Copyright (C) 2002-2004 René Nyffenegger
+   Copyright (C) 2002-2004 Renï¿½ Nyffenegger
 
    This source code is provided 'as-is', without any express or implied
    warranty. In no event will the author be held liable for any damages
@@ -21,7 +21,7 @@
 
    3. This notice may not be removed or altered from any source distribution.
 
-   René Nyffenegger rene.nyffenegger@adp-gmbh.ch
+   Renï¿½ Nyffenegger rene.nyffenegger@adp-gmbh.ch
 */
 
 
@@ -55,12 +55,12 @@ Socket::Socket() : s_(0) {
     throw "INVALID_SOCKET";
   }
 
-  refCounter_ = new int(1);
+  refCounter_ = new cf_int(1);
 }
 
 Socket::Socket(SOCKET s) : s_(s) {
   Start();
-  refCounter_ = new int(1);
+  refCounter_ = new cf_int(1);
 };
 
 Socket::~Socket() {
@@ -174,7 +174,7 @@ SocketServer::SocketServer(int port, int connections, TypeSocket type) {
     ioctlsocket(s_, FIONBIO, &arg);
   }
 
-  /* bind the socket to the internet address */
+  /* bind the socket to the cf_internet address */
   if (bind(s_, (sockaddr *)&sa, sizeof(sockaddr_in)) == SOCKET_ERROR) {
     closesocket(s_);
     throw "INVALID_SOCKET";

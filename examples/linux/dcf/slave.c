@@ -36,7 +36,7 @@ static char Run;
 void display_usage(char *prog)
 {
 	printf("usage: %s itf nodeid\n", prog); 
-    printf("    itf is the can interface\n");
+    printf("    itf is the can cf_interface\n");
     printf("    nodeid is the canopen node id from 1 to 127\n");
     printf("Ex: %s can0 12\n", prog);
 }
@@ -119,7 +119,7 @@ int main(int argc,char **argv)
         exit(1);
     }
 	if(!canOpen(&SlaveBoard0,&slavedic_Data)){
-		printf("Cannot open can interface %s\n",SlaveBoard0.busname);
+		printf("Cannot open can cf_interface %s\n",SlaveBoard0.busname);
 		exit(1);
 	}
 

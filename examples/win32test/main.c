@@ -183,7 +183,7 @@ int main(int argc, char *argv[])
             printf("********************************************\n");
 
             size = sizeof (dev_type);
-            res = ReadSDO(node_id, 0x1000, 0, uint32, &dev_type, &size);
+            res = ReadSDO(node_id, 0x1000, 0, cf_uint32, &dev_type, &size);
             printf("device type: %d\n",dev_type & 0xFFFF);
            
             size = sizeof (device_name);
@@ -199,15 +199,15 @@ int main(int argc, char *argv[])
             printf("SW version: %s\n",sw_ver);            
             
             size = sizeof (vendor_id);
-            res = ReadSDO(node_id, 0x1018, 1, uint32, &vendor_id, &size);
+            res = ReadSDO(node_id, 0x1018, 1, cf_uint32, &vendor_id, &size);
             printf("vendor id: %d\n",vendor_id);
 
             size = sizeof (prod_code);
-            res = ReadSDO(node_id, 0x1018, 2, uint32, &prod_code, &size);
+            res = ReadSDO(node_id, 0x1018, 2, cf_uint32, &prod_code, &size);
             printf("product code: %d\n",prod_code);
 
             size = sizeof (ser_num);
-            res = ReadSDO(node_id, 0x1018, 4, uint32, &ser_num, &size);
+            res = ReadSDO(node_id, 0x1018, 4, cf_uint32, &ser_num, &size);
             printf("serial number: %d\n",ser_num);
             
             printf("********************************************\n");

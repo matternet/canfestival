@@ -26,7 +26,7 @@ _has_coredata_cache = {}
 # sanity in case Python changes ...
 if gnosis.pyconfig.Have_BoolClass() and gnosis.pyconfig.IsLegal_BaseClass('bool'):
     raise XMLPicklingError, \
-        "Assumption broken - can now use bool as baseclass!"
+        "Assumption broken - can now use cf_bool as baseclass!"
 
 Have_BoolClass = gnosis.pyconfig.Have_BoolClass()
 

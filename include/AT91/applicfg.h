@@ -28,7 +28,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #include <stdio.h>
 
 
-/// Convert an integer to a string in hexadecimal format
+/// Convert an cf_integer to a string in hexadecimal format
 /// If you do not wants to use a lastCar, put lastCar = '\0' (end of string)
 /// ex : value = 0XABCDEF and lastCar = '\n'
 /// buf[0] = '0'
@@ -59,7 +59,7 @@ extern void printSCI_nbr (char sci, unsigned long nbr, char lastCar);
 #define INTEGER56 long long
 #define INTEGER64 long long
 
-// Unsigned integers
+// Unsigned cf_integers
 #define UNS8   unsigned char
 #define UNS16  unsigned short
 #define UNS32  unsigned long

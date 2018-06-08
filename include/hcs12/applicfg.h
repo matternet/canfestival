@@ -97,7 +97,7 @@ extern void initSCI_0 (void);
 /// Initialisation of the serial port 1
 extern void initSCI_1 (void);
 
-/// Convert an integer to a string in hexadecimal format
+/// Convert an cf_integer to a string in hexadecimal format
 /// If you do not wants to use a lastCar, put lastCar = '\0' (end of string)
 /// ex : value = 0XABCDEF and lastCar = '\n'
 /// buf[0] = '0'
@@ -135,7 +135,7 @@ extern void initHCS12 (void);
 #define INTEGER56
 #define INTEGER64
  
-// Unsigned integers
+// Unsigned cf_integers
 #define UNS8   unsigned char
 #define UNS16  unsigned short
 #define UNS32  unsigned long

@@ -54,14 +54,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 example_objdict_obj1000 = 0x0;	/* 0 */
                     subindex example_objdict_Index1000[] = 
                      {
-                       { RO, uint32, sizeof (UNS32), (void*)&example_objdict_obj1000, NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1000, NULL }
                      };
 
 /* index 0x1001 :   Error Register. */
                     UNS8 example_objdict_obj1001 = 0x0;	/* 0 */
                     subindex example_objdict_Index1001[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_obj1001, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1001, NULL }
                      };
 
 /* index 0x1003 :   Pre-defined Error Field */
@@ -73,7 +73,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     subindex example_objdict_Index1003[] = 
                      {
                        { RW, valueRange_EMC, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1003, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&example_objdict_obj1003[0], NULL }
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1003[0], NULL }
                      };
 
 /* index 0x1005 :   SYNC COB ID */
@@ -106,8 +106,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex example_objdict_Index1016[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1016, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1016[0], NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1016, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1016[0], NULL }
                      };
 
 /* index 0x1017 :   Producer Heartbeat Time */ 
@@ -121,11 +121,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS32 example_objdict_obj1018_Serial_Number = 0x0;	/* 0 */
                     subindex example_objdict_Index1018[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1018, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&example_objdict_obj1018_Vendor_ID, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&example_objdict_obj1018_Product_Code, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&example_objdict_obj1018_Revision_Number, NULL },
-                       { RO, uint32, sizeof (UNS32), (void*)&example_objdict_obj1018_Serial_Number, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1018, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1018_Vendor_ID, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1018_Product_Code, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1018_Revision_Number, NULL },
+                       { RO, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1018_Serial_Number, NULL }
                      };
 
 /* index 0x1280 :   Client SDO 1 Parameter. */
@@ -135,10 +135,10 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS8 example_objdict_obj1280_Node_ID_of_the_SDO_Server = 0x0;	/* 0 */
                     subindex example_objdict_Index1280[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1280, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1280_COB_ID_Client_to_Server_Transmit_SDO, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1280_COB_ID_Server_to_Client_Receive_SDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1280_Node_ID_of_the_SDO_Server, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1280, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1280_COB_ID_Client_to_Server_Transmit_SDO, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1280_COB_ID_Server_to_Client_Receive_SDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1280_Node_ID_of_the_SDO_Server, NULL }
                      };
 
 /* index 0x1400 :   Receive PDO 1 Parameter. */
@@ -150,12 +150,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS16 example_objdict_obj1400_Event_Timer = 0x0;	/* 0 */
                     subindex example_objdict_Index1400[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1400, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1400_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1400_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1400_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1400_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1400_Event_Timer, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1400, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1400_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1400_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1400_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1400_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1400_Event_Timer, NULL }
                      };
 
 /* index 0x1401 :   Receive PDO 2 Parameter. */
@@ -167,12 +167,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS16 example_objdict_obj1401_Event_Timer = 0x0;	/* 0 */
                     subindex example_objdict_Index1401[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1401, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1401_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1401_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1401_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1401_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1401_Event_Timer, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1401, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1401_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1401_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1401_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1401_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1401_Event_Timer, NULL }
                      };
 
 /* index 0x1402 :   Receive PDO 3 Parameter. */
@@ -184,12 +184,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS16 example_objdict_obj1402_Event_Timer = 0x0;	/* 0 */
                     subindex example_objdict_Index1402[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1402, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1402_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1402_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1402_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1402_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1402_Event_Timer, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1402, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1402_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1402_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1402_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1402_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1402_Event_Timer, NULL }
                      };
 
 /* index 0x1403 :   Receive PDO 4 Parameter. */
@@ -201,12 +201,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS16 example_objdict_obj1403_Event_Timer = 0x0;	/* 0 */
                     subindex example_objdict_Index1403[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1403, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1403_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1403_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1403_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1403_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1403_Event_Timer, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1403, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1403_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1403_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1403_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1403_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1403_Event_Timer, NULL }
                      };
 
 /* index 0x1600 :   Receive PDO 1 Mapping. */
@@ -217,8 +217,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex example_objdict_Index1600[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1600, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1600[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1600, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1600[0], NULL }
                      };
 
 /* index 0x1601 :   Receive PDO 2 Mapping. */
@@ -229,8 +229,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex example_objdict_Index1601[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1601, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1601[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1601, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1601[0], NULL }
                      };
 
 /* index 0x1602 :   Receive PDO 3 Mapping. */
@@ -241,8 +241,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex example_objdict_Index1602[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1602, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1602[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1602, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1602[0], NULL }
                      };
 
 /* index 0x1603 :   Receive PDO 4 Mapping. */
@@ -253,8 +253,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex example_objdict_Index1603[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1603, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1603[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1603, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1603[0], NULL }
                      };
 
 /* index 0x1800 :   Transmit PDO 1 Parameter. */
@@ -266,12 +266,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS16 example_objdict_obj1800_Event_Timer = 0x0;	/* 0 */
                     subindex example_objdict_Index1800[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1800, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1800_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1800_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1800_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1800_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1800_Event_Timer, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1800, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1800_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1800_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1800_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1800_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1800_Event_Timer, NULL }
                      };
 
 /* index 0x1801 :   Transmit PDO 2 Parameter. */
@@ -283,12 +283,12 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     UNS16 example_objdict_obj1801_Event_Timer = 0x0;	/* 0 */
                     subindex example_objdict_Index1801[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1801, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1801_COB_ID_used_by_PDO, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1801_Transmission_Type, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1801_Inhibit_Time, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_obj1801_Compatibility_Entry, NULL },
-                       { RW, uint16, sizeof (UNS16), (void*)&example_objdict_obj1801_Event_Timer, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1801, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1801_COB_ID_used_by_PDO, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1801_Transmission_Type, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1801_Inhibit_Time, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_obj1801_Compatibility_Entry, NULL },
+                       { RW, cf_uint16, sizeof (UNS16), (void*)&example_objdict_obj1801_Event_Timer, NULL }
                      };
 
 /* index 0x1A00 :   Transmit PDO 1 Mapping. */
@@ -299,8 +299,8 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex example_objdict_Index1A00[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1A00, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1A00[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1A00, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1A00[0], NULL }
                      };
 
 /* index 0x1A01 :   Transmit PDO 2 Mapping. */
@@ -311,31 +311,31 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     };
                     subindex example_objdict_Index1A01[] = 
                      {
-                       { RW, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1A01, NULL },
-                       { RW, uint32, sizeof (UNS32), (void*)&example_objdict_obj1A01[0], NULL }
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj1A01, NULL },
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&example_objdict_obj1A01[0], NULL }
                      };
 
 /* index 0x2000 :   Mapped variable Time */
                     UNS8 example_objdict_highestSubIndex_obj2000 = 4; /* number of subindex - 1*/
                     subindex example_objdict_Index2000[] = 
                      {
-                       { RO, uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj2000, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&Time_seconds, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&Time_minutes, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&Time_hours, NULL },
-                       { RW, uint8, sizeof (UNS8), (void*)&Time_days, NULL }
+                       { RO, cf_uint8, sizeof (UNS8), (void*)&example_objdict_highestSubIndex_obj2000, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&Time_seconds, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&Time_minutes, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&Time_hours, NULL },
+                       { RW, cf_uint8, sizeof (UNS8), (void*)&Time_days, NULL }
                      };
 
 /* index 0x2001 :   Mapped variable canopenErrNB */
                     subindex example_objdict_Index2001[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&canopenErrNB, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&canopenErrNB, NULL }
                      };
 
 /* index 0x2002 :   Mapped variable canopenErrVal */
                     subindex example_objdict_Index2002[] = 
                      {
-                       { RW, uint32, sizeof (UNS32), (void*)&canopenErrVal, NULL }
+                       { RW, cf_uint32, sizeof (UNS32), (void*)&canopenErrVal, NULL }
                      };
 
 /* index 0x2003 :   Mapped variable strTest */

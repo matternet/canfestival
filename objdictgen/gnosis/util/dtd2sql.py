@@ -20,7 +20,7 @@ __version__ = "$Revision: 0.10 $"
 __author__=["David Mertz (mertz@gnosis.cx)",]
 __thanks_to__=[]
 __copyright__="""
-    This file is released to the public domain.  I (dqm) would
+    This file is released to the public cf_domain.  I (dqm) would
     appreciate it if you choose to keep derived works under terms
     that promote freedom, but obviously am giving up any rights
     to compel such.

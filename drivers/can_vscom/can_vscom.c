@@ -25,10 +25,10 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  * @author VScom (http://www.vscom.de)
  * @date 17/04/08
  *
- * This file implements interface between CanFestival and the VSCAN API 
+ * This file implements cf_interface between CanFestival and the VSCAN API 
  * (supported VScom products SER-CAN, USB-CAN, NET-CAN). 
  *
- * To build this interface following files will needed:
+ * To build this cf_interface following files will needed:
  * vs_can_api.h
  * va_can_api.lib (for Windows builds)
 */

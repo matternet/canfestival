@@ -25,7 +25,7 @@ class dcombo(dict):
         self.a = a
         self.b = b
 
-# interesting, Python won't let me define extra args for __init__ ...
+# cf_interesting, Python won't let me define extra args for __init__ ...
 # (this leads to the note in setCoreData())
 class _tcombo(tuple):
     def __init__(self,inittup):
@@ -37,10 +37,10 @@ def tcombo(inittup,a,b):
     t.b = b
     return t
 
-# ditto for int
+# ditto for cf_int
 class _icombo(int):
     def __init__(self,initi):
-        int.__init__(self,initi)
+        cf_int.__init__(self,initi)
 
 def icombo(initi,a,b):
     i = _fcombo(initi)

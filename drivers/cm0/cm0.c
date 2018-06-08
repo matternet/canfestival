@@ -24,7 +24,7 @@ void MessBuf_Init(MessBuf_t *pFifo);
 int MessBuf_Write(MessBuf_t *pFifo, Message *pgd);
 int MessBuf_Read(MessBuf_t *pFifo, Message *pgd);
 
-static uint8_t tx_fifo_in_use = 0;
+static cf_uint8_t tx_fifo_in_use = 0;
 
 TIMEVAL last_counter_val = 0;
 TIMEVAL elapsed_time = 0;
@@ -54,7 +54,7 @@ void start_callback(CO_Data* d, UNS32 id)
 {
 }
 
-// Initializes the timer, turn on the interrupt and put the interrupt time to zero
+// Initializes the timer, turn on the cf_interrupt and put the cf_interrupt time to zero
 void initTimer(void)
 {
 	NVIC_InitTypeDef NVIC_InitStructure;
@@ -118,7 +118,7 @@ TIMEVAL getElapsedTime(void)
 	return elapsed;
 }
 
-// This function handles Timer 3 interrupt request.
+// This function handles Timer 3 cf_interrupt request.
 void TIM17_IRQHandler(void)
 {
 	//printf("--\r\n");
@@ -170,7 +170,7 @@ uint16_t brp_from_birate_24(uint32_t bitrate)
 }
 
 //Initialize the CAN hardware 
-unsigned char canInit(CO_Data * d, uint32_t bitrate)
+unsigned char canInit(CO_Data * d, cf_uint32_t bitrate)
 {
   GPIO_InitTypeDef  GPIO_InitStructure;
   NVIC_InitTypeDef  NVIC_InitStructure;
@@ -321,7 +321,7 @@ unsigned char canChangeBaudRate_driver( CAN_HANDLE fd, char* baud)
 }
 
 /**
-  * @brief  This function handles CAN1 RX0 interrupt request.
+  * @brief  This function handles CAN1 RX0 cf_interrupt request.
   * @param  None
   * @retval None
   */

@@ -43,13 +43,13 @@ class can_uvccm_win32
         };
       can_uvccm_win32(s_BOARD *board);
       ~can_uvccm_win32();
-      bool send(const Message *m);
-      bool receive(Message *m);
+      cf_bool send(const Message *m);
+      cf_bool receive(Message *m);
    private:
-      bool open_rs232(int port = 1, int baud_rate = 57600);
-      bool close_rs232();
-      bool get_can_data(const char* can_cmd_buf, long& bufsize, Message* m);
-      bool set_can_data(const Message& m, std::string& can_cmd);
+      cf_bool open_rs232(int port = 1, int baud_rate = 57600);
+      cf_bool close_rs232();
+      cf_bool get_can_data(const char* can_cmd_buf, long& bufsize, Message* m);
+      cf_bool set_can_data(const Message& m, std::string& can_cmd);
    private:
       HANDLE m_port;
       HANDLE m_read_event;
@@ -92,7 +92,7 @@ bool can_uvccm_win32::send(const Message *m)
    // get number of bytes written
    ::GetOverlappedResult(m_port, &overlapped, &bytes_written, FALSE);
 
-   bool result = (bytes_written == can_cmd.size());
+   cf_bool result = (bytes_written == can_cmd.size());
    
    return false;
    }
@@ -104,7 +104,7 @@ bool can_uvccm_win32::receive(Message *m)
       return false;
 
    long res_buffer_size = (long)m_residual_buffer.size();
-   bool result = get_can_data(m_residual_buffer.c_str(), res_buffer_size, m);
+   cf_bool result = get_can_data(m_residual_buffer.c_str(), res_buffer_size, m);
    if (result)
       {
       m_residual_buffer.erase(0, res_buffer_size);

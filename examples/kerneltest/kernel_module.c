@@ -26,11 +26,11 @@ ssize_t canftest_write(struct file *filp, const char __user *buf, size_t count,
 {
 	int cmd;
 
-	// get integer from user-space
+	// get cf_integer from user-space
 	if (get_user (cmd, buf))
 		return -EFAULT;
 
-	// process integer as command
+	// process cf_integer as command
 	switch (cmd) {
 		case CMD_START:
 			if (!canftest_stopped) break;

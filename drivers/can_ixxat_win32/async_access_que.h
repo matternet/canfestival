@@ -59,9 +59,9 @@ class async_access_que
 	 SetEvent(m_newObject);
          }
 
-      bool extract_top(type& data)
+      cf_bool extract_top(type& data)
          {
-			 bool empty = true;
+			 cf_bool empty = true;
 			 {
 				 AutoReleaseCS acs(m_cs);
 				 empty = m_data.empty();

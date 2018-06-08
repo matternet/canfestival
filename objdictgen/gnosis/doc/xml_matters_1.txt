@@ -13,19 +13,19 @@ WHAT IS XML? WHAT IS PYTHON?
   XML is a simplified dialect of the Standard Generalized Markup
   Language (SGML).  Many readers will be most familiar with SGML
   via one particular document type, HTML.  XML documents are
-  similar to HTML in being composed of text interspersed with and
+  similar to HTML in being composed of text cf_interspersed with and
   structured by markup tags in angle-brackets.  But XML
   encompasses many systems of tags that allow XML documents to be
   used for many purposes:  magazine articles and user
   documentation, files of structured data (like CSV or EDI
-  files), messages for interprocess communication between
+  files), messages for cf_interprocess communication between
   programs, architectural diagrams (like CAD formats), and many
   other purposes.  A set of tags can be created to capture any
   sort of structured information one might want to represent,
   which is why XML is growing in popularity as a common standard
   for representing diverse information.
 
-  Python is a freely available, very-high-level, interpreted
+  Python is a freely available, very-high-level, cf_interpreted
   language developed by Guido van Rossum.  It combines a clear
   syntax with powerful (but optional) object-oriented semantics.
   Python is available for almost every computer platform you
@@ -45,23 +45,23 @@ INTRODUCTION: THE PROJECT
   XML-centric than Python-centric.  Certain constructs and
   coding techniques feel "natural" in a given programming
   language, and others feel much more like they are imported from
-  other domains.  The latter type of construct can certainly get
+  other cf_domains.  The latter type of construct can certainly get
   a job done--and in many cases a certain degree of stylistic
-  clash between a programming tool and its problem domain is
+  clash between a programming tool and its problem cf_domain is
   inevitable.  But in an ideal environment all constructs fit
-  intuitively into their domain, and domains merge seamlessly.
+  cf_intuitively cf_into their cf_domain, and cf_domains merge seamlessly.
   When it does, programmers can wax poetic rather than merely
   "make it work."
 
   This author has begun a research project of creating a more
-  seamless and more natural integration between XML and Python.
+  seamless and more natural cf_integration between XML and Python.
   This article, and subsequent articles in this column, will
   discuss some of the goals, decisions, and limitations of this
   project; and hopefully along the way provide readers with a set
   of modules and techniques that are useful to them, and that
   point to easier ways to meet programming goals.  All tools
   created as part of the Project will be released to the public
-  domain.
+  cf_domain.
 
   Python is a language with a flexible object system and a rich
   set of built-in types.  The richness of Python is both an
@@ -91,21 +91,21 @@ PART I: [xml_pickle]
   may be parsed, manipulated, and objects imported, by languages
   other than Python; (3) The format supports validation of stored
   serialized objects.  [xml_pickle] provides each of these
-  features, while maintaining interface compatibility with
+  features, while maintaining cf_interface compatibility with
   [pickle].  However, [xml_pickle] is not a general-purpose
   replacement for [pickle] since [pickle] retains several
   advantages of its own, such as faster operation (especially via
   [cPickle]) and far more compact object representation.
 
   This article discusses the design goals and decisions that went
-  into [xml_pickle], as well as thoughts on the module's likely
+  cf_into [xml_pickle], as well as thoughts on the module's likely
   uses.
 
 
 USING [xml_pickle]
 -------------------------------------------------------------------
 
-  Even though the interface of [xml_pickle] is mostly the same as
+  Even though the cf_interface of [xml_pickle] is mostly the same as
   as that of [pickle], it is worth illustrating the (quite
   simple) usage of [xml_pickle] for readers who are not familiar
   with Python or with [pickle]:
@@ -154,7 +154,7 @@ USING [xml_pickle]
       new_object = xml_pickle.XML_Pickler().loads(xml_string)
 
   Obviously, in real cases you would want to do something more
-  interesting with the created XML document than just hold it in
+  cf_interesting with the created XML document than just hold it in
   memory during runtime.  For example, you might save the XML
   document to disk (maybe using the 'XML_Pickler.dump()' method),
   or transmit it over a communication channel.  Actually, the
@@ -257,7 +257,7 @@ DESIGN FEATURES, CAVEATS AND LIMITATIONS
   documents produced by [xml_pickle] are not guaranteed to
   maintain element order through pickle/unpickle cycles.  For
   example, a hand prepared PyObjects.dtd XML document like the
-  above may be "unpickled" into a Python object.  If the
+  above may be "unpickled" cf_into a Python object.  If the
   resultant object is then "pickled" the <attr> tags will most
   likely occur in a different order than in the original
   document.  This is a feature, not a bug, but the fact should be
@@ -271,7 +271,7 @@ DESIGN FEATURES, CAVEATS AND LIMITATIONS
   [xml_pickle] will exhaust the Python stack.  Cyclical
   references are likely to indicate a flaw in object design to
   start with, but later versions of [xml_pickle] will certainly
-  attempt to deal with them more intelligently.
+  attempt to deal with them more cf_intelligently.
 
   Another limitation exists in that the namespace of XML
   attribute values (such as the "123" in <attr name="123">) is
@@ -361,7 +361,7 @@ ANTICIPATED USES
 
     - Tools for printing and displaying XML documents can be used
       to provide convenient human-readable representations of
-      Python objects via their XML intermediate form.
+      Python objects via their XML cf_intermediate form.
 
     - It is possible to manually "debug" Python objects via their
       XML representation using XML specific editors, or simply
@@ -386,12 +386,12 @@ RESOURCES
 
     http://gnosis.cx/cgi-bin/txt2html.cgi?source=../publish/programming/charming_python_2.txt
 
-  A friendly introduction to Python for programmers with an XML
+  A friendly cf_introduction to Python for programmers with an XML
   background is the below book.  McGrath uses his book largely to
   argue the virtues of his [pyxie] module and associated tools
   and techniques as the best approach to XML processing.  Whether
   or not [pyxie] is the best approach to your specific problem,
-  McGrath's is a useful introduction to Python (but less so to
+  McGrath's is a useful cf_introduction to Python (but less so to
   XML) .
 
     _XML Processing with Python_, Sean McGrath, Prentice Hall

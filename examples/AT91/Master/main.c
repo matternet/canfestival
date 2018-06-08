@@ -66,7 +66,7 @@ unsigned char val_pdo = 1;
 
 //----------------------------------------------------------------------------
 // Function Name       : main
-// Object              : Main interrupt function
+// Object              : Main cf_interrupt function
 // Input Parameters    : none
 // Output Parameters   : TRUE
 //----------------------------------------------------------------------------

@@ -44,10 +44,10 @@ AN OBJECT ORIENTED PROGRAMMING REVIEW
   have?  What methods and attributes are available to the object?
   Introspection lets a function or method that handles objects
   make decisions based on what kind of object it is passed.  Even
-  without introspection, functions frequently branch based on
+  without cf_introspection, functions frequently branch based on
   instance data--e.g. the route to 'jane.room_number' differs
   from that to 'bob.room_number' because they are in different
-  rooms.  With introspection, you can also safely calculate the
+  rooms.  With cf_introspection, you can also safely calculate the
   bonus 'jane' gets, while skipping the calculation for 'bob'--
   say, because 'jane' has a '.profit_share' attribute, or because
   'bob' is an instance of the subclass 'Hourly(Employee)'.
@@ -58,7 +58,7 @@ A METAPROGRAMMING REJOINDER
   The basic OOP system sketched above is quite powerful.  But
   there is one element brushed over in the description.  In
   Python (and other languages), classes are themselves objects
-  that can be passed around and introspected.  Since objects, as
+  that can be passed around and cf_introspected.  Since objects, as
   stated, are produced using classes as templates, what acts as a
   template for producing classes?  The answer, of course, is
   -metaclasses-.
@@ -96,7 +96,7 @@ A METAPROGRAMMING REJOINDER
 
   The factory function 'class_with_method()' dynamically creates
   and returns a class that contains the method/function passed
-  into the factory.  The class itself is manipulated within the
+  cf_into the factory.  The class itself is manipulated within the
   function body before being returned.  The [new] module provides
   a more concise spelling, but without the same options for
   custom code within the body of the class factory, e.g.:
@@ -382,11 +382,11 @@ SOLVING PROBLEMS WITH MAGIC (II)
       </chapter>
 
   The package [gnosis.xml.validity] knows nothing about DTDs and
-  internal subsets.  Those concepts and capabilities are
-  introduced entirely by the metaclass 'DTDGenerator', without
+  cf_internal subsets.  Those concepts and capabilities are
+  cf_introduced entirely by the metaclass 'DTDGenerator', without
   -any- change made to either [gnosis.xml.validity] or
   'simple_diss.py'.  'DTDGenerator' does not substitute its own
-  '.__str__()' method into classes it produces--you can still
+  '.__str__()' method cf_into classes it produces--you can still
   print the unadorned XML fragment--but it a metaclass could
   easily modify such magic methods.
 

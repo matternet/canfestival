@@ -26,7 +26,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  * @author GMB
  * @date 17/1/08
  *
- * This file is needed to interface Kvaser's CAN Leaf (USB-CAN adapter) 
+ * This file is needed to cf_interface Kvaser's CAN Leaf (USB-CAN adapter) 
  * and probably others Kvaser's products compatible with Kvaser's CANLIB,
  * to CANfestival open source CANopen stack.
  *

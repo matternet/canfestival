@@ -39,8 +39,8 @@ Preface: What is XML-RPC?
   characterizing the "worse-is-better philosophy":
 
     * Simplicity:  the design must be simple, both in
-      implementation and interface.  It is more important for the
-      implementation to be simple than the interface.  Simplicity
+      implementation and cf_interface.  It is more important for the
+      implementation to be simple than the cf_interface.  Simplicity
       is the most important consideration in a design.
 
     * Correctness:  the design must be correct in all observable
@@ -49,7 +49,7 @@ Preface: What is XML-RPC?
     * Consistency:  the design must not be overly inconsistent.
       Consistency can be sacrificed for simplicity in some cases,
       but it is better to drop those parts of the design that
-      deal with less common circumstances than to introduce
+      deal with less common circumstances than to cf_introduce
       either implementational complexity or inconsistency.
 
     * Completeness:  the design must cover as many important
@@ -59,7 +59,7 @@ Preface: What is XML-RPC?
       sacrificed whenever implementation simplicity is
       jeopardized.  Consistency can be sacrificed to achieve
       completeness if simplicity is retained; especially
-      worthless is consistency of interface.
+      worthless is consistency of cf_interface.
 
   Writing years before the specific technology existed, Gabriel
   identifies the virtues of XML-RPC perfectly.
@@ -71,9 +71,9 @@ Introduction
   I have written a moderately popular module for Python called
   [xml_pickle].  The purpose of that module (discussed previously
   in this column) is to serialize Python objects, using an
-  interface mostly the same as the standard [cPickle] and
+  cf_interface mostly the same as the standard [cPickle] and
   [pickle] modules.  The only difference is that the
-  representation is in XML.  My intention all along with that
+  representation is in XML.  My cf_intention all along with that
   module was to create a very lightweight format that could also
   be read from other programming languages (and across Python
   versions).  A DTD accompanies the module for users wanting to
@@ -112,7 +112,7 @@ Introduction
   without peforming any actual call.
 
   At a first level of examination, [xml_pickle] and [xmlrpclib]
-  are functionally interchangeable--at least if one only cares
+  are functionally cf_interchangeable--at least if one only cares
   about the serialization aspect.  As we will see, a closer look
   finds some differences.
 
@@ -163,7 +163,7 @@ Representing Objects
   '<methodName>' is superfluous, but the example gives a name
   that indicates the role of the document.  Moreover, a call to
   'xmlrpclib.dumps()' accepts a tuple of objects, but we are only
-  interested in "pickling" one--if there were others, they would
+  cf_interested in "pickling" one--if there were others, they would
   have their own '<param>' element.  But other than some
   wrapping, the attributes of our object are well contained in
   the '<struct>' element's '<member>' elements.
@@ -189,7 +189,7 @@ Representing Objects
 
   There is both less and more to the [xml_pickle] version (the
   actual size is similar between the two).  Notice that even
-  though Python does not have a builtin boolean type, when a
+  though Python does not have a builtin cf_boolean type, when a
   class is used to represent a new type, [xml_pickle] adjusts
   with aplomb (albeit more verbosely).  XML-RPC, by contrast, is
   limited to serializing its 8 data types, and nothing else.  Of
@@ -197,10 +197,10 @@ Representing Objects
   themselves collections, and can be compound.  There is also the
   little matter that [xml_pickle] can point multiple collection
   members to the same underlying object; but that is absent by
-  design from XML-RPC (and introduced in later versions of
+  design from XML-RPC (and cf_introduced in later versions of
   [xml_pickle] also).  As a small matter, [xml_pickle] contains
   only a single 'numeric' type attribute, but the actual pattern
-  of the 'value' attribute allows decoding to integer, float,
+  of the 'value' attribute allows decoding to cf_integer, float,
   complex, etc.  No real generality is lost or gained by these
   strategies, although the XML-RPC style will appeal
   aesthetically to programmers in statically-typed languages.
@@ -294,7 +294,7 @@ Weaknesses of [xml_pickle]
   programming languages have.  If our goal is not simply to save
   and restore -Python- objects, but to exchange objects across
   languages, [xml_pickle] is not currently quite adequate.  The
-  issue of floats and integers is not really important in
+  issue of floats and cf_integers is not really important in
   principle; but designing an "unpickler" for, say, Java would be
   made easier by having the XML parser be able to determine the
   type needed, rather than defer that until the format of the
@@ -320,7 +320,7 @@ Weaknesses of [xml_pickle]
   'xml_pickle.DateTime' (but the namespaces can be manually
   manipulated prior to unpickling).  The way Python's
   instantiation and namespaces work, little rests on this
-  fact--or at least not if our interest is in the instance
+  fact--or at least not if our cf_interest is in the instance
   attributes rather than its methods.  But various languages
   handle scoping matters in very different ways.
 
@@ -365,14 +365,14 @@ Conclusion: Where to Go From Here?
   Once unpickled, [xml_pickle] could either just treat "email" as
   a synonym for "string", or we could implement an 'EmailAddress'
   class with some useful behaviors.  One such behavior, if we
-  took the latter route would be pickling into the above
+  took the latter route would be pickling cf_into the above
   [xml_pickle] fragment.
 
   "Fixing" XML-RPC is more difficult.  It would be easy to
   suggest just adding a bunch of new data types.  And purely
   technically there would be no particular problem with this.
   But as a social matter, XML-RPC's success makes it difficult to
-  introduce incompatible changes.  A hypothetical "data-enhanced"
+  cf_introduce incompatible changes.  A hypothetical "data-enhanced"
   XML-RPC would not play nice with all the existing
   implementations and installations.  Actually, some implementors
   have felt sufficiently bothered by the lack of a "nil" type

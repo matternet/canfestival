@@ -42,7 +42,7 @@ static TIMEVAL last_time_set = TIMEVAL_MAX;
 
 void initTimer(void)
 /******************************************************************************
-Initializes the timer, turn on the interrupt and put the interrupt time to zero
+Initializes the timer, turn on the cf_interrupt and put the cf_interrupt time to zero
 INPUT	void
 OUTPUT	void
 ******************************************************************************/
@@ -51,7 +51,7 @@ OUTPUT	void
 
   // First, enable the clock of the TIMER
   AT91F_PMC_EnablePeriphClock (AT91C_BASE_PMC, 1 << AT91C_ID_TC);
-  // Disable the clock and the interrupts
+  // Disable the clock and the cf_interrupts
   AT91C_BASE_TC->TC_CCR = AT91C_TC_CLKDIS ;
   AT91C_BASE_TC->TC_IDR = 0xFFFFFFFF ;
   // Clear status bit
@@ -65,7 +65,7 @@ OUTPUT	void
   // Enable the clock
   AT91C_BASE_TC->TC_CCR = AT91C_TC_CLKEN ;
 
-  // Open Timer interrupt
+  // Open Timer cf_interrupt
   AT91F_AIC_ConfigureIt (AT91C_BASE_AIC, AT91C_ID_TC, TIMER_INTERRUPT_LEVEL,
 			 AT91C_AIC_SRCTYPE_INT_POSITIVE_EDGE, timer_can_irq_handler);
 
@@ -83,7 +83,7 @@ INPUT	value TIMEVAL (unsigned long)
 OUTPUT	void
 ******************************************************************************/
 {
-  TimerAlarm += value;	// Add the desired time to timer interrupt time
+  TimerAlarm += value;	// Add the desired time to timer cf_interrupt time
 }
 
 TIMEVAL getElapsedTime(void)
@@ -101,7 +101,7 @@ OUTPUT	value TIMEVAL (unsigned long) the elapsed time
 
 //*----------------------------------------------------------------------------
 //* Function Name       : timer_can_irq_handler
-//* Object              : C handler interrupt function by the interrupts
+//* Object              : C handler cf_interrupt function by the cf_interrupts
 //*                       assembling routine
 //* Output Parameters   : calls TimeDispatch
 //*----------------------------------------------------------------------------
@@ -109,7 +109,7 @@ void timer_can_irq_handler(void)
 {
   AT91PS_TC TC_pt = AT91C_BASE_TC;
   unsigned int dummy;
-  // AcknowAT91B_LEDge interrupt status
+  // AcknowAT91B_LEDge cf_interrupt status
   dummy = TC_pt->TC_SR;
   // Suppress warning variable "dummy" was set but never used
   dummy = dummy;

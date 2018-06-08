@@ -7,11 +7,11 @@ David Mertz, Ph.D.
 Essence Preceder, Gnosis Software, Inc.
 December, 2002
 
-    The object orientation and transparent introspective
+    The object orientation and transparent cf_introspective
     capabilities of Python allow you to easily create
     -declarative mini-lanaguages- for programming tasks.  This
-    installment is not so much interested in using Python to
-    interpret or translate other specialized languages (although
+    installment is not so much cf_interested in using Python to
+    cf_interpret or translate other specialized languages (although
     that is possible), but rather in ways that Python code itself
     can be helpfully restricted to a set of declarative elements.
     Ideally a developer can use declarative techniques to state
@@ -56,7 +56,7 @@ BACKGROUND ON DECLARATIVE STYLES
   that something is the case, or that certain constraints apply.
   Mathematics is generally the same way. The functional
   languages--e.g. Haskell, ML, Dylan, Ocaml, Scheme--are similar,
-  but with more of an emphasis on stating internal (functional)
+  but with more of an emphasis on stating cf_internal (functional)
   relationships between programming objects (recursion, lists,
   etc.).  Our ordinary life, at least in its narrative quality,
   provides no direct analog for the programming constructs of
@@ -143,7 +143,7 @@ PYTHON AS INTERPRETER VERSUS PYTHON AS ENVIRONMENT
   two, fairly distinct, ways.  Perhaps the more common technique
   is to parse and process non-Python declarative languages as
   data.  An application or a library can read in an external
-  source (or a string defined internally, but just as a "blob"),
+  source (or a string defined cf_internally, but just as a "blob"),
   then figure out a set of imperative steps to carry out that
   conform in some way with those external declaration.  In
   essence, these types of libraries are "data-driven" systems;
@@ -158,7 +158,7 @@ PYTHON AS INTERPRETER VERSUS PYTHON AS ENVIRONMENT
   system.  It reads a Prolog data file like the sample, then
   creates Python objects to -model- the Prolog declarations.  The
   EBNF sample uses the particular variant of [SimpleParse], which
-  is a Python library that transforms these declarations into
+  is a Python library that transforms these declarations cf_into
   state tables that can be used by [mx.TextTools].
   [mx.TextTools] is itself an extension library for Python that
   uses an underlying C engine to run code stored in Python data
@@ -184,7 +184,7 @@ PYTHON AS INTERPRETER VERSUS PYTHON AS ENVIRONMENT
   libraries that facilitated this would not require programmers
   to think about two (or more) languages when writing one
   application.  At times it is natural and powerful to lean on
-  Python introspective capabilities to implement "native"
+  Python cf_introspective capabilities to implement "native"
   declarations.
 
 
@@ -215,7 +215,7 @@ THE MAGIC OF INTROSPECTION
 
   I have written about [PLY] in my forthcoming book _Text
   Processing in Python_, and have written about [Spark] in this
-  column.  Without going into details of the libraries, what you
+  column.  Without going cf_into details of the libraries, what you
   should notice here is that it is the Python bindings themselves
   that configure the parsing (actually lexing/tokening in this
   example).  The [PLY] module just happens to know enough about
@@ -223,7 +223,7 @@ THE MAGIC OF INTROSPECTION
   declarations.
 
   Just -how- [PLY] knows what it does involves some pretty fancy
-  Python programming.  At a first level, an intermediate
+  Python programming.  At a first level, an cf_intermediate
   programmer will realize that she can probe the contents of the
   'globals()' and 'locals()' dictionaries.  That would be fine if
   the declaration style were slightly different.  For example,
@@ -252,7 +252,7 @@ THE MAGIC OF INTROSPECTION
       WORDPUNCT = [-_]
       CONTRACTION = '(clock|d|ll|m|re|s|t|ve)
 
-  [PLY] manages to poke into the namespace of the importing
+  [PLY] manages to poke cf_into the namespace of the importing
   module using stack frame information.  For example:
 
       #--------------------- magic_lex.py ----------------------#
@@ -287,7 +287,7 @@ THE MAGIC OF INTROSPECTION
                   print t, '=', t_obj
 
   Obviously, the actual [PLY] module does something more
-  interesting with these declared patterns than the toy examples,
+  cf_interesting with these declared patterns than the toy examples,
   but these demonstrate some techniques involved.
 
 THE MAGIC OF INHERITANCE
@@ -296,7 +296,7 @@ THE MAGIC OF INHERITANCE
   Letting a support library poke around in and manipulate an
   application's namespace can enable an elegant declarative
   style.  But often, using inheritance structures together with
-  introspection allows an even greater flexibility.
+  cf_introspection allows an even greater flexibility.
 
   The module [gnosis.xml.validity] is a framework for creating
   classes that map directly to DTD productions.  Any
@@ -308,7 +308,7 @@ THE MAGIC OF INHERITANCE
   types.
 
   Since I wrote the [gnosis.xml.validity] module, I am biased to
-  thinking its purpose is itself interesting.  But for this
+  thinking its purpose is itself cf_interesting.  But for this
   article, I just want to look at the declarative style in which
   validity classes are created.  A set of rules/classes matching
   the prior DTD sample consists of:
@@ -332,7 +332,7 @@ THE MAGIC OF INHERITANCE
 
   Notice how closely the classes match the prior DTD.  The
   mapping is basically one-to-one; except it is necessary to use
-  intermediaries for quantification and alternation of nested
+  cf_intermediaries for quantification and alternation of nested
   tags (intermediary names are marked by a leading underscore).
 
   Notice also that these classes, while created using standard
@@ -383,7 +383,7 @@ WHEN TO DECLARE
   formulation.  But problems of rule based systems, such as
   grammars and inference systems, are much easier to manage if
   they can be described declaratively.  Imperative verification
-  of grammaticality quickly turns into spaghetti code, and is
+  of grammaticality quickly turns cf_into spaghetti code, and is
   difficult to debug.  Statments of patterns and rules can remain
   much simpler.
 
@@ -391,11 +391,11 @@ WHEN TO DECLARE
   of declared rules will always boil down to procedural checks.
   But the right place for such procedural checks is is
   well-tested library code.  Individual applications should rely
-  on the simpler declarative interfaces provided by libraries
+  on the simpler declarative cf_interfaces provided by libraries
   like [Spark], or [PLY], or [gnosis.xml.validity].  Other
   libraries like [xmlproc], [SimpleParse], or [ft.4xslt] also
   enable declarative styles, although not declarations -in
-  Python- (which is appropriate for their domains, of course).
+  Python- (which is appropriate for their cf_domains, of course).
 
 RESOURCES
 ------------------------------------------------------------------------

@@ -45,7 +45,7 @@ def GetBoolList():
     _ = lambda x : x
     return [_("True"), _("False")]
 BoolList = ",".join(map(_, GetBoolList()))
-BOOL_LIST_DICT = dict([(_(bool), bool) for bool in GetBoolList()])
+BOOL_LIST_DICT = dict([(_(bool), cf_bool) for cf_bool in GetBoolList()])
 
 def GetOptionList():
     _ = lambda x : x
@@ -827,11 +827,11 @@ class EditingPanel(wx.SplitterWindow):
                         elif value == "False":
                             value = 0
                         elif value.isdigit():
-                            value = int(value)
+                            value = cf_int(value)
                         elif value.startswith("0x"):
-                            value = int(value, 16)
+                            value = cf_int(value, 16)
                         else:
-                            value = int(value.encode("hex_codec"), 16)
+                            value = cf_int(value.encode("hex_codec"), 16)
                         self.Manager.AddToMasterDCF(node_id, index, subindex, max(1, typeinfos["size"] / 8), value)    
                         self.ParentWindow.OpenMasterDCFDialog(node_id)
 
@@ -897,12 +897,12 @@ class EditingPanel(wx.SplitterWindow):
                                  _("Add subindexes"), "1", wx.OK|wx.CANCEL)
                     if dialog.ShowModal() == wx.ID_OK:
                         try:
-                            number = int(dialog.GetValue())
+                            number = cf_int(dialog.GetValue())
                             self.Manager.AddSubentriesToCurrent(index, number)
                             self.ParentWindow.RefreshBufferState()
                             self.RefreshIndexList()
                         except:
-                            message = wx.MessageDialog(self, _("An integer is required!"), _("ERROR"), wx.OK|wx.ICON_ERROR)
+                            message = wx.MessageDialog(self, _("An cf_integer is required!"), _("ERROR"), wx.OK|wx.ICON_ERROR)
                             message.ShowModal()
                             message.Destroy()
                     dialog.Destroy()
@@ -917,12 +917,12 @@ class EditingPanel(wx.SplitterWindow):
                                  _("Delete subindexes"), "1", wx.OK|wx.CANCEL)
                     if dialog.ShowModal() == wx.ID_OK:
                         try:
-                            number = int(dialog.GetValue())
+                            number = cf_int(dialog.GetValue())
                             self.Manager.RemoveSubentriesFromCurrent(index, number)
                             self.ParentWindow.RefreshBufferState()
                             self.RefreshIndexList()
                         except:
-                            message = wx.MessageDialog(self, _("An integer is required!"), _("ERROR"), wx.OK|wx.ICON_ERROR)
+                            message = wx.MessageDialog(self, _("An cf_integer is required!"), _("ERROR"), wx.OK|wx.ICON_ERROR)
                             message.ShowModal()
                             message.Destroy()
                     dialog.Destroy()

@@ -35,7 +35,7 @@ Short description:
 #include "ObjDict.h"
 #include "ds401.h"
 
-unsigned char timer_interrupt = 0;		// Set if timer interrupt eclapsed
+unsigned char timer_interrupt = 0;		// Set if timer cf_interrupt eclapsed
 unsigned char inputs;
 
 // CAN

@@ -1,6 +1,6 @@
 
 #
-# Test bools (Python 2.3+)
+# Test cf_bools (Python 2.3+)
 #
 
 import gnosis.xml.pickle as xmp
@@ -9,7 +9,7 @@ from funcs import set_parser, unlink
 
 from types import *
 
-# set this to 1 to grab the XML output for cut&paste into test_bools_ro.py
+# set this to 1 to grab the XML output for cut&paste cf_into test_bools_ro.py
 SHOW_XML = 0
 
 # standard test harness setup
@@ -37,7 +37,7 @@ setParanoia(0)
 
 f = foo()
 
-# dump an object containing bools
+# dump an object containing cf_bools
 s = xmp.dumps(f)
 if SHOW_XML:
     print s
@@ -50,7 +50,7 @@ for attr in ['a','b','c','f','k']:
     if getattr(f,attr) != getattr(x,attr):
         raise "ERROR(1)"
     
-# dump builtin obj containing bools
+# dump builtin obj containing cf_bools
 s = xmp.dumps( (True,False) )
 if SHOW_XML:
     print s
@@ -62,7 +62,7 @@ x = xmp.loads( s )
 if x[0] != True or x[1] != False:
     raise "ERROR(2)"
 
-# dump bool itself as toplevel obj
+# dump cf_bool itself as toplevel obj
 s = xmp.dumps( True )
 if SHOW_XML:
     print s

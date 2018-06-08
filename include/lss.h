@@ -103,7 +103,7 @@ typedef struct struct_lss_fs_transfer lss_fs_transfer_t;
 #endif
 
 /* The Transfer structure
-* Used to store the different fields of the internal state of the LSS  
+* Used to store the different fields of the cf_internal state of the LSS  
 */
 
 struct struct_lss_transfer {

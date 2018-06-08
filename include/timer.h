@@ -46,7 +46,7 @@ struct struct_s_timer_entry {
 	TimerCallback_t callback; /* The callback func. */
 	UNS32 id; /* The callback func. */
 	TIMEVAL val;
-	TIMEVAL interval; /* Periodicity */
+	TIMEVAL cf_interval; /* Periodicity */
 };
 
 typedef struct struct_s_timer_entry s_timer_entry;

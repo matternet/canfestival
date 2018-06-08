@@ -13,7 +13,7 @@
 class MyApp:public wxApp
 {
 public:
-  virtual bool OnInit ();
+  virtual cf_bool OnInit ();
 };
 
 class MyFrame:public wxFrame

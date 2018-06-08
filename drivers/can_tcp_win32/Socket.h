@@ -1,7 +1,7 @@
 /* 
    Socket.h
 
-   Copyright (C) 2002-2004 René Nyffenegger
+   Copyright (C) 2002-2004 Renï¿½ Nyffenegger
 
    This source code is provided 'as-is', without any express or implied
    warranty. In no event will the author be held liable for any damages
@@ -21,7 +21,7 @@
 
    3. This notice may not be removed or altered from any source distribution.
 
-   René Nyffenegger rene.nyffenegger@adp-gmbh.ch
+   Renï¿½ Nyffenegger rene.nyffenegger@adp-gmbh.ch
 */
 
 #ifndef SOCKET_H
@@ -64,7 +64,7 @@ protected:
 
   SOCKET s_;
 
-  int* refCounter_;
+  cf_int* refCounter_;
 
 private:
   static void Start();
@@ -89,7 +89,7 @@ class SocketSelect {
   public:
     SocketSelect(Socket const * const s1, Socket const * const s2=NULL, TypeSocket type=BlockingSocket);
 
-    bool Readable(Socket const * const s);
+    cf_bool Readable(Socket const * const s);
 
   private:
     fd_set fds_;
